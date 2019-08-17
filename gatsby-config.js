@@ -41,5 +41,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //Posts
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `mindbodyspiritfairbkk`,
+      },
+    },
+    //Profile Data
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `user-profile`,
+        username: `mindbodyspiritfairbkk`,
+      },
+    },
   ],
 }

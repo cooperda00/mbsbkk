@@ -49,10 +49,10 @@
   @include min-width(1000px) {
     @include flex(row, center, flex-start);
 
+    margin-top: $spaceL;
+
     .Left,
     .Right {
-      width: 50%;
-
       h1,
       h2 {
         text-align: left;
@@ -62,6 +62,7 @@
 
     .Left {
       margin-right: $spaceM;
+      width: 60%;
 
       h1 {
         @include font("G");
@@ -75,6 +76,7 @@
     .Right {
       @include flex(column, center, flex-start);
       margin-left: $spaceM;
+      width: 40%;
 
       h1 {
         @include font("XL");

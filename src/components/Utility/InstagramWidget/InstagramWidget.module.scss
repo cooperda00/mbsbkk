@@ -1,0 +1,85 @@
+@import "../../../vars";
+
+.InstagramWidget {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  min-height: 50vh;
+  padding: $spaceL 0;
+}
+
+.UserInfo {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  max-width: $contentWidthS;
+  margin-bottom: $spaceM;
+  padding: 0 $spaceM;
+
+  img {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+    margin-right: $spaceS;
+  }
+
+  h1 {
+    @include font("M");
+    text-align: center;
+  }
+
+  p {
+    @include font("S");
+    text-align: center;
+  }
+
+  @include min-width(768px) {
+    @include flex(row, flex-start, center);
+
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.FeedGrid {
+  width: 100%;
+  max-width: $contentWidthS;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: $spaceS;
+  justify-items: center;
+
+  @include min-width(600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include min-width(850px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include min-width(1300px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.Tile {
+  position: relative;
+
+  .ImageOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: rgba($secondaryD, 0.2);
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    .ImageOverlay {
+      opacity: 0;
+    }
+  }
+}

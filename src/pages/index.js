@@ -6,9 +6,12 @@ import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import CTAButton from "../components/Utility/CTAButton/CTAButton"
+import InstagramWidget from "../components/Utility/InstagramWidget/InstagramWidget"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
+  const insta = data.insta.edges
+  const instaUser = data.instaUser
 
   return (
     <Layout>
@@ -22,6 +25,8 @@ const IndexPage = ({ data }) => {
           <CTAButton path="/get-involved" text="Become a Vendor" />
         </BannerText>
       </Hero>
+
+      <InstagramWidget insta={insta} user={instaUser} />
     </Layout>
   )
 }
@@ -34,6 +39,27 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+
+    insta: allInstaNode {
+      edges {
+        node {
+          id
+          localFile {
+            childImageSharp {
+              fixed(width: 275, height: 275) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+
+    instaUser: instaUserNode {
+      username
+      biography
+      profile_pic_url
     }
   }
 `

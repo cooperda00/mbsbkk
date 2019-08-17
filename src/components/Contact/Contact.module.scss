@@ -1,0 +1,101 @@
+@import "../../vars";
+
+.ContactContainer {
+  @include flex(column, flex-start, center);
+
+  margin: $spaceL auto;
+  width: 100%;
+  max-width: $contentWidth;
+  min-height: calc(100vh - 15rem);
+}
+
+.Details {
+  @include font("M");
+
+  margin: $spaceM 0;
+
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  strong {
+    color: $primaryD;
+  }
+
+  strong:not(:first-of-type) {
+    margin-left: $spaceS;
+  }
+
+  @include min-width(1000px) {
+    margin: $spaceS 0;
+  }
+}
+
+.ContactForm {
+  @include flex(column, center, center);
+
+  height: 100%;
+  width: 100%;
+
+  div {
+    @include flex(column, flex-start, center);
+
+    max-width: 50rem;
+    padding: 0 2rem;
+    width: 100%;
+
+    label {
+      @include font("M");
+      align-self: flex-start;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      @include font("M");
+      height: 6rem;
+      margin-bottom: $spaceM;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      @include font("L");
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      @include font("M");
+      margin-bottom: 1rem;
+      max-width: 500px;
+      min-height: 320px;
+      resize: vertical;
+      width: 100%;
+      padding: 0 1rem;
+
+      @include min-width(1000px) {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+
+    margin-top: 5rem;
+  }
+}
+
+.Submit {
+  @include cta-button();
+  @include font("SM");
+  text-align: center;
+  font-weight: 300;
+
+  @include min-width(1000px) {
+    align-self: flex-start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+}
