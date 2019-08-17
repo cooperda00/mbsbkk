@@ -13,7 +13,7 @@ const InstagramWidget = ({ insta, user }) => {
     <section className={styles.InstagramWidget}>
       <div className={styles.UserInfo}>
         <a
-          href={`www.instagram.com/${username}`}
+          href={`https://instagram.com/${username}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ const InstagramWidget = ({ insta, user }) => {
         </a>
         <div>
           <a
-            href={`www.instagram.com/${username}`}
+            href={`https://instagram.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,7 +38,7 @@ const InstagramWidget = ({ insta, user }) => {
           insta.map(({ node }) => {
             return (
               <a
-                href={`www.instagram.com/${node.id}`}
+                href={`https://instagram.com/p/${node.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={node.id}

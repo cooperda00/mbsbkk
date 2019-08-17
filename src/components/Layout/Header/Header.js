@@ -3,7 +3,8 @@ import React from "react"
 //Sass
 import styles from "./Header.module.scss"
 //Images
-import headerLogo from "../../../images/logo_long.png"
+import headerLogo from "../../../images/logo_transparent.png"
+// import headerLogo from "../../../images/logo_long.png"
 //Components
 import Navigation from "./Navigation/Navigation"
 
