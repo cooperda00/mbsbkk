@@ -1,0 +1,93 @@
+@import "../../../vars";
+
+.BannerText {
+  @include flex(column, flex-start, center);
+
+  padding: 0 $spaceM;
+  width: 100%;
+  max-width: $contentWidth;
+  margin-top: $spaceM;
+
+  h1 {
+    margin-bottom: $spaceS;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+    text-shadow: 0.2rem 0.2rem 10rem $gray6;
+  }
+
+  .Left {
+    margin-bottom: $spaceM;
+
+    h1 {
+      @include font("XXL");
+    }
+
+    h2 {
+      @include font("M");
+    }
+  }
+
+  .Right {
+    @include flex(column, center, center);
+
+    h1 {
+      @include font("L");
+    }
+
+    h2 {
+      @include font("SSM");
+      margin-bottom: $spaceM;
+    }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+
+    .Left,
+    .Right {
+      width: 50%;
+
+      h1,
+      h2 {
+        text-align: left;
+        margin-bottom: $spaceM;
+      }
+    }
+
+    .Left {
+      margin-right: $spaceM;
+
+      h1 {
+        @include font("G");
+      }
+
+      h2 {
+        @include font("L");
+      }
+    }
+
+    .Right {
+      @include flex(column, center, flex-start);
+      margin-left: $spaceM;
+
+      h1 {
+        @include font("XL");
+      }
+
+      h2 {
+        @include font("M");
+        // margin-left: $spaceM;
+      }
+    }
+  }
+
+  @include min-width(1500px) {
+    max-width: $contentWidthL;
+  }
+}

@@ -1,0 +1,138 @@
+// @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
+
+//COLORS
+$primary: #6ec7c0; //Main Turquoise
+$primaryL: #9fe2dd;
+$primaryLL: #d4f6f4;
+$primaryD: #45a69f;
+$primaryDD: #45a69f;
+
+$secondary: #ffbf8d; //Light Orange
+$secondaryL: #ffd4b3;
+$secondaryLL: #ffe8d7;
+$secondaryD: #d99159;
+$secondaryDD: #b86b31;
+
+$gray1: hsl(24, 20%, 95%); //Interface Grays
+$gray2: hsl(24, 21%, 93%);
+$gray3: hsl(24, 9%, 82%);
+
+$gray4: hsl(24, 12%, 30%); //Text Grays
+$gray5: hsl(24, 24%, 11%);
+
+$gray6: rgb(69, 69, 69); //Cool Gray
+
+//FONT
+$fontStack: "Roboto Slab", serif;
+$fontG: 8rem;
+$fontXXL: 5rem;
+$fontXL: 4rem;
+$fontL: 3rem;
+$fontM: 2.5rem;
+$fontSM: 2.2rem;
+$fontSSM: 2rem;
+$fontS: 1.8rem;
+$fontXS: 1.4rem;
+
+//Line Height
+$lineG: 1;
+$lineXXL: 1;
+$lineXL: 1.1;
+$lineL: 1.2;
+$lineM: 1.4;
+$lineS: 1.5;
+$lineXS: 1.5;
+
+//SPACING
+$spaceXS: 0.5rem;
+$spaceS: 1rem;
+$spaceSM: 2rem;
+$spaceM: 3rem;
+$spaceL: 6rem;
+$spaceXL: 10rem;
+
+$contentWidthS: 120rem;
+$contentWidth: 140rem;
+$contentWidthL: 165rem;
+
+//MIXINS
+//Flex
+@mixin flex($dir: null, $just: null, $ali: null) {
+  display: flex;
+  @if $dir != null {
+    flex-direction: $dir;
+  }
+  @if $just != null {
+    justify-content: $just;
+  }
+  @if $ali != null {
+    align-items: $ali;
+  }
+}
+
+//Media Queries
+@mixin min-width($threshold) {
+  @media screen and (min-width: $threshold) {
+    @content;
+  }
+}
+
+//CTA Button
+@mixin cta-button() {
+  background: $secondary;
+  border-radius: 0.2rem;
+  border: none;
+  box-shadow: 0px 0.2rem 0px 0px $secondaryD;
+  color: $gray5;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  letter-spacing: 0.3rem;
+  transition: 0.5s;
+
+  &:hover {
+    background: $secondaryD;
+  }
+}
+
+//Font size and height
+@mixin font($size) {
+  @if $size == "XS" {
+    font-size: $fontXS;
+    line-height: $lineXS;
+  } @else if $size == "S" {
+    font-size: $fontS;
+    line-height: $lineS;
+  } @else if $size == "SSM" {
+    font-size: $fontSSM;
+    line-height: $lineS;
+  } @else if $size == "SM" {
+    font-size: $fontSM;
+    line-height: $lineS;
+  } @else if $size == "M" {
+    font-size: $fontM;
+    line-height: $lineM;
+  } @else if $size == "L" {
+    font-size: $fontL;
+    line-height: $lineL;
+  } @else if $size == "XL" {
+    font-size: $fontXL;
+    line-height: $lineXL;
+  } @else if $size == "XXL" {
+    font-size: $fontXXL;
+    line-height: $lineXXL;
+  } @else if $size == "G" {
+    font-size: $fontG;
+    line-height: $lineG;
+  }
+}
+
+@mixin underline() {
+  background: $tertiary;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 4rem;
+  width: 100%;
+}

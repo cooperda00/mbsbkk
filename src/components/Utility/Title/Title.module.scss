@@ -1,0 +1,16 @@
+@import "../../../vars";
+
+.Title {
+  @include font("XL");
+
+  background: white;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  padding: $spaceS;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.GreenText {
+  color: $primaryD !important;
+}

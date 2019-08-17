@@ -1,0 +1,66 @@
+@import "../../../../vars";
+
+.Navigation {
+}
+
+.DesktopNav {
+  display: none;
+
+  @include min-width(768px) {
+    @include flex(row, flex-end, center);
+    @include font("S");
+
+    a {
+      padding-right: 2rem;
+    }
+  }
+
+  @include min-width(1000px) {
+    @include font("M");
+
+    a {
+      padding-right: 6rem;
+    }
+  }
+}
+
+.MobileNav {
+  @include flex(row, center, center);
+
+  position: absolute;
+  width: 100vw;
+  height: 15rem;
+  top: 0;
+  right: 0;
+  background: white;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+
+  a {
+    @include font("M");
+    padding: 0.5rem 1rem;
+  }
+
+  @include min-width(768px) {
+    display: none;
+  }
+}
+
+.MenuButton {
+  @include font("L");
+  @include flex(column, center, center);
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  background: white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba($gray6, 0.2);
+
+  @include min-width(768px) {
+    display: none;
+  }
+}

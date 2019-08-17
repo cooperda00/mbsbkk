@@ -1,0 +1,19 @@
+@import "../../../vars";
+
+.Header {
+  @include flex(row, center, center);
+
+  height: 15rem;
+  width: 100%;
+
+  @include min-width(768px) {
+    @include flex(row, space-between, center);
+  }
+}
+
+.Logo {
+  height: 100%;
+  max-width: 100vw;
+  object-fit: cover;
+  object-position: center;
+}
