@@ -8,6 +8,7 @@ import BannerText from "../components/Utility/BannerText/BannerText"
 import CTAButton from "../components/Utility/CTAButton/CTAButton"
 import InstagramWidget from "../components/Utility/InstagramWidget/InstagramWidget"
 import Features from "../components/Features/Features"
+import SEO from "../components/SEO/SEO"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -17,6 +18,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="" />
       <Hero type="home" image={image}>
         <BannerText
           title="Mind Body Spirit Fair BKK"

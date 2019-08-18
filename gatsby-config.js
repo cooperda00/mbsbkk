@@ -4,8 +4,8 @@ module.exports = {
     description: `Holistic health, well-being and spiritual practitioners and vendors in one event, 
     celebrating all things mind, body and spirit!`,
     author: `danielcooper.io`,
-    siteUrl: "http://www.mbsbkk.com",
-    image: "/social_card.png",
+    siteUrl: "mbsbkk.netlify.com",
+    image: "/og_image.png",
   },
   plugins: [
     `gatsby-plugin-sass`,
