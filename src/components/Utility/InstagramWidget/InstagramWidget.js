@@ -11,44 +11,46 @@ const InstagramWidget = ({ insta, user }) => {
 
   return (
     <section className={styles.InstagramWidget}>
-      <div className={styles.UserInfo}>
-        <a
-          href={`https://instagram.com/${username}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <img src={userImage} alt={username} />
-        </a>
-        <div>
+      <div className={styles.Container}>
+        <div className={styles.UserInfo}>
           <a
             href={`https://instagram.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <h1>@{username}</h1>{" "}
+            <img src={userImage} alt={username} />
           </a>
-          <p>{userBio}</p>
+          <div>
+            <a
+              href={`https://instagram.com/${username}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <h1>@{username}</h1>{" "}
+            </a>
+            <p>{userBio}</p>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.FeedGrid}>
-        {insta &&
-          insta.map(({ node }) => {
-            return (
-              <a
-                href={`https://instagram.com/p/${node.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={node.id}
-                className={styles.Tile}
-              >
-                <Image fixed={node.localFile.childImageSharp.fixed} />
-                <div className={styles.ImageOverlay} />
-              </a>
-            )
-          })}
+        <div className={styles.FeedGrid}>
+          {insta &&
+            insta.map(({ node }) => {
+              return (
+                <a
+                  href={`https://instagram.com/p/${node.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={node.id}
+                  className={styles.Tile}
+                >
+                  <Image fixed={node.localFile.childImageSharp.fixed} />
+                  <div className={styles.ImageOverlay} />
+                </a>
+              )
+            })}
+        </div>
       </div>
     </section>
   )
