@@ -33,3 +33,7 @@ button,
 a {
   color: $gray5;
 }
+
+.active {
+  background: rgba($primary, 0.6);
+}

@@ -7,24 +7,28 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import CTAButton from "../components/Utility/CTAButton/CTAButton"
 import InstagramWidget from "../components/Utility/InstagramWidget/InstagramWidget"
+import Features from "../components/Features/Features"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
   const insta = data.insta.edges
   const instaUser = data.instaUser
+  const features = data.features.edges
 
   return (
     <Layout>
       <Hero type="home" image={image}>
         <BannerText
           title="Mind Body Spirit Fair BKK"
-          info="Bangkok's first charity holistic wellbeing fair."
+          info="Bangkok's first charity holistic well-being fair."
         >
           <h1>Our Next Event:</h1>
           <h2>Date and venue coming soon!</h2>
-          <CTAButton path="/get-involved" text="Become a Vendor" />
+          <CTAButton path="/get-involved" text="Become a vendor" />
         </BannerText>
       </Hero>
+
+      <Features features={features} />
 
       <InstagramWidget insta={insta} user={instaUser} />
     </Layout>
@@ -60,6 +64,28 @@ export const query = graphql`
       username
       biography
       profile_pic_url
+    }
+
+    features: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "feature" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            number
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          html
+        }
+      }
     }
   }
 `

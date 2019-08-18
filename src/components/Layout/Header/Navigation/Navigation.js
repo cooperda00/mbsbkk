@@ -1,5 +1,5 @@
 //Modules
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
 //Sass
@@ -16,14 +16,16 @@ const Navigation = () => {
     <nav className={styles.Navigation}>
       <div className={styles.DesktopNav}>
         {links.map(({ path, text }) => (
-          <Link to={path}>{text}</Link>
+          <Link to={path} activeClassName="active">
+            {text}
+          </Link>
         ))}
       </div>
 
       <Slide top when={menu}>
         <div className={styles.MobileNav}>
           {mobileLinks.map(({ path, text }) => (
-            <Link to={path} tabIndex="-1">
+            <Link to={path} tabIndex="-1" activeClassName="active">
               {menu && text}
             </Link>
           ))}

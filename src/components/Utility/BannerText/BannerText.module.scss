@@ -25,7 +25,7 @@
     margin-bottom: $spaceM;
 
     h1 {
-      @include font("XXL");
+      @include font("XL");
     }
 
     h2 {
@@ -41,7 +41,7 @@
     }
 
     h2 {
-      @include font("SSM");
+      @include font("M");
       margin-bottom: $spaceM;
     }
   }

@@ -1,5 +1,6 @@
 //Modules
 import React from "react"
+import { Link } from "gatsby"
 //Sass
 import styles from "./Header.module.scss"
 //Images
@@ -11,7 +12,9 @@ import Navigation from "./Navigation/Navigation"
 const Header = () => {
   return (
     <header className={styles.Header}>
-      <img src={headerLogo} alt="logo" className={styles.Logo} />
+      <Link to="/">
+        <img src={headerLogo} alt="logo" className={styles.Logo} />
+      </Link>
 
       <Navigation />
     </header>

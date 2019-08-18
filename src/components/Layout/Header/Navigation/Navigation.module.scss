@@ -11,7 +11,8 @@
     @include font("S");
 
     a {
-      padding-right: 2rem;
+      padding: 0 0.5rem;
+      margin-right: 2rem;
     }
   }
 
@@ -19,7 +20,7 @@
     @include font("M");
 
     a {
-      padding-right: 6rem;
+      margin-right: 6rem;
     }
   }
 }
@@ -37,8 +38,9 @@
   padding: 0 4rem;
 
   a {
-    @include font("M");
-    padding: 0.5rem 1rem;
+    @include font("S");
+    padding: 0 1rem;
+    height: 3rem;
   }
 
   @include min-width(768px) {

@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-robots-txt",
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
@@ -34,6 +35,16 @@ module.exports = {
     },
 
     //CONTENT SOURCING ***************************
+
+    //All Markdown Files
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    //Main Images
     {
       resolve: `gatsby-source-filesystem`,
       options: {
