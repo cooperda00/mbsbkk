@@ -33,9 +33,21 @@
 
 .Left {
   width: 30rem;
+  position: relative;
 
   @include min-width(1000px) {
     width: 35rem;
+  }
+
+  .Overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: rgba($primary, 0.4);
+    opacity: 1;
+    transition: 0.5s;
   }
 }
 

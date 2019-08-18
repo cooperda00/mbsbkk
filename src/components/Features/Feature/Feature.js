@@ -16,6 +16,7 @@ const Feature = ({ node, selectedClass }) => {
           fluid={node.frontmatter.image.childImageSharp.fluid}
           className={styles.FeatureImage}
         />
+        <div className={styles.Overlay} />
       </div>
 
       <div className={styles.Right}>
