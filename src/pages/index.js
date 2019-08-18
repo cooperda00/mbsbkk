@@ -70,6 +70,7 @@ export const query = graphql`
 
     features: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "feature" } } }
+      sort: { order: ASC, fields: [frontmatter___number] }
     ) {
       edges {
         node {
