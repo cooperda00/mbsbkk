@@ -3,9 +3,17 @@
 .Title {
   @include font("XL");
 
-  font-weight: 400;
-  letter-spacing: 0.6rem;
+  margin: 0 auto;
+  max-width: $contentWidthS;
+  font-weight: 300;
+  letter-spacing: 0.4rem;
   padding: $spaceS;
   text-align: center;
   text-transform: capitalize;
+
+  line-height: 1.2 !important;
+
+  @include min-width(1000px) {
+    @include font("XXL");
+  }
 }

@@ -1,0 +1,67 @@
+@import "../../../vars";
+
+.Feature {
+  @include flex(column, flex-start, center);
+  margin: $spaceM $spaceS;
+  width: 30%;
+  min-width: 35rem;
+
+  // @include min-width(1000px) {
+  //   width: 95rem;
+  // }
+}
+
+.Left {
+  width: 100%;
+  position: relative;
+
+  // @include min-width(1000px) {
+  //   width: 35rem;
+  // }
+
+  .FeatureImage {
+    min-height: 350px;
+  }
+
+  .Overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: rgba($primaryD, 0.6);
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .Name {
+    @include font("XL");
+    text-shadow: 1px 1px 1rem $gray6;
+    letter-spacing: 4px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Right {
+}
+
+.HTML {
+  margin-top: $spaceM;
+  width: 100%;
+
+  p {
+    @include font("S");
+    padding: 0 $spaceS;
+  }
+
+  // @include min-width(1000px) {
+  //   p {
+  //     padding: 0;
+  //   }
+  // }
+}

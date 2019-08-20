@@ -1,0 +1,60 @@
+@import "../../vars";
+
+.BasicInfo {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  min-height: 60vh;
+  background: $eggshell;
+}
+
+.CardContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spaceM;
+  max-width: $contentWidthL;
+  margin: $spaceL $spaceM;
+
+  @include min-width(1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.Left,
+.Right {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  height: 70rem;
+  background: white;
+  padding: $spaceL $spaceM;
+
+  h2 {
+    @include font("M");
+    margin-bottom: $spaceM;
+  }
+
+  p {
+    @include font("SM");
+  }
+
+  div {
+    margin-top: auto;
+  }
+
+  @include min-width(600px) {
+    height: 55rem;
+  }
+
+  @include min-width(1000px) {
+    height: 65rem;
+  }
+
+  @include min-width(1500px) {
+    height: 50rem;
+  }
+}
+
+.Left {
+  p {
+    margin-bottom: $spaceM;
+  }
+}

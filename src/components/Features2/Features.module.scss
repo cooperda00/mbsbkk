@@ -1,0 +1,25 @@
+@import "../../vars";
+
+.Features {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  min-height: 60vh;
+  background: $eggshell;
+}
+
+.Container {
+  padding: $spaceL $spaceM 0 $spaceM;
+  max-width: $contentWidthL;
+  width: 100%;
+  background: white;
+}
+
+.FeaturesContainer {
+  @include flex(row, center, center);
+
+  width: 100%;
+  max-width: $contentWidthL;
+  background: white;
+  padding-bottom: $spaceL;
+  flex-wrap: wrap;
+}

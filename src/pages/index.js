@@ -7,8 +7,10 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import CTAButton from "../components/Utility/CTAButton/CTAButton"
 import InstagramWidget from "../components/Utility/InstagramWidget/InstagramWidget"
-import Features from "../components/Features/Features"
+import Features from "../components/Features2/Features"
 import SEO from "../components/SEO/SEO"
+import Testimonials from "../components/Testimonials/Testimonials"
+import BasicInfo from "../components/BasicInfo/BasicInfo"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -26,11 +28,15 @@ const IndexPage = ({ data }) => {
         >
           <h1>Our Next Event:</h1>
           <h2>Date and venue coming soon!</h2>
-          <CTAButton path="/get-involved" text="Become a vendor" />
+          <CTAButton path="/get-involved" text="Get Involved" />
         </BannerText>
       </Hero>
 
+      <BasicInfo />
+
       <Features features={features} />
+
+      <Testimonials />
 
       <InstagramWidget insta={insta} user={instaUser} />
     </Layout>
@@ -76,6 +82,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            path
             title
             number
             image {

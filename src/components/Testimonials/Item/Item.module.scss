@@ -1,0 +1,19 @@
+@import "../../../vars";
+
+.Item {
+  display: inline-block;
+  width: 100%;
+  background: $secondaryLL;
+  padding: $spaceM;
+  margin: 0 0 $spaceL 0;
+
+  p {
+    @include font("SSM");
+  }
+
+  h3 {
+    @include font("SM");
+
+    margin-top: $spaceM;
+  }
+}
