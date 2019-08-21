@@ -11,6 +11,7 @@ import Features from "../components/Features2/Features"
 import SEO from "../components/SEO/SEO"
 import Testimonials from "../components/Testimonials/Testimonials"
 import BasicInfo from "../components/BasicInfo/BasicInfo"
+import Carousel from "../components/Utility/Carousel/Carousel"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -21,7 +22,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="" />
-      <Hero type="home" image={image}>
+      {/* <Hero type="home" image={image}>
         <BannerText
           title="Mind Body Spirit Fair BKK"
           info="Bangkok's first charity holistic well-being fair."
@@ -30,7 +31,9 @@ const IndexPage = ({ data }) => {
           <h2>Date and venue coming soon!</h2>
           <CTAButton path="/get-involved" text="Get Involved" />
         </BannerText>
-      </Hero>
+      </Hero> */}
+
+      <Carousel />
 
       <BasicInfo />
 

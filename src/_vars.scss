@@ -9,13 +9,19 @@ $primaryLL: #d4f6f4;
 $primaryD: #45a69f;
 $primaryDD: #45a69f;
 
-$secondary: #deb887; //Light Orange
-$secondaryL: #ffe3bf;
-$secondaryLL: #fff1df;
-$secondaryD: #b88c53;
-$secondaryDD: #96692f;
+$secondary: #e6d6bd; //Brown
+$secondaryL: #fff6e8;
+$secondaryLL: #fffdf9;
+$secondaryD: #c4ae8b;
+$secondaryDD: #a58a5f;
 
-$eggshell: lighten(#f0ead6, 8%);
+$tertiary: #eec7fe; //Lilac
+$tertiaryL: lighten(#eec7fe, 5%);
+$tertiaryLL: lighten(#eec7fe, 8%);
+$tertiaryD: #de96fa;
+$tertiaryDD: #ca6bf0;
+
+$eggshell: $secondaryL;
 
 $gray1: hsl(24, 20%, 95%); //Interface Grays
 $gray2: hsl(24, 21%, 93%);
@@ -83,10 +89,10 @@ $contentWidthL: 165rem;
 
 //CTA Button
 @mixin cta-button() {
-  background: $secondary;
+  background: $tertiary;
   border-radius: 0.2rem;
   border: none;
-  box-shadow: 0px 0.2rem 0px 0px $secondaryD;
+  box-shadow: 0px 0.2rem 0px 0px $tertiaryD;
   color: $gray5;
   cursor: pointer;
   padding: 1rem 2rem;
@@ -94,7 +100,7 @@ $contentWidthL: 165rem;
   transition: 0.5s;
 
   &:hover {
-    background: $secondaryD;
+    background: $tertiaryD;
   }
 }
 

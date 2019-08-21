@@ -9,18 +9,19 @@ const BasicInfo = () => {
     <section className={styles.BasicInfo}>
       <div className={styles.CardContainer}>
         <div className={styles.Left}>
-          <h2>The Mind Body Spirit Fair Bangkok</h2>
+          <h2>Totally Non-profit, Totally Charitable, Totally Inspiring!</h2>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-            perferendis sapiente sunt accusamus molestias in adipisci suscipit
-            quidem placeat laborum itaque optio, vitae aspernatur repudiandae,
-            saepe ut dignissimos dolore maxime.
+            Holistic health, well-being and spiritual practitioners and vendors
+            in one event, celebrating all things mind, body and spirit!
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-            perferendis sapiente sunt.
+            The Mind, Body and Spirit Fair is Bangkok’s first dedicated health,
+            well-being and natural therapies event. This community charity event
+            brings together a diversity of local and international mind, body
+            and spirit practitioners, vendors and businesses, to share their
+            expertise and passions with the people of Bangkok.
           </p>
 
           <div>
@@ -32,7 +33,7 @@ const BasicInfo = () => {
           <h2>Next Event Details:</h2>
 
           <p>Dates: To Be Announced</p>
-          <p>Time: 10am - 6pm</p>
+          <p>Time: To Be Announced</p>
           <p>Venue: To Be Announced</p>
 
           <div>

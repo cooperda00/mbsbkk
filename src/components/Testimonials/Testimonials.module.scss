@@ -3,7 +3,6 @@
 .Testimonials {
   @include flex(column, flex-start, center);
   width: 100%;
-  //   min-height: 60vh;
   min-height: 50vh;
   background: $eggshell;
 }
@@ -21,6 +20,7 @@
   background: white;
   column-count: 1;
   padding: $spaceL $spaceL 0 $spaceL;
+  margin-bottom: $spaceL;
 
   @include min-width(768px) {
     column-count: 2;

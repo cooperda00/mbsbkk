@@ -11,9 +11,10 @@
 
   width: 100%;
   min-height: 50vh;
-  padding: 0 0 $spaceL 0;
+  padding: $spaceL 0 $spaceL 0;
   background: white;
   max-width: $contentWidthL;
+  margin-bottom: $spaceL;
 }
 
 .UserInfo {

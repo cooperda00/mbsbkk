@@ -3,33 +3,29 @@
 .BannerText {
   @include flex(column, flex-start, center);
 
-  padding: 0 $spaceM;
+  position: relative;
+  padding: 0 $spaceS;
   width: 100%;
   max-width: $contentWidth;
-  margin-top: $spaceM;
-
-  h1 {
-    margin-bottom: $spaceS;
-  }
+  z-index: 2000;
 
   h1,
   h2 {
     text-align: center;
-
+    color: white;
     letter-spacing: 0.4rem;
     font-weight: 300;
-    text-shadow: 0.2rem 0.2rem 10rem $gray6;
+    text-shadow: 0.2rem 0.2rem 3rem $gray5;
   }
 
   .Left {
-    margin-bottom: $spaceM;
-
     h1 {
       @include font("XL");
+      margin-bottom: $spaceS;
     }
-
     h2 {
       @include font("M");
+      margin-bottom: $spaceM;
     }
   }
 
@@ -37,12 +33,83 @@
     @include flex(column, center, center);
 
     h1 {
-      @include font("L");
+      @include font("M");
     }
 
     h2 {
-      @include font("M");
+      @include font("SM");
       margin-bottom: $spaceM;
+    }
+  }
+
+  //Mobile Specific Queries:::
+  @media only screen and (max-width: 767px) and (max-height: 570px) {
+    .Left {
+      h1 {
+        @include font("M");
+        margin-bottom: $spaceS;
+      }
+      h2 {
+        @include font("SM");
+        margin-bottom: $spaceM;
+      }
+    }
+    .Right {
+      h1 {
+        @include font("SSM");
+      }
+
+      h2 {
+        @include font("S");
+        margin-bottom: $spaceM;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) and (max-height: 641px) {
+    .Left {
+      h1 {
+        @include font("M");
+        margin-bottom: $spaceS;
+      }
+      h2 {
+        @include font("SM");
+        margin-bottom: $spaceM;
+      }
+    }
+    .Right {
+      h1 {
+        @include font("M");
+      }
+
+      h2 {
+        @include font("S");
+        margin-bottom: $spaceM;
+      }
+    }
+  }
+
+  //Tablet Sizing::::
+  @include min-width(768px) {
+    .Left {
+      h1 {
+        @include font("G");
+        margin-bottom: $spaceM;
+      }
+      h2 {
+        @include font("L");
+        margin-bottom: $spaceL;
+      }
+    }
+    .Right {
+      h1 {
+        @include font("L");
+      }
+
+      h2 {
+        @include font("M");
+        margin-bottom: $spaceM;
+      }
     }
   }
 
@@ -50,6 +117,7 @@
     @include flex(row, center, flex-start);
 
     margin-top: $spaceL;
+    padding: 0 $spaceL;
 
     .Left,
     .Right {
@@ -84,7 +152,6 @@
 
       h2 {
         @include font("M");
-        // margin-left: $spaceM;
       }
     }
   }

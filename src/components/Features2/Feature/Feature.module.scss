@@ -4,20 +4,13 @@
   @include flex(column, flex-start, center);
   margin: $spaceM $spaceS;
   width: 30%;
-  min-width: 35rem;
-
-  // @include min-width(1000px) {
-  //   width: 95rem;
-  // }
+  min-width: 32rem;
+  height: 65rem;
 }
 
 .Left {
   width: 100%;
   position: relative;
-
-  // @include min-width(1000px) {
-  //   width: 35rem;
-  // }
 
   .FeatureImage {
     min-height: 350px;
@@ -29,7 +22,7 @@
     width: 100%;
     top: 0;
     right: 0;
-    background: rgba($primaryD, 0.6);
+    background: rgba($primaryD, 0.5);
     opacity: 1;
     transition: 0.5s;
   }
@@ -44,6 +37,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    .Overlay {
+      background: rgba($tertiaryD, 0.5);
+    }
   }
 }
 
