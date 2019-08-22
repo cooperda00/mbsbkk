@@ -1,0 +1,65 @@
+@import "../../../vars";
+
+.Container {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+
+  @include min-width(1000px) {
+    padding: $spaceM;
+  }
+}
+
+.UserInfo {
+  @include flex(row, flex-start, flex-start);
+  width: 100%;
+  margin-bottom: $spaceM;
+
+  .LogoContainer {
+    img {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      margin-right: $spaceS;
+    }
+  }
+
+  div {
+    a {
+      h1 {
+        @include font("SSM");
+        text-align: center;
+        text-align: left;
+      }
+    }
+
+    p {
+      @include font("XS");
+      text-align: center;
+      text-align: left;
+      max-width: 32rem;
+    }
+  }
+}
+
+.FeedGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 15rem);
+  grid-gap: $spaceS;
+  justify-items: center;
+
+  @include min-width(500px) {
+    grid-template-columns: repeat(3, 12rem);
+  }
+
+  .Tile {
+    height: 15rem;
+    width: 15rem;
+
+    @include min-width(500px) {
+      height: 12rem;
+      width: 12rem;
+    }
+  }
+}

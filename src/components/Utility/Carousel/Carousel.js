@@ -8,8 +8,8 @@ import Image from "gatsby-image"
 import styled, { css } from "styled-components"
 import styles from "./Carousel.module.scss"
 //Components
-import BannerText from "../../Utility/BannerText/BannerText"
-import CTAButton from "../CTAButton/CTAButton"
+// import BannerText from "../../Utility/BannerText/BannerText"
+// import CTAButton from "../CTAButton/CTAButton"
 
 const Carousel = () => {
   const data = useStaticQuery(query)
@@ -17,15 +17,17 @@ const Carousel = () => {
   const image2 = data.image_2.childImageSharp.fluid
   const image3 = data.image_3.childImageSharp.fluid
   const image4 = data.image_4.childImageSharp.fluid
+  const image5 = data.image_5.childImageSharp.fluid
 
   const width = "100%",
-    height = "85vh"
+    height = "100vh"
 
   const Container = styled.div`
     position: relative;
     overflow: hidden;
     width: ${width};
     height: ${height};
+    margin-top: -15rem;
   `
   const Children = styled.div`
     width: ${width};
@@ -75,7 +77,7 @@ const Carousel = () => {
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container>
       <Children>
-        <div className={styles.BannerContainer}>
+        {/* <div className={styles.BannerContainer}>
           <BannerText
             title="Mind Body Spirit Fair BKK"
             info="Bangkok's first charity holistic well-being fair."
@@ -84,7 +86,7 @@ const Carousel = () => {
             <h2>Date and venue coming soon!</h2>
             <CTAButton path="/get-involved" text="Get Involved" />
           </BannerText>
-        </div>
+        </div> */}
 
         {children}
         <Arrow onClick={handleClick} data-position={position - 1}>
@@ -110,25 +112,31 @@ const Carousel = () => {
       <Slide right>
         <div className={styles.SlideContainer}>
           <Image fluid={image1} className={styles.Img} />
-          <div className={styles.Overlay} />
+          {/* <div className={styles.Overlay} /> */}
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
           <Image fluid={image2} className={styles.Img} />
-          <div className={styles.Overlay} />
+          {/* <div className={styles.Overlay} /> */}
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
           <Image fluid={image3} className={styles.Img} />
-          <div className={styles.Overlay} />
+          {/* <div className={styles.Overlay} /> */}
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
           <Image fluid={image4} className={styles.Img} />
-          <div className={styles.Overlay} />
+          {/* <div className={styles.Overlay} /> */}
+        </div>
+      </Slide>
+      <Slide right>
+        <div className={styles.SlideContainer}>
+          <Image fluid={image5} className={styles.Img} />
+          {/* <div className={styles.Overlay} /> */}
         </div>
       </Slide>
     </Carousel>
@@ -137,28 +145,35 @@ const Carousel = () => {
 
 const query = graphql`
   {
-    image_1: file(relativePath: { eq: "crystal_coffee.jpg" }) {
+    image_1: file(relativePath: { eq: "carousel/carousel1.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image_2: file(relativePath: { eq: "sunset.jpg" }) {
+    image_2: file(relativePath: { eq: "carousel/carousel2.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image_3: file(relativePath: { eq: "hands.jpg" }) {
+    image_3: file(relativePath: { eq: "carousel/carousel3.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image_4: file(relativePath: { eq: "stupa.jpg" }) {
+    image_4: file(relativePath: { eq: "carousel/carousel4.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image_5: file(relativePath: { eq: "carousel/carousel5.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

@@ -4,11 +4,11 @@
   @include flex(column, flex-start, center);
   width: 100%;
   min-height: 60vh;
-  background: $eggshell;
+  // background: $eggshell;
 }
 
 .Container {
-  padding: $spaceL $spaceM 0 $spaceM;
+  padding: 0 $spaceM 0 $spaceM;
   max-width: $contentWidthL;
   width: 100%;
   background: white;
@@ -20,6 +20,6 @@
   width: 100%;
   max-width: $contentWidthL;
   background: white;
-  margin-bottom: $spaceL;
+  // margin-bottom: $spaceL;
   flex-wrap: wrap;
 }

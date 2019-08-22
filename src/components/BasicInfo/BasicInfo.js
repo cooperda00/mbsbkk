@@ -32,9 +32,14 @@ const BasicInfo = () => {
         <div className={styles.Right}>
           <h2>Next Event Details:</h2>
 
-          <p>Dates: To Be Announced</p>
-          <p>Time: To Be Announced</p>
-          <p>Venue: To Be Announced</p>
+          <p>Dates: 1-2 February 2020</p>
+          <p>Time: 9am-6pm</p>
+          <p>
+            Venue:{" "}
+            <a href="https://goo.gl/maps/76EQNyY2xHzU6qHC6">
+              Jasmine Building, Asok
+            </a>{" "}
+          </p>
 
           <div>
             <CTAButton path="/get-involved" text="Get Involved" />

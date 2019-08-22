@@ -1,7 +1,51 @@
 @import "../../../vars";
 
 .Footer {
-  height: 50px;
+  min-height: 35rem;
   width: 100%;
-  background: $primary;
+  background: $secondary;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include min-width(1000px) {
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+}
+
+.FooterNav {
+  @include flex(column, flex-start, flex-start);
+  @include font("M");
+
+  width: 90%;
+
+  @include min-width(1000px) {
+    padding: $spaceM 0 0 $spaceM;
+  }
+
+  .Links {
+    @include flex(column, flex-start, flex-start);
+
+    margin-top: $spaceM;
+
+    a {
+      margin-bottom: $spaceS;
+    }
+  }
+}
+
+.FacebookWidget {
+  margin-top: $spaceM;
+
+  @include min-width(1000px) {
+    // padding: $spaceM;
+  }
+}
+
+.InstagramWidget {
+  margin: $spaceM;
+
+  @include min-width(1000px) {
+    padding: 0;
+  }
 }

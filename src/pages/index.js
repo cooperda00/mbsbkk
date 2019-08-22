@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
 
       <Testimonials />
 
-      <InstagramWidget insta={insta} user={instaUser} />
+      {/* <InstagramWidget insta={insta} user={instaUser} /> */}
     </Layout>
   )
 }

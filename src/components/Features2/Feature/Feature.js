@@ -14,6 +14,7 @@ const Feature = ({ node }) => {
           className={styles.FeatureImage}
         />
         <div className={styles.Overlay} />
+        <div className={styles.Overlay2} />
         <h1 className={styles.Name}>{node.frontmatter.title}</h1>
       </Link>
 

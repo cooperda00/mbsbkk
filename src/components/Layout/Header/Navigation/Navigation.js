@@ -23,13 +23,15 @@ const Navigation = () => {
       </div>
 
       <Slide top when={menu}>
-        <div className={styles.MobileNav}>
-          {mobileLinks.map(({ path, text }) => (
-            <Link to={path} tabIndex="-1" activeClassName="active">
-              {menu && text}
-            </Link>
-          ))}
-        </div>
+        {menu && (
+          <div className={styles.MobileNav}>
+            {mobileLinks.map(({ path, text }) => (
+              <Link to={path} tabIndex="-1" activeClassName="active">
+                {text}
+              </Link>
+            ))}
+          </div>
+        )}
       </Slide>
 
       <div

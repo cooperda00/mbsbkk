@@ -1,25 +1,25 @@
 @import "../../../vars";
 
-.BannerContainer {
-  padding: $spaceM;
-}
+// .BannerContainer {
+//   padding: $spaceM;
+// }
 
 .SlideContainer {
   height: 100%;
   width: 100%;
   position: relative;
 
-  .Overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background: rgba($primaryDD, 0.7);
-    opacity: 1;
-    transition: 0.5s;
-    z-index: 3000;
-  }
+  // .Overlay {
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   top: 0;
+  //   right: 0;
+  //   background: rgba($primaryDD, 0.7);
+  //   opacity: 1;
+  //   transition: 0.5s;
+  //   z-index: 3000;
+  // }
 
   .Img {
     height: 100%;
