@@ -24,9 +24,19 @@ const Footer = () => {
       </div>
 
       <div className={styles.FacebookWidget}>
+        {/* <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmbsbkk&tabs=timeline&width=310&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+          width="310"
+          height="500"
+          style={{ border: "none", overflow: "hidden" }}
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe> */}
         <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMBSBKK&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-          width="320"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmbsbkk&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+          width="300"
           height="500"
           style={{ border: "none", overflow: "hidden" }}
           scrolling="no"

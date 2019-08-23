@@ -1,26 +1,26 @@
 @import "../../../vars";
 
 .Footer {
+  @include flex(column, flex-start, center);
   min-height: 35rem;
   width: 100%;
-  background: $secondary;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  background: lighten($gray1, 2%);
 
   @include min-width(1000px) {
-    grid-template-columns: 1fr 2fr 2fr;
+    @include flex(row, flex-start, flex-start);
   }
 }
 
 .FooterNav {
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, flex-start, center);
   @include font("M");
 
-  width: 90%;
+  width: 100%;
 
   @include min-width(1000px) {
-    padding: $spaceM 0 0 $spaceM;
+    @include flex(column, flex-start, flex-start);
+    width: 20%;
+    padding: $spaceL;
   }
 
   .Links {
@@ -35,17 +35,21 @@
 }
 
 .FacebookWidget {
+  @include flex(column, flex-start, center);
+  width: 100%;
   margin-top: $spaceM;
 
   @include min-width(1000px) {
-    // padding: $spaceM;
+    width: 40%;
   }
 }
 
 .InstagramWidget {
-  margin: $spaceM;
+  @include flex(column, flex-start, center);
+  width: 100%;
+  margin-top: $spaceM;
 
   @include min-width(1000px) {
-    padding: 0;
+    width: 40%;
   }
 }

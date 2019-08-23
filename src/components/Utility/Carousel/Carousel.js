@@ -19,20 +19,28 @@ const Carousel = () => {
   const image4 = data.image_4.childImageSharp.fluid
   const image5 = data.image_5.childImageSharp.fluid
 
-  const width = "100%",
-    height = "100vh"
+  const width = "70vw",
+    height = "60vh"
 
   const Container = styled.div`
     position: relative;
     overflow: hidden;
-    width: ${width};
+    width: 100vw;
     height: ${height};
-    margin-top: -15rem;
+
+    @media (min-width: 1000px) {
+      width: ${width};
+      margin: 2rem auto 0 auto;
+    }
   `
   const Children = styled.div`
-    width: ${width};
+    width: 100%;
     position: relative;
     height: ${height};
+
+    @media (min-width: 1000px) {
+      width: ${width};
+    }
   `
   const Arrow = styled.button`
     background: none;
@@ -61,10 +69,14 @@ const Carousel = () => {
   const Dots = styled.span`
     position: absolute;
     text-align: center;
-    width: ${width};
+    width: 100%;
     z-index: 1000;
     bottom: 5%;
     left: 0;
+
+    @media (min-width: 1000px) {
+      width: ${width};
+    }
   `
   const Dot = styled.span`
     color: white;

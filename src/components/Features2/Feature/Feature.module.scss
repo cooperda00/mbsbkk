@@ -26,9 +26,9 @@
     right: 0;
     background: linear-gradient(
       to bottom left,
-      rgba($tertiaryD, 0),
-      rgba($tertiaryD, 0),
-      rgba($tertiaryD, 0.5)
+      rgba($primaryD, 0),
+      rgba($primaryD, 0),
+      rgba($primaryD, 0.5)
     );
     opacity: 0;
     transition: 0.5s;
@@ -59,6 +59,7 @@
     position: absolute;
     left: 5%;
     bottom: 5%;
+    font-weight: 300;
 
     // left: 50%;
     // top: 50%;

@@ -8,6 +8,7 @@ import headerLogo from "../../../images/logo_transparent.png"
 // import headerLogo from "../../../images/logo_long.png"
 //Components
 import Navigation from "./Navigation/Navigation"
+import Social from "./Social/Social"
 
 const Header = () => {
   return (
@@ -15,8 +16,10 @@ const Header = () => {
       <Link to="/">
         <img src={headerLogo} alt="logo" className={styles.Logo} />
       </Link>
-
-      <Navigation />
+      <div className={styles.Menu}>
+        <Social />
+        <Navigation />
+      </div>
     </header>
   )
 }

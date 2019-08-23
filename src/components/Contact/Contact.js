@@ -12,7 +12,7 @@ const Contact = () => {
       <div className={styles.Details}>
         <p>
           <strong>Email:</strong>{" "}
-          <a href="mailto:mbsfairbkk@gmail.com">mbsfairbkk@gmail.com</a>
+          <a href="mailto:nfo@mbsbkk.com">info@mbsbkk.com</a>
         </p>
         <p>
           <strong>Phone:</strong> 00000000000

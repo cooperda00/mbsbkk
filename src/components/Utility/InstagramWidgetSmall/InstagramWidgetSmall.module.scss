@@ -3,17 +3,18 @@
 .Container {
   @include flex(column, flex-start, center);
 
-  width: 100%;
+  width: 310px;
+  height: 550px;
 
-  @include min-width(1000px) {
-    padding: $spaceM;
-  }
+  // @include min-width(1000px) {
+  //   padding: 0 $spaceM 0 $spaceM;
+  // }
 }
 
 .UserInfo {
   @include flex(row, flex-start, flex-start);
   width: 100%;
-  margin-bottom: $spaceM;
+  margin-bottom: $spaceS;
 
   .LogoContainer {
     img {
@@ -45,21 +46,21 @@
 .FeedGrid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 15rem);
-  grid-gap: $spaceS;
-  justify-items: center;
+  grid-template-columns: repeat(3, 10rem);
+  // grid-gap: 0.5rem;
+  // justify-items: center;
 
   @include min-width(500px) {
-    grid-template-columns: repeat(3, 12rem);
+    grid-gap: $spaceS;
   }
 
   .Tile {
-    height: 15rem;
-    width: 15rem;
+    height: 100%;
+    width: 100%;
 
-    @include min-width(500px) {
-      height: 12rem;
-      width: 12rem;
-    }
+    // @include min-width(500px) {
+    //   height: 10rem;
+    //   width: 10rem;
+    // }
   }
 }

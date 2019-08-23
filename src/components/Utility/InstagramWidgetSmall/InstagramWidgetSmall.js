@@ -28,17 +28,17 @@ const InstagramWidget = () => {
           {" "}
           <img src={userImage} alt={username} />
         </a>
-        <div>
-          <a
-            href={`https://instagram.com/${username}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <h1>@{username}</h1>{" "}
-          </a>
-          <p>{userBio}</p>
-        </div>
+        {/* <div> */}
+        <a
+          href={`https://instagram.com/${username}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <h1>@{username}</h1>{" "}
+        </a>
+        {/* <p>{userBio}</p> */}
+        {/* </div> */}
       </div>
 
       <div className={styles.FeedGrid}>

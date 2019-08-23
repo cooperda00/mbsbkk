@@ -28,3 +28,7 @@
     margin-left: $spaceM;
   }
 }
+
+.Menu {
+  @include flex(column, flex-start, flex-end);
+}

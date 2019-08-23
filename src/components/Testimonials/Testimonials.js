@@ -14,9 +14,14 @@ const Testimonials = () => {
           title={"Here are some kind words our guests had for us last year"}
         />
       </div>
-      <div className={styles.Masonry}>
+      {/* <div className={styles.Masonry}>
         {dummyData.map((item, i) => {
           return <Item item={item} key={i} />
+        })}
+      </div> */}
+      <div className={styles.Items}>
+        {dummyData.map((item, i) => {
+          return <Item item={item} key={i} location={i + 1} />
         })}
       </div>
     </section>
@@ -26,38 +31,32 @@ const Testimonials = () => {
 const dummyData = [
   {
     name: "James Dove",
-    country: "USA",
+    bigText: "Amazing Atmosphere!",
     text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur nisi nobis corrupti, blanditiis soluta?",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore.",
   },
   {
     name: "Fiona Taggerty",
-    country: "Ireland",
+    bigText: "Uplifting",
     text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit.",
-  },
-  {
-    name: "Jack Dempsy",
-    country: "Canada",
-    text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis",
   },
   {
     name: "Sarah Willingham",
-    country: "Australia",
+    bigText: "Loved Every Moment",
     text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur nisi nobis corrupti, blanditiis soluta? neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur nisi nobis corrupti, blanditiis soluta?",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo.",
   },
   {
     name: "Oliver Bell",
-    country: "UK",
+    bigText: "Amazing Atmosphere!",
     text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur nisi nobis corrupti, blanditiis soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi neque iste ipsam voluptates accusamus vel tenetur earum impedit, exercitationem consectetur nisi nobis corrupti, blanditiis soluta?",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi.",
   },
   {
     name: "Donald Choi",
-    country: "South Korea",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    bigText: "Amazing Atmosphere!",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit?",
   },
 ]
 

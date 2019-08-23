@@ -1,19 +1,86 @@
 @import "../../../vars";
 
-.Item {
-  display: inline-block;
+.Even {
+  @include flex(column, flex-start, center);
+  margin: $spaceL 0;
   width: 100%;
-  background: $secondaryL;
-  padding: $spaceM;
-  margin: 0 0 $spaceM 0;
 
-  p {
-    @include font("SSM");
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-end);
+    align-self: "flex-end";
+  }
+}
+
+.Odd {
+  @include flex(column, flex-start, center);
+  margin: $spaceL 0;
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.Stars {
+  @include font("XL");
+  margin-bottom: $spaceS;
+  color: $primaryD;
+
+  svg:not(:last-of-type) {
+    margin-right: $spaceS;
   }
 
-  h3 {
-    @include font("SM");
+  @include min-width(1000px) {
+    @include font("XXL");
+  }
+}
 
-    margin-top: $spaceM;
+.Title {
+  @include flex(row, center, flex-start);
+  @include font("SSM");
+
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: $spaceS;
+  text-align: center;
+
+  svg {
+    @include font("XS");
+
+    @include min-width(1000px) {
+      @include font("SSM");
+    }
+  }
+
+  svg:first-of-type {
+    margin-right: $spaceS;
+  }
+
+  svg:last-of-type {
+    margin-left: $spaceS;
+  }
+
+  @include min-width(1000px) {
+    @include font("XL");
+  }
+}
+
+.ExtraBlurb {
+  @include font("SSM");
+  text-align: center;
+
+  @include min-width(1000px) {
+    text-align: initial;
+  }
+}
+
+.Name {
+  @include font("SSM");
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: $spaceS;
+
+  @include min-width(1000px) {
+    margin-top: 0;
   }
 }

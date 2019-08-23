@@ -1,0 +1,37 @@
+@import "../../../../vars";
+
+.Social {
+  @include font("M");
+
+  display: none;
+  margin-bottom: $spaceS;
+  margin-right: $spaceL;
+  color: $gray5;
+
+  a {
+    @include flex(column, center, center);
+
+    position: relative;
+    transition: 0.3s;
+  }
+
+  a:not(:last-child) {
+    margin-right: $spaceM;
+  }
+
+  a:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  a svg {
+    color: $gray4;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+  }
+
+  @include min-width(1500px) {
+    margin-bottom: $spaceM;
+  }
+}

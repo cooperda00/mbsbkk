@@ -4,7 +4,8 @@
   @include flex(column, flex-start, center);
   width: 100%;
   min-height: 50vh;
-  // background: $eggshell;
+  max-width: $contentWidthL;
+  margin: 0 auto;
 }
 
 .Container {
@@ -14,19 +15,25 @@
   background: white;
 }
 
-.Masonry {
-  max-width: $contentWidthL;
-  column-gap: $spaceL;
-  background: white;
-  column-count: 1;
-  padding: $spaceL $spaceL 0 $spaceL;
-  // margin-bottom: $spaceL;
-
-  @include min-width(768px) {
-    column-count: 2;
-  }
-
-  @include min-width(1024px) {
-    column-count: 3;
-  }
+.Items {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  max-width: 100rem;
 }
+
+// .Masonry {
+//   max-width: $contentWidthL;
+//   column-gap: $spaceL;
+//   background: white;
+//   column-count: 1;
+//   padding: $spaceL $spaceL 0 $spaceL;
+//   // margin-bottom: $spaceL;
+
+//   @include min-width(768px) {
+//     column-count: 2;
+//   }
+
+//   @include min-width(1024px) {
+//     column-count: 3;
+//   }
+// }
