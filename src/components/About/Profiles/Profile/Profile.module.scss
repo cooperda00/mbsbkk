@@ -1,0 +1,81 @@
+@import "../../../../vars";
+
+.Profile {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+
+    width: 50%;
+  }
+}
+
+//Image
+.Left {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  margin-bottom: $spaceM;
+
+  @include min-width(1000px) {
+    width: 40%;
+    padding: $spaceS;
+    margin-bottom: 0;
+  }
+
+  .ImageContainer {
+    width: 30rem;
+    height: 30rem;
+
+    @include min-width(1000px) {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    @include min-width(1300px) {
+      height: 25rem;
+      width: 25rem;
+    }
+
+    @include min-width(1500px) {
+      height: 28rem;
+      width: 28rem;
+    }
+
+    .Image {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+//Profile
+.Right {
+  width: 100%;
+  padding: $spaceS;
+  max-width: 50rem;
+
+  @include min-width(1000px) {
+    width: 60%;
+  }
+
+  h3 {
+    @include font("SM");
+    margin-bottom: $spaceS;
+  }
+
+  .Passions,
+  .Word {
+    @include font("S");
+    margin-bottom: $spaceS;
+  }
+
+  .Bio {
+    p {
+      @include font("S");
+      margin-bottom: $spaceS;
+    }
+  }
+}

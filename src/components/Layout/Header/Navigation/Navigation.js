@@ -15,8 +15,8 @@ const Navigation = () => {
   return (
     <nav className={styles.Navigation}>
       <div className={styles.DesktopNav}>
-        {links.map(({ path, text }) => (
-          <Link to={path} activeClassName="active">
+        {links.map(({ path, text }, i) => (
+          <Link to={path} activeClassName="active" key={i}>
             {text}
           </Link>
         ))}
@@ -25,8 +25,8 @@ const Navigation = () => {
       <Slide top when={menu}>
         {menu && (
           <div className={styles.MobileNav}>
-            {mobileLinks.map(({ path, text }) => (
-              <Link to={path} tabIndex="-1" activeClassName="active">
+            {mobileLinks.map(({ path, text }, i) => (
+              <Link to={path} tabIndex="-1" activeClassName="active" key={i}>
                 {text}
               </Link>
             ))}

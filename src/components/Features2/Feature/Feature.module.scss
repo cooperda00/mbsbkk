@@ -86,11 +86,12 @@
   p {
     @include font("M");
     padding: 0 $spaceS;
+    text-align: center;
   }
 
-  // @include min-width(1000px) {
-  //   p {
-  //     padding: 0;
-  //   }
-  // }
+  @include min-width(1000px) {
+    p {
+      text-align: left;
+    }
+  }
 }

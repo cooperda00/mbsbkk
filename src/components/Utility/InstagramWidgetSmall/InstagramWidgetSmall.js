@@ -12,9 +12,6 @@ const InstagramWidget = () => {
 
   const username = user.username
   const userImage = user.profile_pic_url
-  const userBio = user.biography
-
-  console.log(insta)
 
   return (
     <div className={styles.Container}>

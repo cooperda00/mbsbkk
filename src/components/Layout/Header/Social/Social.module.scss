@@ -6,7 +6,6 @@
   display: none;
   margin-bottom: $spaceS;
   margin-right: $spaceL;
-  color: $gray5;
 
   a {
     @include flex(column, center, center);
@@ -24,7 +23,7 @@
   }
 
   a svg {
-    color: $gray4;
+    color: $gray5;
   }
 
   @include min-width(1000px) {

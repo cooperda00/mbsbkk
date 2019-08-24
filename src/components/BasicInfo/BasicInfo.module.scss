@@ -23,10 +23,11 @@
 
 .Left,
 .Right {
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, flex-start, center);
   // width: 100%;
   background: white;
   padding: $spaceM $spaceS;
+  text-align: center;
 
   h2 {
     @include font("M");
@@ -46,12 +47,20 @@
   }
 
   @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
     padding: $spaceL $spaceM;
+    text-align: left;
   }
 }
 
 .Left {
   p {
+    margin-bottom: $spaceM;
+  }
+}
+
+.Right {
+  p:last-of-type {
     margin-bottom: $spaceM;
   }
 }

@@ -13,6 +13,11 @@
     a {
       padding: 0 0.5rem;
       margin-right: 2rem;
+      transition: 0.5s;
+    }
+
+    a:hover {
+      color: $primaryDD;
     }
   }
 

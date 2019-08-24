@@ -17,10 +17,24 @@
 
   width: 100%;
 
+  p {
+    margin-top: $spaceM;
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
     width: 20%;
     padding: $spaceL;
+
+    p {
+      text-align: left;
+    }
   }
 
   .Links {
@@ -30,6 +44,12 @@
 
     a {
       margin-bottom: $spaceS;
+      transition: 0.5s;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      color: $primaryDD;
     }
   }
 }

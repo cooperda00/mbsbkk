@@ -15,12 +15,15 @@ const Footer = () => {
         <div className={styles.Links}>
           {links.map((link, i) => {
             return (
-              <Link to={link.path} key={i}>
+              <Link to={link.path} key={i} activeClassName="active">
                 {link.text}
               </Link>
             )
           })}
         </div>
+        <p>
+          Get In Touch: <a href="mailto:info@mbsbkk.com">info@mbsbkk.com</a>
+        </p>
       </div>
 
       <div className={styles.FacebookWidget}>
@@ -40,9 +43,10 @@ const Footer = () => {
           height="500"
           style={{ border: "none", overflow: "hidden" }}
           scrolling="no"
-          frameborder="0"
-          allowTransparency="true"
+          frameBorder="0"
+          allowtransparency="true"
           allow="encrypted-media"
+          title="Facebook Widget"
         ></iframe>
       </div>
 

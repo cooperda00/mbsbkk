@@ -11,10 +11,10 @@ export const links = [
     path: "/get-involved",
     text: "Get Involved",
   },
-  {
-    path: "/contact",
-    text: "Contact",
-  },
+  // {
+  //   path: "/contact",
+  //   text: "Contact",
+  // },
 ]
 
 export const mobileLinks = [
@@ -30,8 +30,8 @@ export const mobileLinks = [
     path: "/get-involved",
     text: "Get Involved",
   },
-  {
-    path: "/contact",
-    text: "Contact",
-  },
+  // {
+  //   path: "/contact",
+  //   text: "Contact",
+  // },
 ]

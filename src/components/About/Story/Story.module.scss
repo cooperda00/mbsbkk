@@ -1,0 +1,55 @@
+@import "../../../vars";
+
+.Story {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  max-width: $contentWidth;
+  min-height: 40vh;
+  margin-top: $spaceL;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+  }
+}
+
+//Image Container
+.Left {
+  @include flex(column, center, center);
+  width: 100%;
+
+  @include min-width(1000px) {
+    padding: 0 $spaceM $spaceM $spaceM;
+    width: 50%;
+  }
+
+  .ImageContainer {
+    width: 100%;
+    margin-bottom: $spaceM;
+  }
+
+  .Image2 {
+    @media screen and (max-width: 999px) {
+      display: none;
+    }
+  }
+}
+
+//Copy
+.Right {
+  width: 100%;
+  padding: $spaceS;
+
+  @include min-width(1000px) {
+    width: 50%;
+  }
+
+  p,
+  h3 {
+    @include font("S");
+    margin-bottom: $spaceM;
+  }
+
+  h3 {
+    color: $primaryDD;
+  }
+}
