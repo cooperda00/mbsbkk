@@ -1,0 +1,26 @@
+@import "../../../vars";
+
+.Copy {
+  width: 100%;
+  padding: 0 $spaceM;
+
+  @include min-width(1000px) {
+    width: 70%;
+  }
+
+  .HTML {
+    h3 {
+      @include font("M");
+      margin: $spaceM 0;
+
+      @include min-width(1000px) {
+        margin: 0;
+      }
+    }
+
+    p {
+      @include font("S");
+      margin-bottom: $spaceS;
+    }
+  }
+}

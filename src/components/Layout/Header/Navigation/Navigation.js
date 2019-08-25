@@ -2,10 +2,11 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Navigation.module.scss"
 //Constants
-import { links, mobileLinks } from "../../../../constants/links"
+import { links } from "../../../../constants/links"
 //Icons
 import { FaPrayingHands } from "react-icons/fa"
 
@@ -22,10 +23,10 @@ const Navigation = () => {
         ))}
       </div>
 
-      <Slide top when={menu}>
+      <Slide right when={menu}>
         {menu && (
           <div className={styles.MobileNav}>
-            {mobileLinks.map(({ path, text }, i) => (
+            {links.map(({ path, text }, i) => (
               <Link to={path} tabIndex="-1" activeClassName="active" key={i}>
                 {text}
               </Link>
@@ -33,6 +34,8 @@ const Navigation = () => {
           </div>
         )}
       </Slide>
+
+      <Fade when={menu}>{menu && <div className={styles.Backdrop} />}</Fade>
 
       <div
         className={styles.MenuButton}

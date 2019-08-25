@@ -89,6 +89,7 @@ $contentWidthL: 165rem;
 
 //CTA Button
 @mixin cta-button() {
+  display: block;
   background: $primary;
   border-radius: 0.2rem;
   border: none;

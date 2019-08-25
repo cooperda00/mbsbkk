@@ -1,0 +1,69 @@
+@import "../../vars";
+
+.FairInfo {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  min-height: 50vh;
+  margin: $spaceS 0;
+
+  @include min-width(1000px) {
+    margin: $spaceL 0;
+  }
+}
+
+.Container {
+  @include flex(column, flex-start, center);
+  width: 100%;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+    width: 80%;
+  }
+}
+
+.SideMenu {
+  display: none;
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, center);
+    width: 30%;
+  }
+
+  .InfoCard {
+    background: $primaryLL;
+    width: 90%;
+    margin-bottom: $spaceM;
+    padding: $spaceS;
+    max-width: 30rem;
+
+    p {
+      @include font("S");
+
+      span {
+        display: block;
+        margin-left: $spaceS;
+      }
+    }
+  }
+
+  .MenuTile {
+    width: 90%;
+    position: relative;
+    margin-bottom: $spaceM;
+    max-width: 30rem;
+
+    p {
+      @include font("SM");
+      position: absolute;
+      bottom: 5%;
+      left: 3%;
+      z-index: 1000;
+      color: white;
+    }
+
+    .Image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 .Even {
   @include flex(column, flex-start, center);
-  margin: $spaceL 0;
+  margin: $spaceS 0;
   width: 100%;
 
   @include min-width(1000px) {
@@ -13,7 +13,7 @@
 
 .Odd {
   @include flex(column, flex-start, center);
-  margin: $spaceL 0;
+  margin: $spaceS 0;
 
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
@@ -68,6 +68,7 @@
 .ExtraBlurb {
   @include font("SSM");
   text-align: center;
+  padding: 0 $spaceS;
 
   @include min-width(1000px) {
     text-align: initial;

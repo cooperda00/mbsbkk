@@ -10,15 +10,8 @@ const Testimonials = () => {
   return (
     <section className={styles.Testimonials}>
       <div className={styles.Container}>
-        <Title
-          title={"Here are some kind words our guests had for us last year"}
-        />
+        <Title title={"Visitor Appreciation"} />
       </div>
-      {/* <div className={styles.Masonry}>
-        {dummyData.map((item, i) => {
-          return <Item item={item} key={i} />
-        })}
-      </div> */}
       <div className={styles.Items}>
         {dummyData.map((item, i) => {
           return <Item item={item} key={i} location={i + 1} />
@@ -30,33 +23,56 @@ const Testimonials = () => {
 
 const dummyData = [
   {
-    name: "James Dove",
-    bigText: "Amazing Atmosphere!",
-    text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore.",
+    name: "SB, France",
+    bigText: "Bravo!",
+    text: "Bravo! Such and inspiring event.",
+    stars: 5,
   },
   {
-    name: "Fiona Taggerty",
-    bigText: "Uplifting",
-    text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis",
+    name: "DG, UK",
+    bigText: "Incredible",
+    text: "What an incredible day!",
+    stars: 5,
   },
   {
-    name: "Sarah Willingham",
-    bigText: "Loved Every Moment",
-    text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo.",
+    name: "GB, France",
+    bigText: "Best Memories",
+    text: "It will be one of my best memories in Bangkok.",
+    stars: 5,
   },
   {
-    name: "Oliver Bell",
-    bigText: "Amazing Atmosphere!",
+    name: "RC, UK",
+    bigText: "Good Vibes",
     text:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto corporis, tempore quo pariatur commodi.",
+      "Loved all the workshops and left with some seriously good vibes and goodies.",
+    stars: 4,
   },
   {
-    name: "Donald Choi",
-    bigText: "Amazing Atmosphere!",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit?",
+    name: "TN, Thailand",
+    bigText: "Healing",
+    text: "Fun holistic shopping spree,educational,healing and delicious.",
+    stars: 4,
+  },
+  {
+    name: "LA, Sweden",
+    bigText: "Community",
+    text:
+      "So for me the best part was being part and creating a sense of community. Oh! And being tempted to try and learn new things.",
+    stars: 4,
+  },
+  {
+    name: "LM, USA",
+    bigText: "Magical",
+    text:
+      "I can't express how much my soul is on fire after such a magical event.",
+    stars: 5,
+  },
+  {
+    name: "AC, USA",
+    bigText: "Heartfully Created",
+    text:
+      "Heartfully created event with such a beautiful variety of vendors and healers.",
+    stars: 5,
   },
 ]
 

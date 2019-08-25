@@ -31,21 +31,21 @@
 }
 
 .MobileNav {
-  @include flex(row, center, center);
+  @include flex(column, flex-start, flex-start);
 
   position: absolute;
-  width: 100vw;
-  height: 15rem;
+  width: 80vw;
+  height: 100vh;
   top: 0;
   right: 0;
+  padding: $spaceL $spaceM;
   background: white;
-  flex-wrap: wrap;
-  padding: 0 4rem;
+  z-index: 1500;
 
   a {
     @include font("S");
-    padding: 0 1rem;
     height: 3rem;
+    margin-bottom: $spaceS;
   }
 
   @include min-width(768px) {
@@ -60,7 +60,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 100;
+  z-index: 3000;
   background: white;
   height: 5rem;
   width: 5rem;
@@ -68,6 +68,20 @@
   box-shadow: inset 0 0 0 1px rgba($gray6, 0.2);
 
   @include min-width(768px) {
+    display: none;
+  }
+}
+
+.Backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba($gray5, 0.8);
+  z-index: 1000;
+
+  @include min-width(1000px) {
     display: none;
   }
 }

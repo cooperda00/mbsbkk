@@ -32,12 +32,12 @@ const BasicInfo = () => {
         <div className={styles.Right}>
           <h2>Next Event Details:</h2>
 
-          <p>Dates: 1-2 February 2020</p>
-          <p>Time: 9am-6pm</p>
+          <p>Dates: 1 - 2 February 2020</p>
+          <p>Time: 9am - 6pm</p>
           <p>
             Venue:{" "}
-            <a href="https://goo.gl/maps/76EQNyY2xHzU6qHC6">
-              Jasmine Building, Asok
+            <a href="https://goo.gl/maps/MToD7u3Gn7BDquKH8">
+              Jasmine City Hotel, Asok
             </a>{" "}
           </p>
 

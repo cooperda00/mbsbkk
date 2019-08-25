@@ -1,0 +1,41 @@
+@import "../../../vars";
+
+.TopMenu {
+  @include flex(column, flex-start, center);
+  margin-top: $spaceM;
+  width: 100%;
+
+  @include min-width(1000px) {
+    display: none;
+  }
+
+  .InfoCard {
+    border: 0.2rem solid $primary;
+    width: 90%;
+    margin-bottom: $spaceM;
+    padding: $spaceS;
+    max-width: 30rem;
+
+    p {
+      @include font("S");
+
+      span {
+        display: block;
+        margin-left: $spaceS;
+
+        a {
+          color: dodgerblue;
+        }
+      }
+    }
+  }
+
+  .Links {
+    @include flex(column, flex-start, center);
+
+    a {
+      @include font("S");
+      margin-bottom: $spaceS;
+    }
+  }
+}

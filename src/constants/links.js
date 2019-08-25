@@ -8,30 +8,30 @@ export const links = [
     text: "About Us",
   },
   {
+    path: "/fair-info",
+    text: "Fair Info",
+  },
+  {
     path: "/get-involved",
     text: "Get Involved",
   },
-  // {
-  //   path: "/contact",
-  //   text: "Contact",
-  // },
 ]
 
-export const mobileLinks = [
+export const fairInfoLinks = [
   {
-    path: "/",
-    text: "Home",
+    path: "/fair-info",
+    text: "Fair Info",
   },
   {
-    path: "/about",
-    text: "About Us",
+    path: "/fair-info/exhibitors",
+    text: "Exhibitors",
   },
   {
-    path: "/get-involved",
-    text: "Get Involved",
+    path: "/fair-info/healing-zone",
+    text: "Healing Zone",
   },
-  // {
-  //   path: "/contact",
-  //   text: "Contact",
-  // },
+  {
+    path: "/fair-info/workshops-and-seminars",
+    text: "Workshops and Seminars",
+  },
 ]

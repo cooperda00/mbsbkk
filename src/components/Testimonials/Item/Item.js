@@ -9,11 +9,22 @@ const Item = ({ item, location }) => {
   return (
     <div className={location % 2 ? `${styles.Even}` : `${styles.Odd}`}>
       <div className={styles.Stars}>
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
+        {item.stars === 5 ? (
+          <>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </>
+        ) : (
+          <>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </>
+        )}
       </div>
       <h3 className={styles.Title}>
         <FaQuoteLeft /> {item.bigText} <FaQuoteRight />
