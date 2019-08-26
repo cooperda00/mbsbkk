@@ -15,9 +15,24 @@ const Footer = () => {
         <div className={styles.Links}>
           {links.map((link, i) => {
             return (
-              <Link to={link.path} key={i} activeClassName="active">
-                {link.text}
-              </Link>
+              <>
+                <Link to={link.path} key={i} activeClassName="active">
+                  {link.text}
+                </Link>
+                {link.subLinks &&
+                  link.subLinks.map((subLink, i) => {
+                    return (
+                      <Link
+                        to={subLink.path}
+                        key={i + 100}
+                        activeClassName="active"
+                        className={styles.SubLink}
+                      >
+                        {subLink.text}
+                      </Link>
+                    )
+                  })}
+              </>
             )
           })}
         </div>

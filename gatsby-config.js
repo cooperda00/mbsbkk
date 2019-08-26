@@ -35,7 +35,7 @@ module.exports = {
     },
 
     //CONTENT SOURCING ***************************
-
+    `gatsby-plugin-mdx`,
     //All Markdown Files
     {
       resolve: `gatsby-source-filesystem`,

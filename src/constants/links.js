@@ -10,6 +10,20 @@ export const links = [
   {
     path: "/fair-info",
     text: "Fair Info",
+    subLinks: [
+      {
+        path: "/fair-info/exhibitors",
+        text: "Exhibitors",
+      },
+      {
+        path: "/fair-info/healing-zone",
+        text: "Healing Zone",
+      },
+      {
+        path: "/fair-info/workshops-and-seminars",
+        text: "Workshops & Seminars",
+      },
+    ],
   },
   {
     path: "/get-involved",

@@ -30,18 +30,20 @@ const SideMenu = ({ links }) => {
         </p>
       </div>
 
-      {links.map((link, i) => {
-        return (
-          <Link to={link.path} key={i} className={styles.MenuTile}>
-            <p>{link.text}</p>
+      {links
+        ? links.map((link, i) => {
+            return (
+              <Link to={link.path} key={i} className={styles.MenuTile}>
+                <p>{link.text}</p>
 
-            <Image fluid={image} className={styles.Image} />
+                <Image fluid={image} className={styles.Image} />
 
-            <div className={styles.Overlay} />
-            <div className={styles.Overlay2} />
-          </Link>
-        )
-      })}
+                <div className={styles.Overlay} />
+                <div className={styles.Overlay2} />
+              </Link>
+            )
+          })
+        : undefined}
     </div>
   )
 }

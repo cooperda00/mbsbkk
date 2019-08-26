@@ -14,9 +14,13 @@ const WorkshopsAndSeminarsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="" />
+      <SEO
+        titleExtra="Workshops And Seminars"
+        keywordsExtra=""
+        descriptionExtra=""
+      />
       <Hero type="page" image={image}>
-        <BannerText title="Exhibitors" text="dark" />
+        <BannerText title="Workshops And Seminars" text="dark" />
       </Hero>
       <FairInfo copy={copy} />
     </Layout>

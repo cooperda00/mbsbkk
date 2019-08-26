@@ -16,20 +16,53 @@ const Navigation = () => {
   return (
     <nav className={styles.Navigation}>
       <div className={styles.DesktopNav}>
-        {links.map(({ path, text }, i) => (
-          <Link to={path} activeClassName="active" key={i}>
-            {text}
-          </Link>
+        {links.map(({ path, text, subLinks }, i) => (
+          <div
+            className={styles.MenuItemWrapper}
+            style={{ position: "relative" }}
+            key={text}
+          >
+            <Link
+              to={path}
+              activeClassName="active"
+              key={i}
+              partiallyActive={text !== "Home" ? true : false}
+            >
+              {text}
+            </Link>
+            {text === "Fair Info" && (
+              <div className={styles.InfoSubMenu}>
+                {subLinks.map((subLink, i) => {
+                  return <Link to={subLink.path}>{subLink.text}</Link>
+                })}
+              </div>
+            )}
+          </div>
         ))}
       </div>
 
       <Slide right when={menu}>
         {menu && (
           <div className={styles.MobileNav}>
-            {links.map(({ path, text }, i) => (
-              <Link to={path} tabIndex="-1" activeClassName="active" key={i}>
-                {text}
-              </Link>
+            {links.map(({ path, text, subLinks }, i) => (
+              <>
+                <Link to={path} tabIndex="-1" activeClassName="active" key={i}>
+                  {text}
+                </Link>
+                {subLinks &&
+                  subLinks.map((subLink, i) => {
+                    return (
+                      <Link
+                        to={subLink.path}
+                        key={i + 100}
+                        activeClassName="active"
+                        className={styles.SubLink}
+                      >
+                        {subLink.text}
+                      </Link>
+                    )
+                  })}
+              </>
             ))}
           </div>
         )}

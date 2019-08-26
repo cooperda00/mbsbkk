@@ -85,3 +85,53 @@
     display: none;
   }
 }
+
+.SubLink {
+  @include font("XS");
+  margin-left: $spaceM;
+}
+
+.MenuItemWrapper {
+  .InfoSubMenu {
+    @include flex(column, flex-start, flex-start);
+
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: $spaceM;
+    left: -3rem;
+    padding: $spaceM;
+    transition: 0.5s;
+    width: 35rem;
+
+    a {
+      @include font("XS");
+      margin-bottom: $spaceS;
+      letter-spacing: 0.1rem;
+
+      @include min-width(1500px) {
+        @include font("S");
+      }
+    }
+
+    a:hover {
+      color: $primaryDD;
+    }
+  }
+
+  // .ServicesSubMenu {
+  //   width: 38rem;
+  // }
+
+  // .ComplianceSubMenu {
+  //   width: 20rem;
+  // }
+
+  &:hover {
+    .InfoSubMenu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

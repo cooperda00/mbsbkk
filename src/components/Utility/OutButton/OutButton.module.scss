@@ -1,0 +1,15 @@
+@import "../../../vars";
+
+.OutButton {
+  @include cta-button();
+  @include font("S");
+
+  text-align: center;
+  font-weight: 300;
+  margin: $spaceM 0;
+}
+
+.AltColor {
+  background: $primaryDD;
+  box-shadow: 0px 2px 0px 0px $primaryLL;
+}

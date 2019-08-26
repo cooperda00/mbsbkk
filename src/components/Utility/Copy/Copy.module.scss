@@ -15,6 +15,7 @@
 
       @include min-width(1000px) {
         margin: 0;
+        margin-bottom: $spaceS;
       }
     }
 

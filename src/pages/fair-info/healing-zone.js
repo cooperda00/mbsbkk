@@ -14,9 +14,9 @@ const HealingZonePage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra="Healing Zone" keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}>
-        <BannerText title="Exhibitors" text="dark" />
+        <BannerText title="Healing Zone" text="dark" />
       </Hero>
       <FairInfo copy={copy} />
     </Layout>

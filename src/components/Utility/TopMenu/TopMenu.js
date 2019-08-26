@@ -27,13 +27,15 @@ const TopMenu = ({ links }) => {
       </div>
 
       <div className={styles.Links}>
-        {links.map((link, i) => {
-          return (
-            <Link to={link.path} key={i} activeClassName="active">
-              {link.text}
-            </Link>
-          )
-        })}
+        {links
+          ? links.map((link, i) => {
+              return (
+                <Link to={link.path} key={i} activeClassName="active">
+                  {link.text}
+                </Link>
+              )
+            })
+          : undefined}
       </div>
     </div>
   )

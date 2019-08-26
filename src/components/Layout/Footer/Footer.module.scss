@@ -73,3 +73,8 @@
     width: 40%;
   }
 }
+
+.SubLink {
+  @include font("SSM");
+  margin-left: $spaceM;
+}
