@@ -37,7 +37,7 @@
 //Copy
 .Right {
   width: 100%;
-  padding: $spaceS;
+  padding: 0 $spaceS;
 
   @include min-width(1000px) {
     width: 50%;
@@ -50,6 +50,7 @@
   }
 
   h3 {
+    @include font("M");
     color: $primaryDD;
   }
 }

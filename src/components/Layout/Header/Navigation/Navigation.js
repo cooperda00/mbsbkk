@@ -68,7 +68,16 @@ const Navigation = () => {
         )}
       </Slide>
 
-      <Fade when={menu}>{menu && <div className={styles.Backdrop} />}</Fade>
+      <Fade when={menu}>
+        {menu && (
+          <div
+            className={styles.Backdrop}
+            onClick={() => {
+              toggleMenu(false)
+            }}
+          />
+        )}
+      </Fade>
 
       <div
         className={styles.MenuButton}

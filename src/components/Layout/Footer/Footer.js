@@ -7,6 +7,8 @@ import styles from "./Footer.module.scss"
 import { links } from "../../../constants/links"
 //Components
 import InstagramWidgetSmall from "../../Utility/InstagramWidgetSmall/InstagramWidgetSmall"
+//Icons
+import { FaEnvelope } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -35,10 +37,13 @@ const Footer = () => {
               </>
             )
           })}
+          <p>
+            Get In Touch:{" "}
+            <a href="mailto:info@mbsbkk.com">
+              <FaEnvelope />
+            </a>
+          </p>
         </div>
-        <p>
-          Get In Touch: <a href="mailto:info@mbsbkk.com">info@mbsbkk.com</a>
-        </p>
       </div>
 
       <div className={styles.FacebookWidget}>

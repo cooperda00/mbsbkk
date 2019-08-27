@@ -11,7 +11,7 @@ const Features = ({ features }) => {
   return (
     <section className={styles.Features}>
       <div className={styles.Container}>
-        <Title title="Creating & connecting a happy, healthy & conscious community" />
+        <Title title="Creating a happy, healthy & conscious community" />
       </div>
 
       <div className={styles.FeaturesContainer}>

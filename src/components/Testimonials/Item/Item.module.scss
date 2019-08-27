@@ -8,6 +8,13 @@
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-end);
     align-self: "flex-end";
+    margin: -2rem 0 0 0;
+  }
+
+  .ExtraBlurb {
+    @include min-width(1000px) {
+      text-align: right;
+    }
   }
 }
 
@@ -17,11 +24,12 @@
 
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
+    margin: -2rem 0 0 0;
   }
 }
 
 .Stars {
-  @include font("XL");
+  @include font("L");
   margin-bottom: $spaceS;
   color: $primaryD;
 
@@ -30,7 +38,7 @@
   }
 
   @include min-width(1000px) {
-    @include font("XXL");
+    @include font("L");
   }
 }
 
@@ -48,7 +56,7 @@
     @include font("XS");
 
     @include min-width(1000px) {
-      @include font("SSM");
+      @include font("S");
     }
   }
 
@@ -61,7 +69,7 @@
   }
 
   @include min-width(1000px) {
-    @include font("XL");
+    @include font("L");
   }
 }
 
@@ -69,9 +77,11 @@
   @include font("SSM");
   text-align: center;
   padding: 0 $spaceS;
+  max-width: 50rem;
 
   @include min-width(1000px) {
     text-align: initial;
+    padding: 0;
   }
 }
 

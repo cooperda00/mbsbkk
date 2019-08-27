@@ -1,6 +1,8 @@
 // @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
 
 //COLORS
 $primary: #6ec7c0; //Main Turquoise
@@ -33,7 +35,8 @@ $gray5: hsl(24, 24%, 11%);
 $gray6: rgb(69, 69, 69); //Cool Gray
 
 //FONT
-$fontStack: "Roboto Slab", serif;
+// $fontStack: "Roboto Slab", serif;
+$fontStack: "Open Sans", sans-serif;
 $fontG: 8rem;
 $fontXXL: 5rem;
 $fontXL: 4rem;

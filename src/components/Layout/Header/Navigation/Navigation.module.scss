@@ -33,7 +33,7 @@
 .MobileNav {
   @include flex(column, flex-start, flex-start);
 
-  position: absolute;
+  position: fixed;
   width: 80vw;
   height: 100vh;
   top: 0;
@@ -73,7 +73,7 @@
 }
 
 .Backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

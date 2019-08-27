@@ -8,7 +8,7 @@ passions:
     "discovering ferments",
   ]
 word: "Inspiration"
-image: "./test_portrait_1.jpg"
+image: "./alison_portrait.jpg"
 type: "bio"
 number: 1
 ---

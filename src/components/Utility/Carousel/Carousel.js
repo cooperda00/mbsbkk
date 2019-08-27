@@ -70,7 +70,7 @@ const Carousel = () => {
     position: absolute;
     text-align: center;
     width: 100%;
-    z-index: 1000;
+    z-index: 500;
     bottom: 5%;
     left: 0;
 

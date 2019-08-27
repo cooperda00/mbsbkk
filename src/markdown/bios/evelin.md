@@ -2,7 +2,7 @@
 name: "Evelin Nagy"
 passions: ["sound healing", "connecting", "audio books", "dreaming"]
 word: "Love"
-image: "./test_portrait_2.jpg"
+image: "./evelin_portrait.jpg"
 type: "bio"
 number: 2
 ---

@@ -17,24 +17,10 @@
 
   width: 100%;
 
-  p {
-    margin-top: $spaceM;
-    text-align: center;
-
-    a {
-      text-decoration: underline;
-      color: blue;
-    }
-  }
-
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
-    width: 20%;
+    width: 30%;
     padding: $spaceL;
-
-    p {
-      text-align: left;
-    }
   }
 
   .Links {
@@ -51,6 +37,21 @@
     a:hover {
       color: $primaryDD;
     }
+
+    p {
+      @include flex(row, center, center);
+      margin-top: $spaceS;
+
+      a {
+        @include flex(column, center, baseline);
+        color: $gray4;
+        margin-left: $spaceS;
+
+        svg {
+          margin-top: 1rem;
+        }
+      }
+    }
   }
 }
 
@@ -60,7 +61,7 @@
   margin-top: $spaceM;
 
   @include min-width(1000px) {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -70,7 +71,7 @@
   margin-top: $spaceM;
 
   @include min-width(1000px) {
-    width: 40%;
+    width: 35%;
   }
 }
 
