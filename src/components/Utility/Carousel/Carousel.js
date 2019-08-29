@@ -27,10 +27,11 @@ const Carousel = () => {
     overflow: hidden;
     width: 100vw;
     height: ${height};
+    margin-top: 15rem;
 
     @media (min-width: 1000px) {
       width: ${width};
-      margin: 2rem auto 0 auto;
+      margin: 17rem auto 0 auto;
     }
   `
   const Children = styled.div`

@@ -2,7 +2,7 @@
 
 .Footer {
   @include flex(column, flex-start, center);
-  min-height: 35rem;
+  // min-height: 35rem;
   width: 100%;
   background: lighten($gray1, 2%);
 
@@ -20,36 +20,32 @@
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
     width: 30%;
-    padding: $spaceL;
+    padding-left: $spaceL;
   }
 
   .Links {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, flex-start, center);
 
     margin-top: $spaceM;
 
-    a {
-      margin-bottom: $spaceS;
-      transition: 0.5s;
-      white-space: nowrap;
-    }
-
-    a:hover {
-      color: $primaryDD;
-    }
-
-    p {
-      @include flex(row, center, center);
+    .Icons {
       margin-top: $spaceS;
-
       a {
-        @include flex(column, center, baseline);
-        color: $gray4;
-        margin-left: $spaceS;
+        margin-right: $spaceS;
+        transition: 0.5s;
+        white-space: nowrap;
+      }
 
-        svg {
-          margin-top: 1rem;
-        }
+      a:hover {
+        color: $primaryDD;
+      }
+    }
+
+    @include min-width(1000px) {
+      @include flex(row, center, center);
+
+      .Icons {
+        margin-left: $spaceS;
       }
     }
   }

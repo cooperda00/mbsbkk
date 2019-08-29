@@ -22,7 +22,7 @@
   @include flex(column, flex-start, center);
   width: 100%;
   max-width: 80rem;
-  margin: $spaceM 0;
+  margin: $spaceL 0;
 
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);

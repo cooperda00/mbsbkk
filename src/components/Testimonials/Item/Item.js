@@ -8,7 +8,7 @@ import { FaStar, FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
 const Item = ({ item, location }) => {
   return (
     <div className={location % 2 ? `${styles.Even}` : `${styles.Odd}`}>
-      <div className={styles.Stars}>
+      {/* <div className={styles.Stars}>
         {item.stars === 5 ? (
           <>
             <FaStar />
@@ -25,7 +25,7 @@ const Item = ({ item, location }) => {
             <FaStar />
           </>
         )}
-      </div>
+      </div> */}
       <h3 className={styles.Title}>
         <FaQuoteLeft /> {item.bigText} <FaQuoteRight />
       </h3>

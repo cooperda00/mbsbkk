@@ -1,11 +1,16 @@
 import React from "react"
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaRegEnvelope } from "react-icons/fa"
 
 export const social = [
   {
+    name: "Email",
+    path: "mailto:info@mbsbkk.com",
+    icon: <FaRegEnvelope />,
+  },
+  {
     name: "Facebook",
     path: "https://www.facebook.com/MBSBKK",
-    icon: <FaFacebookSquare />,
+    icon: <FaFacebookF />,
   },
   {
     name: "Instagram",

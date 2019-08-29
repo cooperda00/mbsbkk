@@ -63,7 +63,7 @@ const InstagramWidget = () => {
 
 const query = graphql`
   {
-    insta: allInstaNode {
+    insta: allInstaNode(limit: 9) {
       edges {
         node {
           id
