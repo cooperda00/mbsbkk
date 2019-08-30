@@ -25,5 +25,9 @@
 }
 
 .Page {
-  min-height: 70vh;
+  min-height: 45vh;
+
+  @include min-width(768px) {
+    min-height: 70vh;
+  }
 }
