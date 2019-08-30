@@ -19,8 +19,8 @@ const Carousel = () => {
   const image4 = data.image_4.childImageSharp.fluid
   const image5 = data.image_5.childImageSharp.fluid
 
-  const width = "70vw",
-    height = "60vh"
+  const width = "80vw",
+    height = "70vh"
 
   const Container = styled.div`
     position: relative;

@@ -5,6 +5,7 @@
   // min-height: 35rem;
   width: 100%;
   background: lighten($gray1, 2%);
+  padding: $spaceM 0;
 
   @include min-width(1000px) {
     @include flex(row, flex-start, flex-start);

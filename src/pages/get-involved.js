@@ -4,7 +4,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
-import BannerText from "../components/Utility/BannerText/BannerText"
+// import BannerText from "../components/Utility/BannerText/BannerText"
 import GetInvolved from "../components/GetInvolved/GetInvolved"
 
 const GetInvolvedPage = ({ data }) => {
@@ -15,7 +15,7 @@ const GetInvolvedPage = ({ data }) => {
     <Layout>
       <SEO titleExtra="Get Involved" keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}>
-        <BannerText title="Get Involved" text="dark" />
+        {/* <BannerText title="Get Involved" text="dark" /> */}
       </Hero>
       <GetInvolved mdx={mdx} />
     </Layout>
@@ -24,7 +24,7 @@ const GetInvolvedPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "bg_test.jpg" }) {
+    bg: file(relativePath: { eq: "get_involved_header.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

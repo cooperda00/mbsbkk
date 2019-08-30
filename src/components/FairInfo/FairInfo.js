@@ -6,8 +6,8 @@ import styles from "./FairInfo.module.scss"
 import { fairInfoLinks } from "../../constants/links"
 //Components
 import Copy from "../Utility/Copy/Copy"
-import SideMenu from "../Utility/SideMenu/SideMenu"
-import TopMenu from "../Utility/TopMenu/TopMenu"
+import SideMenu from "./SideMenu/SideMenu"
+// import TopMenu from "../Utility/TopMenu/TopMenu"
 
 const FairInfo = ({ copy }) => {
   const html = copy.html
@@ -15,9 +15,9 @@ const FairInfo = ({ copy }) => {
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
-        <TopMenu links={fairInfoLinks} />
+        {/* <TopMenu links={fairInfoLinks} /> */}
 
-        <SideMenu links={fairInfoLinks} />
+        <SideMenu />
 
         <Copy html={html} />
       </div>

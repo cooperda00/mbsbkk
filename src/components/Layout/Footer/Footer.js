@@ -6,15 +6,16 @@ import styles from "./Footer.module.scss"
 import { social } from "../../../constants/social"
 //Components
 import InstagramWidgetSmall from "../../Utility/InstagramWidgetSmall/InstagramWidgetSmall"
+import MailChimp from "../../Utility/MailChimp/MailChimp"
 
 const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <div className={styles.FooterNav}>
         <div className={styles.Links}>
-          <p>Get in touch:</p>
+          <p>Get In Touch:</p>
 
-          <div class={styles.Icons}>
+          <div className={styles.Icons}>
             {social.map((link, i) => {
               return (
                 <a href={link.path} key={i}>
@@ -24,6 +25,8 @@ const Footer = () => {
             })}
           </div>
         </div>
+
+        <MailChimp />
       </div>
 
       <div className={styles.FacebookWidget}>

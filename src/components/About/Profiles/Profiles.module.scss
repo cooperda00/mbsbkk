@@ -4,10 +4,10 @@
   @include flex(column, flex-start, center);
   width: 100%;
   max-width: $contentWidthL;
-  margin-top: $spaceL;
   padding: $spaceS;
 
   @include min-width(1000px) {
-    @include flex(row, center, flex-start);
+    @include flex(row, space-between, flex-start);
+    margin-top: $spaceS;
   }
 }

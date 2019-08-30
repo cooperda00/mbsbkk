@@ -3,13 +3,13 @@
 .Hero {
   @include flex(column, flex-start, center);
 
-  background: linear-gradient(
-    rgba(white, 0.8),
-    rgba(white, 0.6),
-    rgba(white, 0.8)
-  );
+  // background: linear-gradient(
+  //   rgba(white, 0.8),
+  //   rgba(white, 0.6),
+  //   rgba(white, 0.8)
+  // );
 
-  background-position: center;
+  // background-position: center;
   background-size: cover;
   opacity: 1 !important;
   width: 100%;
@@ -25,5 +25,5 @@
 }
 
 .Page {
-  min-height: 50vh;
+  min-height: 70vh;
 }

@@ -44,23 +44,14 @@
 }
 
 .FeedGrid {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 10rem);
-  // grid-gap: 0.5rem;
-  // justify-items: center;
-
-  @include min-width(500px) {
-    grid-gap: $spaceS;
-  }
+  margin-left: $spaceS;
 
   .Tile {
-    height: 100%;
-    width: 100%;
-
-    // @include min-width(500px) {
-    //   height: 10rem;
-    //   width: 10rem;
-    // }
+    height: 30%;
+    width: 30%;
+    margin: 0 $spaceS $spaceS 0;
   }
 }

@@ -29,6 +29,10 @@ export const links = [
     path: "/get-involved",
     text: "Get Involved",
   },
+  {
+    path: "/charities",
+    text: "Our Charities",
+  },
 ]
 
 export const fairInfoLinks = [

@@ -5,35 +5,36 @@
 
   @include min-width(1000px) {
     @include flex(column, flex-start, center);
-    width: 30%;
+    width: 20%;
   }
 
-  .InfoCard {
-    border: 0.2rem solid $primary;
-    width: 90%;
-    margin-bottom: $spaceM;
-    padding: $spaceS;
-    max-width: 30rem;
+  // .InfoCard {
+  //   border: 0.2rem solid $primary;
+  //   width: 90%;
+  //   margin-bottom: $spaceM;
+  //   padding: $spaceS;
+  //   max-width: 30rem;
 
-    p {
-      @include font("S");
+  //   p {
+  //     @include font("S");
 
-      span {
-        display: block;
-        margin-left: $spaceS;
+  //     span {
+  //       display: block;
+  //       margin-left: $spaceS;
 
-        a {
-          color: dodgerblue;
-        }
-      }
-    }
-  }
+  //       a {
+  //         color: dodgerblue;
+  //       }
+  //     }
+  //   }
+  // }
 
   .MenuTile {
     width: 90%;
     position: relative;
-    margin-bottom: $spaceM;
+    margin-bottom: $spaceS;
     max-width: 30rem;
+    height: 15rem;
 
     p {
       @include font("SM");
@@ -60,8 +61,8 @@
       z-index: 900;
       background: linear-gradient(
         to bottom,
-        rgba(white, 0) 65%,
-        rgba($gray5, 0.5) 100%
+        rgba(white, 0) 55%,
+        rgba($gray5, 0.8) 100%
       );
       opacity: 1;
       transition: 0.5s;

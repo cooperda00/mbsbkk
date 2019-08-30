@@ -4,27 +4,27 @@ import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import About from "../components/About/About"
 import Hero from "../components/Utility/Hero/Hero"
 // import BannerText from "../components/Utility/BannerText/BannerText"
 
-const AboutPage = ({ data }) => {
+const CharitiesPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
 
   return (
     <Layout>
-      <SEO titleExtra="About Us" keywordsExtra="" descriptionExtra="" />
-      <Hero image={image} type="page">
+      <SEO titleExtra="Our Charities" keywordsExtra="" descriptionExtra="" />
+      <Hero image={image} type="page" position="top">
         {/* <BannerText title="About Us" text="dark" /> */}
       </Hero>
-      <About />
+
+      <h1>Charity Info Goes Here</h1>
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "seated_lotus.jpg" }) {
+    bg: file(relativePath: { eq: "our_charities.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -34,4 +34,4 @@ export const query = graphql`
   }
 `
 
-export default AboutPage
+export default CharitiesPage

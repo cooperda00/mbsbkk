@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import Hero from "../../components/Utility/Hero/Hero"
-import BannerText from "../../components/Utility/BannerText/BannerText"
+// import BannerText from "../../components/Utility/BannerText/BannerText"
 import FairInfo from "../../components/FairInfo/FairInfo"
 
 const ExhibitorsPage = ({ data }) => {
@@ -16,7 +16,7 @@ const ExhibitorsPage = ({ data }) => {
     <Layout>
       <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}>
-        <BannerText title="Exhibitors" text="dark" />
+        {/* <BannerText title="Exhibitors" text="dark" /> */}
       </Hero>
       <FairInfo copy={copy} />
     </Layout>
@@ -25,9 +25,9 @@ const ExhibitorsPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "bg_test.jpg" }) {
+    bg: file(relativePath: { eq: "exhibitors.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
         }
       }

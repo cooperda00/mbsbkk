@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-robots-txt",
     `gatsby-transformer-remark`,
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
@@ -33,9 +34,16 @@ module.exports = {
         icon: "src/images/logo_small_50.png",
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://mbsbkk.us18.list-manage.com/subscribe/post?u=223da66dcdda49f2ca77a2a0d&amp;id=3a0fa5d563", // add your MC list endpoint here; see instructions below
+      },
+    },
 
     //CONTENT SOURCING ***************************
-    `gatsby-plugin-mdx`,
+
     //All Markdown Files
     {
       resolve: `gatsby-source-filesystem`,

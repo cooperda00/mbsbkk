@@ -8,7 +8,7 @@ import styles from "./Navigation.module.scss"
 //Constants
 import { links } from "../../../../constants/links"
 //Icons
-import { FaPrayingHands } from "react-icons/fa"
+import { FaBars } from "react-icons/fa"
 
 const Navigation = () => {
   const [menu, toggleMenu] = useState(false)
@@ -33,7 +33,11 @@ const Navigation = () => {
             {text === "Fair Info" && (
               <div className={styles.InfoSubMenu}>
                 {subLinks.map((subLink, i) => {
-                  return <Link to={subLink.path}>{subLink.text}</Link>
+                  return (
+                    <Link to={subLink.path} key={i}>
+                      {subLink.text}
+                    </Link>
+                  )
                 })}
               </div>
             )}
@@ -85,7 +89,7 @@ const Navigation = () => {
           toggleMenu(!menu)
         }}
       >
-        <FaPrayingHands />
+        <FaBars />
       </div>
     </nav>
   )

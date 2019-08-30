@@ -6,30 +6,34 @@
   max-width: $contentWidth;
   min-height: 40vh;
   margin-top: $spaceL;
+  padding: 0 $spaceM $spaceM $spaceM;
 
-  @include min-width(1000px) {
-    @include flex(row, center, flex-start);
-  }
-}
-
-//Image Container
-.Left {
-  @include flex(column, center, center);
-  width: 100%;
-
-  @include min-width(1000px) {
-    padding: 0 $spaceM $spaceM $spaceM;
-    width: 50%;
-  }
-
-  .ImageContainer {
+  h2 {
+    @include font("XXL");
+    margin-bottom: $spaceS;
     width: 100%;
-    margin-bottom: $spaceM;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+    @include min-width(1000px) {
+      text-align: left;
+    }
   }
 
-  .Image2 {
-    @media screen and (max-width: 999px) {
-      display: none;
+  h3 {
+    @include font("XL");
+    text-align: center;
+    width: 100%;
+
+    margin-bottom: $spaceM;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+    @include min-width(1000px) {
+      text-align: left;
     }
   }
 }
@@ -37,20 +41,44 @@
 //Copy
 .Right {
   width: 100%;
-  padding: 0 $spaceS;
 
   @include min-width(1000px) {
-    width: 50%;
+    column-count: 2;
+    column-gap: $spaceM;
+    // margin-bottom: $spaceL;
   }
 
-  p,
-  h3 {
+  p {
     @include font("S");
     margin-bottom: $spaceM;
   }
+}
 
-  h3 {
-    @include font("M");
-    color: $primaryDD;
+//Image Container
+.Left {
+  @include flex(row, space-between, center);
+  width: 100%;
+
+  // @include min-width(1000px) {
+  //   padding: 0 $spaceM $spaceM $spaceM;
+  //   width: 100%;
+  // }
+
+  .ImageContainer {
+    width: 30%;
+    height: 25rem;
+    margin-bottom: $spaceM;
+
+    .Image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .Image2 {
+    @media screen and (max-width: 999px) {
+      display: none;
+    }
   }
 }

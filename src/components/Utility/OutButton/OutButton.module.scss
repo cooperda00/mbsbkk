@@ -6,7 +6,11 @@
 
   text-align: center;
   font-weight: 300;
-  margin: $spaceM 0;
+  margin: $spaceS auto $spaceM auto;
+
+  @include min-width(1000px) {
+    margin: $spaceS 0 $spaceM 0;
+  }
 }
 
 .AltColor {
