@@ -8,6 +8,7 @@ import SEO from "../components/SEO/SEO"
 import Testimonials from "../components/Testimonials/Testimonials"
 import BasicInfo from "../components/BasicInfo/BasicInfo"
 import Carousel from "../components/Utility/Carousel/Carousel"
+import Youtube from "../components/Utility/Youtube/Youtube"
 
 const IndexPage = ({ data }) => {
   const features = data.features.edges
@@ -21,6 +22,8 @@ const IndexPage = ({ data }) => {
       <BasicInfo />
 
       <Features features={features} />
+
+      <Youtube />
 
       <Testimonials />
     </Layout>

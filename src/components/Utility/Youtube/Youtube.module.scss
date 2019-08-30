@@ -1,0 +1,37 @@
+@import "../../../vars";
+
+.Youtube {
+  @include flex(column, center, center);
+
+  width: 100%;
+  max-width: $contentWidthL;
+  margin: 0 auto $spaceL auto;
+  padding: $spaceS;
+
+  @include min-width(1000px) {
+    padding: $spaceL;
+  }
+}
+
+.VideoContainer {
+  width: 100%;
+
+  @include min-width(1000px) {
+    width: 80%;
+  }
+}
+
+.Video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.27198%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
