@@ -16,7 +16,7 @@
   margin: 0 $spaceM;
 
   @include min-width(1000px) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     max-width: 80%;
   }
 }
@@ -30,8 +30,11 @@
   text-align: center;
 
   h2 {
-    @include font("M");
+    @include font("L");
     margin-bottom: $spaceM;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
   }
 
   p {

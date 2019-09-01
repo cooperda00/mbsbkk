@@ -6,6 +6,14 @@ number: 1
 
 # Fair Info
 
+## Event Details
+
+**Dates:** 1 - 2 February 2020
+
+**Time:** 9am - 6pm
+
+**Venue:** [Jasmine City Hotel, Asok](https://goo.gl/maps/jshrHKFmhR8h7ms7A)
+
 ## Entry
 
 **2019 PRICES TO BE ANNOUNCED**

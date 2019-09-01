@@ -8,7 +8,7 @@
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-end);
     align-self: "flex-end";
-    margin: -2rem 0 0 0;
+    // margin: -2rem 0 0 0;
   }
 
   .ExtraBlurb {
@@ -28,19 +28,19 @@
   }
 }
 
-.Stars {
-  @include font("L");
-  margin-bottom: $spaceS;
-  color: $primaryD;
+// .Stars {
+//   @include font("L");
+//   margin-bottom: $spaceS;
+//   color: $primaryD;
 
-  svg:not(:last-of-type) {
-    margin-right: $spaceS;
-  }
+//   svg:not(:last-of-type) {
+//     margin-right: $spaceS;
+//   }
 
-  @include min-width(1000px) {
-    @include font("L");
-  }
-}
+//   @include min-width(1000px) {
+//     @include font("L");
+//   }
+// }
 
 .Title {
   @include flex(row, center, flex-start);
@@ -51,9 +51,11 @@
   text-transform: uppercase;
   margin-bottom: $spaceS;
   text-align: center;
+  color: $primaryDD;
 
   svg {
     @include font("XS");
+    color: $gray4;
 
     @include min-width(1000px) {
       @include font("XS");
@@ -90,6 +92,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: $spaceS;
+  font-weight: 700;
 
   @include min-width(1000px) {
     margin-top: 0;

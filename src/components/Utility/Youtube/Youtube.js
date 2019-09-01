@@ -12,9 +12,9 @@ const Youtube = () => {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/JYJchtlcLu0"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             title="Mind Body Spirit Fair BKK 2018"
           />
         </div>

@@ -9,8 +9,8 @@
   letter-spacing: 0.4rem;
   padding: $spaceS;
   text-align: center;
-  text-transform: capitalize;
-
+  text-transform: uppercase;
+  color: $gray4;
   line-height: 1.2 !important;
 
   @include min-width(1000px) {

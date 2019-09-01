@@ -6,7 +6,6 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import About from "../components/About/About"
 import Hero from "../components/Utility/Hero/Hero"
-// import BannerText from "../components/Utility/BannerText/BannerText"
 
 const AboutPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -14,9 +13,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO titleExtra="About Us" keywordsExtra="" descriptionExtra="" />
-      <Hero image={image} type="page">
-        {/* <BannerText title="About Us" text="dark" /> */}
-      </Hero>
+      <Hero image={image} type="page" />
       <About />
     </Layout>
   )
@@ -26,7 +23,7 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "seated_lotus.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
         }
       }

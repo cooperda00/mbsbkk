@@ -7,7 +7,7 @@
   padding: $spaceS;
 
   @include min-width(1000px) {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, space-around, flex-start);
     margin-top: $spaceS;
   }
 }

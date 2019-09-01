@@ -1,0 +1,138 @@
+@import "../../vars";
+
+.OurCharities {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  min-height: 50vh;
+  margin: $spaceS 0;
+
+  @include min-width(1000px) {
+    margin: $spaceL 0;
+  }
+}
+
+.Container {
+  @include flex(column, flex-start, center);
+  width: 100%;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+    width: 80%;
+  }
+}
+
+.Images {
+  display: none;
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, center);
+    width: 30%;
+  }
+
+  .ImageContainer {
+    width: 90%;
+    margin-bottom: $spaceS;
+    max-width: 30rem;
+    height: 28rem;
+
+    .Image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.Copy {
+  width: 100%;
+
+  @include min-width(1000px) {
+    width: 70%;
+    padding: 0 0 0 $spaceM;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    text-align: center;
+    width: 100%;
+
+    @include min-width(1000px) {
+      text-align: left;
+    }
+  }
+
+  h1 {
+    @include font("XXL");
+    margin-bottom: $spaceM;
+    margin-top: $spaceM;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+    @include min-width(1000px) {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    @include font("L");
+    margin-bottom: $spaceM;
+    margin-top: $spaceS;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+    @include min-width(1000px) {
+      margin-bottom: $spaceS;
+    }
+  }
+
+  h3 {
+    @include font("M");
+    margin-bottom: $spaceS;
+    margin-top: $spaceS;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+  }
+
+  p {
+    @include font("S");
+    margin-bottom: $spaceS;
+  }
+
+  ul {
+    margin-left: $spaceM;
+    max-width: 70rem;
+
+    li {
+      @include font("XS");
+
+      p {
+        @include font("XS");
+        color: lighten($gray4, 20%);
+      }
+    }
+  }
+
+  a,
+  span a {
+    color: dodgerblue;
+  }
+
+  div {
+    @include font("XS");
+  }
+
+  hr {
+    width: 100%;
+    border-top: 0.2rem solid $primaryDD;
+    margin: $spaceM 0;
+  }
+
+  strong {
+    color: $primaryDD;
+  }
+}

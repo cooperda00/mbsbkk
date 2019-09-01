@@ -2,10 +2,11 @@
 
 .Copy {
   width: 100%;
-  padding: 0 $spaceM;
+  padding: 0 $spaceS;
 
   @include min-width(1000px) {
     width: 80%;
+    padding: 0 $spaceM;
   }
 
   .HTML {
@@ -78,6 +79,7 @@
       }
     }
 
+    a,
     span a {
       color: dodgerblue;
     }

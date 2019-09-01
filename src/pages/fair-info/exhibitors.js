@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import Hero from "../../components/Utility/Hero/Hero"
-// import BannerText from "../../components/Utility/BannerText/BannerText"
 import FairInfo from "../../components/FairInfo/FairInfo"
 
 const ExhibitorsPage = ({ data }) => {
@@ -15,9 +14,7 @@ const ExhibitorsPage = ({ data }) => {
   return (
     <Layout>
       <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="" />
-      <Hero type="page" image={image}>
-        {/* <BannerText title="Exhibitors" text="dark" /> */}
-      </Hero>
+      <Hero type="page" image={image} />
       <FairInfo copy={copy} />
     </Layout>
   )

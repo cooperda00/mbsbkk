@@ -14,9 +14,7 @@ const GetInvolvedPage = ({ data }) => {
   return (
     <Layout>
       <SEO titleExtra="Get Involved" keywordsExtra="" descriptionExtra="" />
-      <Hero type="page" image={image}>
-        {/* <BannerText title="Get Involved" text="dark" /> */}
-      </Hero>
+      <Hero type="page" image={image} />
       <GetInvolved mdx={mdx} />
     </Layout>
   )
@@ -26,7 +24,7 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "get_involved_header.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
         }
       }

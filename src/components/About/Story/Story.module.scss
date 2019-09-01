@@ -6,11 +6,30 @@
   max-width: $contentWidth;
   min-height: 40vh;
   margin-top: $spaceL;
-  padding: 0 $spaceM $spaceM $spaceM;
+  padding: 0 $spaceS $spaceM $spaceS;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+  }
+}
+
+//Copy
+.Right {
+  width: 100%;
+
+  @include min-width(1000px) {
+    width: 70%;
+    padding: 0 0 0 $spaceM;
+  }
+
+  p {
+    @include font("S");
+    margin-bottom: $spaceM;
+  }
 
   h2 {
     @include font("XXL");
-    margin-bottom: $spaceS;
+    margin-bottom: $spaceM;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -38,35 +57,19 @@
   }
 }
 
-//Copy
-.Right {
-  width: 100%;
-
-  @include min-width(1000px) {
-    column-count: 2;
-    column-gap: $spaceM;
-    // margin-bottom: $spaceL;
-  }
-
-  p {
-    @include font("S");
-    margin-bottom: $spaceM;
-  }
-}
-
 //Image Container
 .Left {
   @include flex(row, space-between, center);
   width: 100%;
 
-  // @include min-width(1000px) {
-  //   padding: 0 $spaceM $spaceM $spaceM;
-  //   width: 100%;
-  // }
+  @include min-width(1000px) {
+    @include flex(column, flex-start, center);
+    width: 30%;
+  }
 
   .ImageContainer {
-    width: 30%;
-    height: 25rem;
+    width: 90%;
+    height: 28rem;
     margin-bottom: $spaceM;
 
     .Image {

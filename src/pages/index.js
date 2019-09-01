@@ -32,14 +32,6 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "bg_test.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
     insta: allInstaNode {
       edges {
         node {

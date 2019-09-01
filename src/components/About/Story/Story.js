@@ -13,8 +13,6 @@ const Story = () => {
 
   return (
     <div className={styles.Story}>
-      <h2>About Us</h2>
-      <h3>Arrive Curious, Leave Inspired</h3>
       <div className={styles.Left}>
         <div className={`${styles.ImageContainer} ${styles.Image2}`}>
           <Image fluid={image2} className={styles.Image} />
@@ -27,6 +25,8 @@ const Story = () => {
         </div>
       </div>
       <div className={styles.Right}>
+        <h2>About Us</h2>
+        <h3>Arrive Curious, Leave Inspired</h3>
         <p>
           Finding your tribe in the sprawling jungle of Bangkok is no mean feat,
           and yet it is all here - if you know where to look.
@@ -34,7 +34,7 @@ const Story = () => {
 
         <p>
           Maybe you have been looking for health, wellness and holistic
-          solutions, People of a like mind or a supportive, wholehearted
+          solutions, people of a like mind or a supportive, wholehearted
           community. Maybe you are curious about the wellbeing modalities
           available to you in the region. Allow us to show you, all in one
           inspiring weekend.
@@ -45,16 +45,6 @@ const Story = () => {
           health, wellbeing and sustainability practitioners, to create a rich
           community and to inspire positive change individually, locally and
           globally.
-        </p>
-
-        <p>
-          Our passionately held vision is to bring together holistic health,
-          wellbeing and sustainability practitioners, to create a community, to
-          build connection and to inspire positive change. A space where the
-          uninitiated seeker might easily find what they are seeking, and that
-          which is seeking them. Arriving with curiosity and leaving with
-          inspiration. A wealth of expertise, knowledge and passion, which also
-          gives back, supporting local charitable causes.
         </p>
 
         <p>
@@ -83,7 +73,7 @@ const Story = () => {
 
 const query = graphql`
   {
-    image: file(relativePath: { eq: "evelin_alison.jpg" }) {
+    image: file(relativePath: { eq: "stall_2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

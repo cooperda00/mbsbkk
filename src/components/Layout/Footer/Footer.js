@@ -29,11 +29,15 @@ const Footer = () => {
         <MailChimp />
       </div>
 
+      <div className={styles.InstagramWidget}>
+        <InstagramWidgetSmall />
+      </div>
+
       <div className={styles.FacebookWidget}>
         <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmbsbkk&tabs=timeline&width=300&height=390&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmbsbkk&tabs=timeline&width=300&height=370&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
           width="300"
-          height="390"
+          height="370"
           style={{ border: "none", overflow: "hidden" }}
           scrolling="no"
           frameBorder="0"
@@ -41,10 +45,6 @@ const Footer = () => {
           allow="encrypted-media"
           title="Facebook Widget"
         ></iframe>
-      </div>
-
-      <div className={styles.InstagramWidget}>
-        <InstagramWidgetSmall />
       </div>
     </footer>
   )
