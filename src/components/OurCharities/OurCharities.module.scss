@@ -5,6 +5,7 @@
   width: 100%;
   min-height: 50vh;
   margin: $spaceS 0;
+  padding: $spaceS;
 
   @include min-width(1000px) {
     margin: $spaceL 0;
