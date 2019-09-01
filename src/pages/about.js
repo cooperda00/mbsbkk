@@ -21,7 +21,7 @@ const AboutPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "seated_lotus.jpg" }) {
+    bg: file(relativePath: { eq: "get_involved_volunteer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
