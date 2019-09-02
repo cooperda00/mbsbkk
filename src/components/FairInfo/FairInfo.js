@@ -2,24 +2,20 @@
 import React from "react"
 //Sass
 import styles from "./FairInfo.module.scss"
-//Constants
-import { fairInfoLinks } from "../../constants/links"
 //Components
-import Copy from "../Utility/Copy/Copy"
+// import Copy from "../Utility/Copy/Copy"
+import CopyMDX from "../Utility/CopyMDX/CopyMDX"
 import SideMenu from "./SideMenu/SideMenu"
-// import TopMenu from "../Utility/TopMenu/TopMenu"
 
 const FairInfo = ({ copy }) => {
-  const html = copy.html
+  const html = copy.body
 
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
-        {/* <TopMenu links={fairInfoLinks} /> */}
-
         <SideMenu />
 
-        <Copy html={html} />
+        <CopyMDX mdx={html} />
       </div>
     </section>
   )

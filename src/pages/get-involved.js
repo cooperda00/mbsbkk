@@ -1,10 +1,10 @@
 //Modules
 import React from "react"
+import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
-// import BannerText from "../components/Utility/BannerText/BannerText"
 import GetInvolved from "../components/GetInvolved/GetInvolved"
 
 const GetInvolvedPage = ({ data }) => {
@@ -13,7 +13,11 @@ const GetInvolvedPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Get Involved" keywordsExtra="" descriptionExtra="" />
+      <SEO
+        titleExtra="Get Involved"
+        keywordsExtra="join us, sponsor, volunteer, vendor"
+        descriptionExtra=""
+      />
       <Hero type="page" image={image} />
       <GetInvolved mdx={mdx} />
     </Layout>

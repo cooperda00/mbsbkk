@@ -14,7 +14,11 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <Link to="/">
-        <img src={headerLogo} alt="logo" className={styles.Logo} />
+        <img
+          src={headerLogo}
+          alt="Mind Body SPirit Fair Logo"
+          className={styles.Logo}
+        />
       </Link>
       <div className={styles.Menu}>
         <Social />

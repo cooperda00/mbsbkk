@@ -21,21 +21,20 @@ const InstagramWidget = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.LogoContainer}
+          aria-label={`Go to the ${username} Instagram page`}
         >
           {" "}
           <img src={userImage} alt={username} />
         </a>
-        {/* <div> */}
         <a
           href={`https://instagram.com/${username}`}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`Go to the ${username} Instagram page`}
         >
           {" "}
           <h1>@{username}</h1>{" "}
         </a>
-        {/* <p>{userBio}</p> */}
-        {/* </div> */}
       </div>
 
       <div className={styles.FeedGrid}>
@@ -47,12 +46,13 @@ const InstagramWidget = () => {
               rel="noopener noreferrer"
               key={node.id}
               className={styles.Tile}
+              aria-label={node.caption}
             >
               <Image
                 fluid={node.localFile.childImageSharp.fluid}
                 className={styles.PostImage}
+                alt={`Instagram post image`}
               />
-              {/* <div className={styles.ImageOverlay} /> */}
             </a>
           )
         })}
@@ -67,6 +67,7 @@ const query = graphql`
       edges {
         node {
           id
+          caption
           localFile {
             childImageSharp {
               fluid {

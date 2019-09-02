@@ -12,6 +12,8 @@ const OutButton = ({ path, text, type }) => {
           ? `${styles.OutButton} ${styles.AltColor}`
           : `${styles.OutButton}`
       }
+      target="_bank"
+      rel="noopener noreferrer"
     >
       {text}
     </a>

@@ -17,7 +17,11 @@ const SideMenu = () => {
       <Link to="/fair-info" className={styles.MenuTile}>
         <p>Fair Info</p>
 
-        <Image fluid={info} className={styles.Image} />
+        <Image
+          fluid={info}
+          className={styles.Image}
+          alt="A close up of a stall"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -26,7 +30,11 @@ const SideMenu = () => {
       <Link to="/fair-info/exhibitors" className={styles.MenuTile}>
         <p>Exhibitors</p>
 
-        <Image fluid={exhibitors} className={styles.Image} />
+        <Image
+          fluid={exhibitors}
+          className={styles.Image}
+          alt="A woman handing a bag over to a customer"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -35,7 +43,11 @@ const SideMenu = () => {
       <Link to="/fair-info/healing-zone" className={styles.MenuTile}>
         <p>Healing Zone</p>
 
-        <Image fluid={healingZone} className={styles.Image} />
+        <Image
+          fluid={healingZone}
+          className={styles.Image}
+          alt="A woman receiving healing"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -44,7 +56,11 @@ const SideMenu = () => {
       <Link to="/fair-info/workshops-and-seminars" className={styles.MenuTile}>
         <p>Workshops</p>
 
-        <Image fluid={workshops} className={styles.Image} />
+        <Image
+          fluid={workshops}
+          className={styles.Image}
+          alt="A group of happy young people sat against a wall"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />

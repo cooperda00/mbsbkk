@@ -13,7 +13,11 @@ const CharitiesPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Our Charities" keywordsExtra="" descriptionExtra="" />
+      <SEO
+        titleExtra="Our Charities"
+        keywordsExtra="charity, fatima centre"
+        descriptionExtra=""
+      />
       <Hero image={image} type="page" position="top" />
       <OurCharities copy={copy} />
     </Layout>

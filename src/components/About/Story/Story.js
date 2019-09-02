@@ -15,13 +15,21 @@ const Story = () => {
     <div className={styles.Story}>
       <div className={styles.Left}>
         <div className={`${styles.ImageContainer} ${styles.Image2}`}>
-          <Image fluid={image2} className={styles.Image} />
+          <Image fluid={image2} className={styles.Image} alt="A vendor table" />
         </div>
         <div className={`${styles.ImageContainer} ${styles.Image2}`}>
-          <Image fluid={image} className={styles.Image} />
+          <Image
+            fluid={image}
+            className={styles.Image}
+            alt="A vendor chatting with a visitor"
+          />
         </div>
         <div className={`${styles.ImageContainer} ${styles.Image2}`}>
-          <Image fluid={image3} className={styles.Image} />
+          <Image
+            fluid={image3}
+            className={styles.Image}
+            alt="A woman giving a talk"
+          />
         </div>
       </div>
       <div className={styles.Right}>

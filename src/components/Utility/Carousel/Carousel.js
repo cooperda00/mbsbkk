@@ -7,9 +7,6 @@ import Image from "gatsby-image"
 //Styling
 import styled, { css } from "styled-components"
 import styles from "./Carousel.module.scss"
-//Components
-// import BannerText from "../../Utility/BannerText/BannerText"
-// import CTAButton from "../CTAButton/CTAButton"
 
 const Carousel = () => {
   const data = useStaticQuery(query)
@@ -49,14 +46,13 @@ const Carousel = () => {
     color: white;
     cursor: pointer;
     font-size: 5rem;
-    /* line-height: ${height}; */
     position: absolute;
     text-align: center;
     text-shadow: 1px 1px 1px #fff;
     top: 50%;
     transform: translateY(-50%);
     user-select: none;
-    
+
     z-index: 100;
     ${props =>
       props.right
@@ -90,17 +86,6 @@ const Carousel = () => {
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container>
       <Children>
-        {/* <div className={styles.BannerContainer}>
-          <BannerText
-            title="Mind Body Spirit Fair BKK"
-            info="Bangkok's first charity holistic well-being fair."
-          >
-            <h1>Our Next Event:</h1>
-            <h2>Date and venue coming soon!</h2>
-            <CTAButton path="/get-involved" text="Get Involved" />
-          </BannerText>
-        </div> */}
-
         {children}
         <Arrow onClick={handleClick} data-position={position - 1}>
           {"<"}
@@ -124,32 +109,43 @@ const Carousel = () => {
     <Carousel>
       <Slide right>
         <div className={styles.SlideContainer}>
-          <Image fluid={image1} className={styles.Img} />
-          {/* <div className={styles.Overlay} /> */}
+          <Image
+            fluid={image1}
+            className={styles.Img}
+            alt="A group of people smiling"
+          />
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
-          <Image fluid={image2} className={styles.Img} />
-          {/* <div className={styles.Overlay} /> */}
+          <Image fluid={image2} className={styles.Img} alt="Flowers in vases" />
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
-          <Image fluid={image3} className={styles.Img} />
-          {/* <div className={styles.Overlay} /> */}
+          <Image
+            fluid={image3}
+            className={styles.Img}
+            alt="A woman spreading her arms"
+          />
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
-          <Image fluid={image4} className={styles.Img} />
-          {/* <div className={styles.Overlay} /> */}
+          <Image
+            fluid={image4}
+            className={styles.Img}
+            alt="Ingredients laid out on a table"
+          />
         </div>
       </Slide>
       <Slide right>
         <div className={styles.SlideContainer}>
-          <Image fluid={image5} className={styles.Img} />
-          {/* <div className={styles.Overlay} /> */}
+          <Image
+            fluid={image5}
+            className={styles.Img}
+            alt="A singing bowl being held over a woman"
+          />
         </div>
       </Slide>
     </Carousel>

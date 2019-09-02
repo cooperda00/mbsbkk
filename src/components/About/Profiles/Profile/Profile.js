@@ -16,35 +16,14 @@ const Profile = ({ profile }) => {
   } = frontmatter
 
   return (
-    // <div className={styles.Profile}>
-    //   <div className={styles.Left}>
-    //     <div className={styles.ImageContainer}>
-    //       <Image fluid={fluid} className={styles.Image} />
-    //     </div>
-    //   </div>
-
-    //   <div className={styles.Right}>
-    //     <h3>{name}</h3>
-
-    //     <p className={styles.Passions}>
-    //       Current Passions:{" "}
-    //       {passions.map((passion, i) => {
-    //         return i !== passions.length - 1 ? `${passion}, ` : `${passion}`
-    //       })}
-    //     </p>
-
-    //     <p className={styles.Word}>Favourite Word: {word}</p>
-
-    //     <div
-    //       dangerouslySetInnerHTML={{ __html: html }}
-    //       className={styles.Bio}
-    //     />
-    //   </div>
-    // </div>
     <div className={styles.Profile}>
       <div className={styles.Left}>
         <div className={styles.ImageContainer}>
-          <Image fluid={fluid} className={styles.Image} />
+          <Image
+            fluid={fluid}
+            className={styles.Image}
+            alt={`A portrait of ${name}`}
+          />
         </div>
       </div>
 

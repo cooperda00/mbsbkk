@@ -12,6 +12,7 @@ const Feature = ({ node }) => {
         <Image
           fluid={node.frontmatter.image.childImageSharp.fluid}
           className={styles.FeatureImage}
+          alt={node.frontmatter.title}
         />
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />

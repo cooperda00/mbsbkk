@@ -34,13 +34,13 @@ export const query = graphql`
       }
     }
 
-    copy: markdownRemark(
+    copy: mdx(
       frontmatter: { queryName: { eq: "fairInfoWorkshopsAndSeminars" } }
     ) {
       frontmatter {
         title
       }
-      html
+      body
     }
   }
 `

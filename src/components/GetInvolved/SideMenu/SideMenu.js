@@ -18,7 +18,11 @@ const SideMenu = () => {
       <a href="#exhibit" className={styles.MenuTile}>
         <p>Exhibit</p>
 
-        <Image fluid={exhibit} className={styles.Image} />
+        <Image
+          fluid={exhibit}
+          className={styles.Image}
+          alt="Flowers in vases"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -27,7 +31,11 @@ const SideMenu = () => {
       <a href="#inspire" className={styles.MenuTile}>
         <p>Inspire</p>
 
-        <Image fluid={inspire} className={styles.Image} />
+        <Image
+          fluid={inspire}
+          className={styles.Image}
+          alt="A woman looking through a leaf"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -36,7 +44,7 @@ const SideMenu = () => {
       <a href="#heal" className={styles.MenuTile}>
         <p>Heal</p>
 
-        <Image fluid={heal} className={styles.Image} />
+        <Image fluid={heal} className={styles.Image} alt="A succulent" />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -45,7 +53,11 @@ const SideMenu = () => {
       <a href="#sponsor" className={styles.MenuTile}>
         <p>Sponsor</p>
 
-        <Image fluid={sponsor} className={styles.Image} />
+        <Image
+          fluid={sponsor}
+          className={styles.Image}
+          alt="People holding their hands in heart shapes"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
@@ -54,7 +66,11 @@ const SideMenu = () => {
       <a href="#volunteer" className={styles.MenuTile}>
         <p>Volunteer</p>
 
-        <Image fluid={volunteer} className={styles.Image} />
+        <Image
+          fluid={volunteer}
+          className={styles.Image}
+          alt="People with their arms around eachother"
+        />
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />

@@ -30,13 +30,11 @@ export const query = graphql`
       }
     }
 
-    copy: markdownRemark(
-      frontmatter: { queryName: { eq: "fairInfoHealingZone" } }
-    ) {
+    copy: mdx(frontmatter: { queryName: { eq: "fairInfoHealingZone" } }) {
       frontmatter {
         title
       }
-      html
+      body
     }
   }
 `

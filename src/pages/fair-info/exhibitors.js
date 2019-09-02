@@ -30,13 +30,11 @@ export const query = graphql`
       }
     }
 
-    copy: markdownRemark(
-      frontmatter: { queryName: { eq: "fairInfoExhibitors" } }
-    ) {
+    copy: mdx(frontmatter: { queryName: { eq: "fairInfoExhibitors" } }) {
       frontmatter {
         title
       }
-      html
+      body
     }
   }
 `

@@ -1,6 +1,5 @@
 //Module
 import React from "react"
-
 //Sass
 import styles from "./Features.module.scss"
 //Components

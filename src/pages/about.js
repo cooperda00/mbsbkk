@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="About Us" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra="About Us" keywordsExtra="about" descriptionExtra="" />
       <Hero image={image} type="page" />
       <About />
     </Layout>

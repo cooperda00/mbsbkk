@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
-// import BannerText from "../components/Utility/BannerText/BannerText"
 import FairInfo from "../components/FairInfo/FairInfo"
 
 const FairInfoPage = ({ data }) => {
@@ -14,10 +13,12 @@ const FairInfoPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Fair Info" keywordsExtra="" descriptionExtra="" />
-      <Hero type="page" image={image}>
-        {/* <BannerText title="Fair Info" text="dark" /> */}
-      </Hero>
+      <SEO
+        titleExtra="Fair Info"
+        keywordsExtra="information"
+        descriptionExtra=""
+      />
+      <Hero type="page" image={image}></Hero>
       <FairInfo copy={copy} />
     </Layout>
   )
@@ -33,11 +34,11 @@ export const query = graphql`
       }
     }
 
-    copy: markdownRemark(frontmatter: { title: { eq: "Fair Info" } }) {
+    copy: mdx(frontmatter: { title: { eq: "Fair Info" } }) {
       frontmatter {
         title
       }
-      html
+      body
     }
   }
 `

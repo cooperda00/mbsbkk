@@ -18,7 +18,7 @@ const Footer = () => {
           <div className={styles.Icons}>
             {social.map((link, i) => {
               return (
-                <a href={link.path} key={i}>
+                <a href={link.path} key={i} aria-label={link.label}>
                   {link.icon}
                 </a>
               )
