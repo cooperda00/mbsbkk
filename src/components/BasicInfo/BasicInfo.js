@@ -32,8 +32,8 @@ const BasicInfo = () => {
         <div className={styles.Right}>
           <h2>Next Event Details:</h2>
 
-          <p>Dates: 1 - 2 February 2020</p>
-          <p>Time: 9am - 6pm</p>
+          <p>Dates: 29th February - 1st March 2020</p>
+          <p>Time: 9:30am - 5pm</p>
           <p>
             Venue:{" "}
             <a href="https://goo.gl/maps/MToD7u3Gn7BDquKH8">
