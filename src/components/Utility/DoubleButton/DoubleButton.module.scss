@@ -1,8 +1,13 @@
 @import "../../../vars";
 
 .DoubleButton {
-  @include flex(row, flex-start, center);
-  margin: $spaceM 0;
+  @include flex(row, center, center);
+  margin: $spaceM auto;
+
+  @include min-width(1000px) {
+    @include flex(row, flex-start, center);
+    margin: $spaceM 0;
+  }
 
   a {
     @include font("S");
@@ -17,7 +22,14 @@
     padding: 1rem 2rem;
     letter-spacing: 0.3rem;
     transition: 0.5s;
-    margin-right: $spaceM;
+  }
+
+  a:not(:last-of-type) {
+    margin-right: $spaceS;
+
+    @include min-width(1000px) {
+      margin-right: $spaceM;
+    }
   }
 
   .Button1 {
