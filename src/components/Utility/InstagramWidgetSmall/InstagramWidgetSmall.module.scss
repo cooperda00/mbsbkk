@@ -4,11 +4,7 @@
   @include flex(column, flex-start, center);
 
   width: 310px;
-  // height: 550px;
   margin-bottom: $spaceM;
-  // @include min-width(1000px) {
-  //   padding: 0 $spaceM 0 $spaceM;
-  // }
 }
 
 .UserInfo {

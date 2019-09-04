@@ -19,8 +19,6 @@ const MailChimp = () => {
       FNAME: name,
     })
 
-    console.log(result)
-
     setSubResult(result)
 
     setEmail("")
@@ -29,10 +27,10 @@ const MailChimp = () => {
 
   return (
     <div className={styles.MailChimp}>
-      <p>Subscribe To Our Newsletter:</p>
+      <p className={styles.Title}>Stay In The Loop With Our Newsletter</p>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="Name">Name</label>
+          <label htmlFor="Name">First Name</label>
           <input
             name="Name"
             id="Name"
@@ -41,9 +39,9 @@ const MailChimp = () => {
             onChange={e => {
               setName(e.target.value)
             }}
-            placeholder="John Smith"
+            placeholder="Jane"
             onFocus={e => (e.target.placeholder = "")}
-            onBlur={e => (e.target.placeholder = "John Smith")}
+            onBlur={e => (e.target.placeholder = "Jane")}
           />
         </div>
 
@@ -57,7 +55,7 @@ const MailChimp = () => {
             onChange={e => {
               setEmail(e.target.value)
             }}
-            placeholder="j.smith@example.com"
+            placeholder="j.sm@test.com"
             onFocus={e => (e.target.placeholder = "")}
             onBlur={e => (e.target.placeholder = "j.smith@example.com")}
           />
@@ -65,7 +63,7 @@ const MailChimp = () => {
 
         <p className={styles.Message}>{subResult.msg}</p>
 
-        <button>Submit</button>
+        <button>Subscribe</button>
       </form>
     </div>
   )

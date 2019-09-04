@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className={styles.Footer}>
       <div className={styles.FooterNav}>
         <div className={styles.Links}>
-          <p>Get In Touch:</p>
+          <p>Get In Touch</p>
 
           <div className={styles.Icons}>
             {social.map((link, i) => {
@@ -45,6 +45,19 @@ const Footer = () => {
           allow="encrypted-media"
           title="Facebook Widget"
         ></iframe>
+      </div>
+
+      <div className={styles.Credit}>
+        <p>
+          Developed by{" "}
+          <a
+            href="https://danielcooper.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            danielcooper.io
+          </a>
+        </p>
       </div>
     </footer>
   )

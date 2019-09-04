@@ -8,27 +8,6 @@
     width: 20%;
   }
 
-  // .InfoCard {
-  //   border: 0.2rem solid $primary;
-  //   width: 90%;
-  //   margin-bottom: $spaceM;
-  //   padding: $spaceS;
-  //   max-width: 30rem;
-
-  //   p {
-  //     @include font("S");
-
-  //     span {
-  //       display: block;
-  //       margin-left: $spaceS;
-
-  //       a {
-  //         color: dodgerblue;
-  //       }
-  //     }
-  //   }
-  // }
-
   .MenuTile {
     width: 90%;
     position: relative;
@@ -37,7 +16,7 @@
     height: 15rem;
 
     p {
-      @include font("SM");
+      @include font("SSM");
 
       letter-spacing: 4px;
       position: absolute;
@@ -45,6 +24,12 @@
       left: 3%;
       z-index: 1000;
       color: white;
+      line-height: 1 !important;
+
+      @include min-width(1200px) {
+        @include font("SM");
+        letter-spacing: 4px;
+      }
     }
 
     .Image {

@@ -3,14 +3,16 @@
 .MailChimp {
   width: 100%;
   margin-top: $spaceM;
+  max-width: 30rem;
 
-  p {
-    @include font("M");
+  .Title {
+    @include font("SM");
     width: 100%;
     margin-bottom: $spaceS;
     text-align: center;
 
     @include min-width(1000px) {
+      @include font("M");
       text-align: left;
     }
   }
@@ -18,6 +20,7 @@
   form {
     @include flex(column, center, center);
     width: 100%;
+    max-width: 30rem;
 
     @include min-width(1000px) {
       @include flex(column, center, flex-start);
@@ -25,16 +28,24 @@
 
     div {
       label {
-        @include font("M");
+        @include font("SM");
         display: block;
+
+        @include min-width(1000px) {
+          @include font("M");
+        }
       }
 
       input {
-        @include font("M");
+        @include font("SM");
         width: 100%;
         margin-bottom: $spaceS;
-        max-width: 35rem;
-        padding: $spaceS;
+        max-width: 30rem;
+        padding: 0.2rem $spaceS;
+
+        @include min-width(1000px) {
+          @include font("M");
+        }
       }
     }
   }
