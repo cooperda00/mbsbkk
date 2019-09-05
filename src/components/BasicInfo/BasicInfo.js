@@ -30,8 +30,21 @@ const BasicInfo = () => {
         </div>
 
         <div className={styles.Right}>
-          <h2>Next Event Details:</h2>
+          <h2>Event Details:</h2>
 
+          <h3>Chiang Mai</h3>
+          <p>Dates: 30th November - 1st December 2019</p>
+          <p>Time: 9:30am - 6pm</p>
+          <p>
+            Venue:{" "}
+            <a href="https://goo.gl/maps/LPfGs6XuV9yvQqWr8">ChiangMai&Co</a>{" "}
+          </p>
+
+          <div className={styles.ButtonContainer}>
+            <CTAButton path="/get-involved" text="Get Involved" type="2" />
+          </div>
+
+          <h3>Bangkok</h3>
           <p>Dates: 29th February - 1st March 2020</p>
           <p>Time: 9:30am - 5pm</p>
           <p>
@@ -41,7 +54,7 @@ const BasicInfo = () => {
             </a>{" "}
           </p>
 
-          <div>
+          <div className={styles.ButtonContainer}>
             <CTAButton path="/get-involved" text="Get Involved" />
           </div>
         </div>

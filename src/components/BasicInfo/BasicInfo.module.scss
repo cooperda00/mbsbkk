@@ -4,7 +4,6 @@
   @include flex(column, flex-start, center);
   width: 100%;
   min-height: 50vh;
-  // background: $eggshell;
   margin-bottom: $spaceM;
 }
 
@@ -24,17 +23,20 @@
 .Left,
 .Right {
   @include flex(column, flex-start, center);
-  // width: 100%;
   background: white;
   padding: $spaceM $spaceS;
   text-align: center;
 
   h2 {
     @include font("L");
-    margin-bottom: $spaceM;
+    margin-bottom: $spaceS;
     font-weight: 300;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
+  }
+
+  h3 {
+    @include font("SM");
   }
 
   p {
@@ -45,8 +47,8 @@
     }
   }
 
-  div {
-    margin-top: $spaceM;
+  .ButtonContainer {
+    margin: 2rem 0;
   }
 
   @include min-width(1000px) {
@@ -63,7 +65,7 @@
 }
 
 .Right {
-  p:last-of-type {
-    margin-bottom: $spaceM;
+  h3:last-of-type {
+    margin-top: $spaceM;
   }
 }
