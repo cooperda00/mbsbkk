@@ -15,7 +15,7 @@ Visit their website to find out more about their projects and the work they do, 
 
 [The Fatima Centre](https://goodshepherdbangkok.com/)
 
-Being totally non-profit and charitable, all proceeds from admission fees will go towards supporting this charity. If you needed another reason to get involved, you just found it.
+Being totally non-profit and charitable, proceeds from admission fees will go towards supporting this charity. If you needed another reason to get involved, you just found it.
 
 Through MBSBKK 2018 we were able to make 220, 000 baht in charitable contributions.
 
