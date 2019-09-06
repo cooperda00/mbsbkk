@@ -1,0 +1,6 @@
+@import "../../../vars";
+
+.AltColorStrong {
+    @include font("S");
+    color: darken($bonus, 10%) !important;
+}
