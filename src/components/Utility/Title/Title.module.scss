@@ -1,7 +1,7 @@
 @import "../../../vars";
 
 .Title {
-  @include font("XL");
+  @include font("L");
 
   margin: 0 auto;
   max-width: $contentWidthS;
@@ -12,6 +12,7 @@
   text-transform: uppercase;
   color: $gray4;
   line-height: 1.2 !important;
+  width: 100%;
 
   @include min-width(1000px) {
     @include font("XXL");
