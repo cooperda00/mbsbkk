@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="Home" />
 
       <Carousel />
 

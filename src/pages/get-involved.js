@@ -16,7 +16,7 @@ const GetInvolvedPage = ({ data }) => {
       <SEO
         titleExtra="Get Involved"
         keywordsExtra="join us, sponsor, volunteer, vendor"
-        descriptionExtra=""
+        descriptionExtra="Get Involved"
       />
       <Hero type="page" image={image} />
       <GetInvolved mdx={mdx} />

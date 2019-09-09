@@ -16,7 +16,7 @@ const WorkshopsAndSeminarsPage = ({ data }) => {
       <SEO
         titleExtra="Workshops And Seminars"
         keywordsExtra=""
-        descriptionExtra=""
+        descriptionExtra="Workshops And Seminars"
       />
       <Hero type="page" image={image} />
       <FairInfo copy={copy} />

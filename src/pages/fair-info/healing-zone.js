@@ -13,7 +13,7 @@ const HealingZonePage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Healing Zone" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra="Healing Zone" keywordsExtra="" descriptionExtra="Healing Zone" />
       <Hero type="page" image={image} position="top" />
       <FairInfo copy={copy} />
     </Layout>

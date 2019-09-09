@@ -13,7 +13,7 @@ const ExhibitorsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="Exhibitors" />
       <Hero type="page" image={image} />
       <FairInfo copy={copy} />
     </Layout>

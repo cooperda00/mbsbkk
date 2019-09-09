@@ -16,7 +16,7 @@ const FairInfoPage = ({ data }) => {
       <SEO
         titleExtra="Fair Info"
         keywordsExtra="information"
-        descriptionExtra=""
+        descriptionExtra="Fair Info"
       />
       <Hero type="page" image={image}></Hero>
       <FairInfo copy={copy} />

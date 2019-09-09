@@ -16,7 +16,7 @@ const CharitiesPage = ({ data }) => {
       <SEO
         titleExtra="Our Charities"
         keywordsExtra="charity, fatima centre"
-        descriptionExtra=""
+        descriptionExtra="Our Charities"
       />
       <Hero image={image} type="page" position="top" />
       <OurCharities copy={copy} />
