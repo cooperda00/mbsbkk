@@ -75,5 +75,7 @@ module.exports = {
         username: `mindbodyspiritfairbkk`,
       },
     },
+
+    `gatsby-plugin-netlify`
   ],
 }
