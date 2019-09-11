@@ -1,0 +1,11 @@
+@import "../../../vars";
+
+.SocialContainer {
+  margin: 0 auto;
+  margin-top: $spaceM;
+
+  @include min-width(1000px) {
+    margin: 0;
+    margin-top: $spaceM;
+  }
+}

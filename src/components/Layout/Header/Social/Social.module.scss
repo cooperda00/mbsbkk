@@ -1,11 +1,19 @@
 @import "../../../../vars";
 
-.Social {
-  @include font("M");
+.Header {
+  display: none !important;
 
-  display: none;
+  @include min-width(1000px) {
+    display: flex !important;
+  }
+}
+
+.Social {
+  @include flex(row, center, center);
+
+  font-size: 2.5rem !important;
+  line-height: 3rem !important;
   margin-bottom: $spaceS;
-  margin-right: $spaceL;
 
   a {
     @include flex(column, center, center);
@@ -28,6 +36,7 @@
 
   @include min-width(1000px) {
     @include flex(row, center, center);
+    margin-right: $spaceL;
   }
 
   @include min-width(1500px) {

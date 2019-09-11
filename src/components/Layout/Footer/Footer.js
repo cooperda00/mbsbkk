@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <MailChimp />
+        <MailChimp text="Stay In The Loop With Our Newsletter" />
       </div>
 
       <div className={styles.InstagramWidget}>

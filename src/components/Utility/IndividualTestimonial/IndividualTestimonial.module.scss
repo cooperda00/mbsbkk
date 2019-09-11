@@ -1,0 +1,70 @@
+@import "../../../vars";
+
+.IndividualTestimonial {
+  @include flex(column, flex-start, center);
+  margin: $spaceS 0;
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
+    margin: 0;
+  }
+
+  .Title {
+    @include flex(row, center, flex-start);
+
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: $spaceS;
+    text-align: center;
+    color: $primaryDD;
+
+    @include min-width(1000px) {
+      @include font("XS");
+    }
+
+    svg {
+      @include font("XS");
+      color: $gray4;
+
+      @include min-width(1000px) {
+        @include font("XS");
+      }
+    }
+
+    svg:first-of-type {
+      margin-right: $spaceS;
+    }
+
+    svg:last-of-type {
+      margin-left: $spaceS;
+    }
+  }
+}
+
+.ExtraBlurb {
+  @include font("SSM");
+  text-align: center;
+  padding: 0 $spaceS;
+  max-width: 50rem;
+
+  @include min-width(1000px) {
+    text-align: initial;
+    padding: 0;
+  }
+}
+
+// .Name {
+//   @include font("SSM");
+//   text-transform: uppercase;
+//   letter-spacing: 2px;
+//   margin-top: $spaceS;
+//   font-weight: 700;
+
+//   @include min-width(1000px) {
+//     margin-top: 0;
+//   }
+// }

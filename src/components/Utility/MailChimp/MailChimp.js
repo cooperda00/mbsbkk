@@ -4,7 +4,7 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 //Sass
 import styles from "./MailChimp.module.scss"
 
-const MailChimp = () => {
+const MailChimp = ({ text }) => {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [subResult, setSubResult] = useState({
@@ -27,7 +27,7 @@ const MailChimp = () => {
 
   return (
     <div className={styles.MailChimp}>
-      <p className={styles.Title}>Stay In The Loop With Our Newsletter</p>
+      <p className={styles.Title}>{text}</p>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="Name">First Name</label>

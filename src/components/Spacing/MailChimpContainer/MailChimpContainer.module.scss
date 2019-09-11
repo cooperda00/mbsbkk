@@ -1,0 +1,9 @@
+@import "../../../vars";
+
+.MailChimpContainer {
+  margin: 0 auto 4.5rem auto;
+
+  @include min-width(1000px) {
+    margin: 0 0 4.5rem 0;
+  }
+}

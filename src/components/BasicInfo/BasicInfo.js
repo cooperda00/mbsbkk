@@ -9,7 +9,7 @@ const BasicInfo = () => {
     <section className={styles.BasicInfo}>
       <div className={styles.CardContainer}>
         <div className={styles.Left}>
-          <h2>Totally Non-profit, Totally Charitable, Totally Inspiring!</h2>
+          <h2>Creating a happy, healthy & concious community</h2>
 
           <p>
             Holistic health, well-being and spiritual practitioners and vendors

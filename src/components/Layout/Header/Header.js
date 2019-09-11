@@ -21,7 +21,7 @@ const Header = () => {
         />
       </Link>
       <div className={styles.Menu}>
-        <Social />
+        <Social header={true} />
         <Navigation />
       </div>
     </header>

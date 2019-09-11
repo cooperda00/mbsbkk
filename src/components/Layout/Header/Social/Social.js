@@ -5,9 +5,13 @@ import styles from "./Social.module.scss"
 //Constants
 import { social } from "../../../../constants/social"
 
-const Social = () => {
+const Social = ({ header }) => {
   return (
-    <div className={styles.Social}>
+    <div
+      className={
+        header ? `${styles.Social} ${styles.Header}` : `${styles.Social}`
+      }
+    >
       {social.map(link => {
         return (
           <a
