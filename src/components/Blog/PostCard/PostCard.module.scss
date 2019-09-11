@@ -1,0 +1,47 @@
+@import "../../../vars";
+
+.PostCard {
+  @include flex(column, flex-start, flex-start);
+  margin: $spaceM;
+  width: 27%;
+  height: 50rem;
+
+  .ImageContainer {
+    width: 100%;
+    height: 50%;
+
+    .Image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .Text {
+    @include flex(column, space-between, flex-start);
+    height: 50%;
+
+    .Title {
+      @include font("S");
+      font-weight: 300;
+      letter-spacing: 0.4rem;
+      color: $primaryDD;
+      text-transform: uppercase;
+      margin-top: $spaceM;
+    }
+
+    .Subtitle {
+      @include font("XS");
+    }
+
+    .ReadMore {
+      @include flex(row, flex-start, center);
+      @include font("XS");
+
+      svg {
+        margin-left: $spaceS;
+      }
+    }
+  }
+}
