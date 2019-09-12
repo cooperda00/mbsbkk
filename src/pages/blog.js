@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "our_charities.jpg" }) {
+    bg: file(relativePath: { eq: "tarot.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid

@@ -34,7 +34,7 @@ const AllPosts = ({ posts, featuredPost }) => {
           </button>
         </div>
 
-        <Sidebar posts={posts} featuredPost={featuredPost} />
+        <Sidebar />
       </div>
     </section>
   )

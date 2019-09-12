@@ -1,18 +1,21 @@
 //Modules
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./Sidebar.module.scss"
 
-const Sidebar = ({ posts, featuredPost }) => {
+const Sidebar = () => {
+  const data = useStaticQuery(query)
+  const posts = data.allPosts.edges
+  const featuredPost = data.featuredPost.edges
+
   return (
     <aside className={styles.Sidebar}>
       <h2 className={styles.Title}>Featured Post</h2>
 
       <div className={styles.FeaturedPostContainer}>
         {featuredPost.map(({ node }) => {
-          console.log(node.image.fluid)
           return (
             <Link
               to={`/blog/${node.slug}`}
@@ -57,5 +60,46 @@ const Sidebar = ({ posts, featuredPost }) => {
     </aside>
   )
 }
+
+const query = graphql`
+  {
+    allPosts: allContentfulBlogPost(sort: { order: DESC, fields: createdAt }) {
+      edges {
+        node {
+          created(formatString: "DD MMM, YYYY")
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+          subtitle
+          title
+          slug
+          imageCaption
+        }
+      }
+    }
+
+    featuredPost: allContentfulBlogPost(
+      filter: { featured: { eq: true } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          created(formatString: "DD MMM, YYYY")
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+          subtitle
+          title
+          slug
+          imageCaption
+        }
+      }
+    }
+  }
+`
 
 export default Sidebar

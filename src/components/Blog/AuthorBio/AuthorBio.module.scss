@@ -1,0 +1,45 @@
+@import "../../../vars";
+
+.AuthorBio {
+  @include flex(row, flex-start, flex-start);
+
+  height: 10rem;
+  width: 30rem;
+  margin-left: $spaceS;
+
+  .ImageContainer {
+    width: 40%;
+    height: 100%;
+    margin-right: $spaceS;
+
+    .Image {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+  }
+
+  .Text {
+    width: 60%;
+
+    .Name {
+      @include font("S");
+      letter-spacing: 0.4rem;
+      margin-bottom: 0.2rem;
+      color: $primaryDD;
+    }
+
+    .Role {
+      @include font("S");
+      letter-spacing: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .Plug {
+      @include font("S");
+      color: dodgerblue;
+    }
+  }
+}

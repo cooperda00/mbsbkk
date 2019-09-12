@@ -3,8 +3,12 @@
 .PostCard {
   @include flex(column, flex-start, flex-start);
   margin: $spaceM;
-  width: 27%;
+  width: 90%;
   height: 50rem;
+
+  @include min-width(1000px) {
+    width: 27%;
+  }
 
   .ImageContainer {
     width: 100%;
