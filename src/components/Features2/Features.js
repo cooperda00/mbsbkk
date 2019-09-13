@@ -9,9 +9,9 @@ import Title from "../Utility/Title/Title"
 const Features = ({ features }) => {
   return (
     <section className={styles.Features}>
-      <div className={styles.Container}>
+      {/* <div className={styles.Container}>
         <Title title="Creating a happy, healthy & conscious community" />
-      </div>
+      </div> */}
 
       <div className={styles.FeaturesContainer}>
         {features.map(({ node }, i) => {

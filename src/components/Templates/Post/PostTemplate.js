@@ -9,6 +9,7 @@ import styles from "./PostTemplate.module.scss"
 import Layout from "../../Layout/Layout"
 import Sidebar from "../../Blog/Sidebar/Sidebar"
 import AuthorBio from "../../Blog/AuthorBio/AuthorBio"
+import AuthorBioLarge from "../../Blog/AuthorBioLarge/AuthorBioLarge"
 
 const PostTemplate = ({ data: { singleBlog } }) => {
   const richText = singleBlog.body.json
@@ -34,6 +35,10 @@ const PostTemplate = ({ data: { singleBlog } }) => {
           <div className={styles.RichText}>
             {documentToReactComponents(richText)}
           </div>
+
+          <div className={styles.AuthorContainer}>
+            <AuthorBioLarge author={author} />
+          </div>
         </section>
         <Sidebar />
       </article>
@@ -45,6 +50,9 @@ export const query = graphql`
   query($slug: String) {
     singleBlog: contentfulBlogPost(slug: { eq: $slug }) {
       author {
+        bio {
+          bio
+        }
         role
         name
         personalWebsite

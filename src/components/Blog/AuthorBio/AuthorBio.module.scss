@@ -10,7 +10,6 @@
   .ImageContainer {
     width: 40%;
     height: 100%;
-    margin-right: $spaceS;
 
     .Image {
       width: 10rem;
@@ -23,23 +22,24 @@
 
   .Text {
     width: 60%;
+    margin-top: $spaceS;
 
     .Name {
       @include font("S");
+      line-height: 1.1 !important;
       letter-spacing: 0.4rem;
-      margin-bottom: 0.2rem;
       color: $primaryDD;
     }
 
     .Role {
       @include font("S");
+      line-height: 1.1 !important;
       letter-spacing: 0.4rem;
-      margin-bottom: 0.2rem;
     }
 
-    .Plug {
-      @include font("S");
-      color: dodgerblue;
-    }
+    // .Plug {
+    //   @include font("S");
+    //   color: dodgerblue;
+    // }
   }
 }
