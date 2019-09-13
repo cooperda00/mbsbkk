@@ -35,7 +35,9 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-reveal": "^1.2.2",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "mem": ">=4.0.0",
+    "lodash.template": ">=4.5.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
