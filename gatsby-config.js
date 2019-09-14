@@ -46,6 +46,14 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-148026578-1",
+        head: true,
+      },
+    },
+
     //CONTENT SOURCING ***************************
 
     //All Markdown Files

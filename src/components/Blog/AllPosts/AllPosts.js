@@ -7,7 +7,7 @@ import PostCard from "../PostCard/PostCard"
 import Title from "../../Utility/Title/Title"
 import Sidebar from "../Sidebar/Sidebar"
 
-const AllPosts = ({ posts, featuredPost }) => {
+const AllPosts = ({ posts}) => {
   const [noOfPosts, setNoOfPosts] = useState(3)
 
   return (
@@ -30,7 +30,7 @@ const AllPosts = ({ posts, featuredPost }) => {
               setNoOfPosts(noOfPosts + 3)
             }}
           >
-            Read More
+            See More
           </button>
         </div>
 

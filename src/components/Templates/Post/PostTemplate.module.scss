@@ -65,57 +65,93 @@
       width: 70%;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-weight: 300;
-      letter-spacing: 0.4rem;
-      color: $primaryDD;
-      margin: $spaceM 0;
-    }
-
-    h1 {
-      @include font("XL");
-    }
-
-    h2 {
-      @include font("L");
-    }
-
-    h3 {
-      @include font("M");
-    }
-
-    p {
-      @include font("S");
-      margin-bottom: $spaceS;
-    }
-
     ul {
       margin-left: $spaceM;
       margin-bottom: $spaceS;
     }
 
-    @include min-width(1000px) {
-      h1 {
-        @include font("L");
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    p{
+      text-align: center;
+      width: 100%;
 
-      h2 {
-        @include font("M");
+      @include min-width(1000px) {
+        text-align: left;
       }
+    }
 
-      h3 {
-        @include font("SM");
-      }
+    h1 {
+      @include font("XL");
+      margin-bottom: $spaceM;
+      margin-top: $spaceM;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-weight: 300;
 
-      p {
-        @include font("S");
+      @include min-width(1000px) {
+        margin-top: 0;
+        @include font("XXL");
       }
+    }
 
-      ul {
-        margin-left: $spaceL;
+    h2 {
+      @include font("L");
+      margin-bottom: $spaceM;
+      margin-top: $spaceS;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-weight: 300;
+
+      @include min-width(1000px) {
+        margin-bottom: $spaceS;
       }
+    }
+
+    h3 {
+      @include font("M");
+      margin-bottom: $spaceS;
+      margin-top: $spaceS;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-weight: 300;
+    }
+
+    p {
+      @include font("S");
+      margin-bottom: $spaceM;
+    }
+
+    ul {
+      margin-left: $spaceM;
+      max-width: 70rem;
+
+      li {
+        p {
+          @include font("S");
+        }
+      }
+    }
+
+    span a,
+    p a {
+      color: dodgerblue;
+    }
+
+    div {
+      @include font("XS");
+    }
+
+    hr {
+      width: 100%;
+      border-top: 0.2rem solid $primaryDD;
+      margin: $spaceM 0;
+    }
+
+    strong {
+      color: $primaryDD;
     }
   }
 }
