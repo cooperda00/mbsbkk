@@ -6,7 +6,7 @@
   top: $spaceS;
   left: $spaceS;
 
-  @include min-width(1000px) {
+  @include min-width(768px) {
     position: initial;
     display: flex !important;
   }
@@ -40,6 +40,11 @@
 
   a svg {
     color: $gray5;
+  }
+
+  @include min-width(768px) {
+  
+    margin-right: $spaceM;
   }
 
   @include min-width(1000px) {
