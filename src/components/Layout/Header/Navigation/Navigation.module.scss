@@ -14,6 +14,7 @@
       padding: 0 0.5rem;
       margin-right: 2rem;
       transition: 0.5s;
+      text-align: center;
     }
 
     a:hover {
@@ -21,12 +22,18 @@
     }
   }
 
-  @include min-width(1000px) {
-    @include font("M");
+  @include min-width(900px) {
+    @include font("SSM");
+  }
 
+  @include min-width(1000px) {
     a {
       margin-right: 6rem;
     }
+  }
+
+  @include min-width(1250px) {
+    @include font("M");
   }
 }
 

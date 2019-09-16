@@ -51,10 +51,12 @@
     letter-spacing: 0.4rem;
     margin-bottom: $spaceM;
     width: 90%;
+    text-align: center;
 
     @include min-width(1000px) {
       @include font("XXL");
       width: 70%;
+      text-align: left;
     }
   }
 
@@ -74,7 +76,7 @@
     h2,
     h3,
     h4,
-    p{
+    p {
       text-align: center;
       width: 100%;
 

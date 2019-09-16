@@ -7,31 +7,37 @@ import PostCard from "../PostCard/PostCard"
 import Title from "../../Utility/Title/Title"
 import Sidebar from "../Sidebar/Sidebar"
 
-const AllPosts = ({ posts}) => {
+const AllPosts = ({ posts }) => {
+  console.log(posts.length)
+
   const [noOfPosts, setNoOfPosts] = useState(3)
 
   return (
     <section className={styles.AllPosts}>
       <div className={styles.AllPostsContainer}>
         <div className={styles.Posts}>
-          <Title title="All Posts" />
+          <Title title="Blog" />
 
           <div className={styles.PostsGrid}>
             {posts.map(({ node }, index) => {
               if (index <= noOfPosts - 1) {
                 return <PostCard post={node} key={node.title} />
+              } else {
+                return undefined
               }
             })}
           </div>
 
-          <button
-            className={styles.ReadMoreButton}
-            onClick={() => {
-              setNoOfPosts(noOfPosts + 3)
-            }}
-          >
-            See More
-          </button>
+          {posts.length > 3 && (
+            <button
+              className={styles.ReadMoreButton}
+              onClick={() => {
+                setNoOfPosts(noOfPosts + 3)
+              }}
+            >
+              See More
+            </button>
+          )}
         </div>
 
         <Sidebar />

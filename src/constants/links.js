@@ -33,6 +33,10 @@ export const links = [
     path: "/charities",
     text: "Our Charities",
   },
+  {
+    path: "/blog",
+    text: "Blog",
+  },
 ]
 
 export const fairInfoLinks = [

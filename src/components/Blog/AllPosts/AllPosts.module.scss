@@ -12,9 +12,6 @@
 
   @include min-width(1000px) {
     @include flex(row, center, flex-start);
-
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 
   .Posts {
@@ -25,14 +22,24 @@
     }
 
     .PostsGrid {
-      @include flex(row, flex-start, flex-start);
+      @include flex(column, flex-start, center);
       flex-wrap: wrap;
+      width: 100%;
+
+      @include min-width(1000px) {
+        @include flex(row, center, flex-start);
+      }
+
+      @include min-width(1280px) {
+        @include flex(row, flex-start, flex-start);
+      }
     }
   }
 
   .ReadMoreButton {
-    @include font("M");
+    @include font("S");
     @include cta-button();
     margin: $spaceM auto;
+    font-weight: 300 !important;
   }
 }

@@ -10,16 +10,19 @@ import Layout from "../../Layout/Layout"
 import Sidebar from "../../Blog/Sidebar/Sidebar"
 import AuthorBio from "../../Blog/AuthorBio/AuthorBio"
 import AuthorBioLarge from "../../Blog/AuthorBioLarge/AuthorBioLarge"
+import SEO from "../../SEO/SEO"
 
 const PostTemplate = ({ data: { singleBlog } }) => {
   const richText = singleBlog.body.json
   const title = singleBlog.title
+  const subtitle = singleBlog.subtitle
   const image = singleBlog.image.fluid
   const caption = singleBlog.imageCaption
   const author = singleBlog.author
 
   return (
     <Layout>
+      <SEO titleExtra={title} keywordsExtra="" descriptionExtra={subtitle} />
       <article className={styles.Post}>
         <section className={styles.PostContent}>
           <div className={styles.ImageContainer}>

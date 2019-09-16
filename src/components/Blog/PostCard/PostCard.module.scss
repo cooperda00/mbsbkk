@@ -4,7 +4,8 @@
   @include flex(column, flex-start, flex-start);
   margin: $spaceM;
   width: 90%;
-  height: 50rem;
+  height: 45rem;
+  max-width: 40rem;
 
   @include min-width(1000px) {
     width: 27%;

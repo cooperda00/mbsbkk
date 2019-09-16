@@ -7,7 +7,6 @@ import styles from "./AuthorBio.module.scss"
 const AuthorBio = ({ author }) => {
   const name = author.name
   const image = author.portrait.fluid
-  const plug = author.personalWebsite
   const role = author.role
 
   return (
