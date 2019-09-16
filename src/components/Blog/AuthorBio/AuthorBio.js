@@ -18,14 +18,6 @@ const AuthorBio = ({ author }) => {
       <div className={styles.Text}>
         <p className={styles.Name}>{name}</p>
         <p className={styles.Role}>{role}</p>
-        {/* <a
-          href={plug}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.Plug}
-        >
-          {plug.replace(/https:\/\/|http:\/\//g, "")}
-        </a> */}
       </div>
     </div>
   )
