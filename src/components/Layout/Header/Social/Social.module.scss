@@ -1,9 +1,13 @@
 @import "../../../../vars";
 
 .Header {
-  display: none !important;
+  // display: none !important;
+  position: absolute;
+  top: $spaceS;
+  left: $spaceS;
 
-  @include min-width(1000px) {
+  @include min-width(768px) {
+    position: initial;
     display: flex !important;
   }
 }
@@ -23,7 +27,11 @@
   }
 
   a:not(:last-child) {
-    margin-right: $spaceM;
+    margin-right: $spaceS;
+
+    @include min-width(1000px) {
+      margin-right: $spaceS;
+    }
   }
 
   a:hover {
@@ -32,6 +40,11 @@
 
   a svg {
     color: $gray5;
+  }
+
+  @include min-width(768px) {
+  
+    margin-right: $spaceM;
   }
 
   @include min-width(1000px) {

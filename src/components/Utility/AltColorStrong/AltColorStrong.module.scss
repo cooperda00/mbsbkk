@@ -2,5 +2,18 @@
 
 .AltColorStrong {
     @include font("S");
+ 
+    display: block;
+
+    @include min-width(1000px) {
+        display: inline;
+    }
+}
+
+.Primary {
+    color: $primaryDD;
+}
+
+.Secondary {
     color: darken($bonus, 10%) !important;
 }
