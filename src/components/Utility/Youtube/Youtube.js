@@ -11,7 +11,7 @@ const Youtube = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/JYJchtlcLu0"
+            src="https://www.youtube.com/embed/JYJchtlcLu0?autoplay=1&loop=1&playlist=JYJchtlcLu0"
             frameBorder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

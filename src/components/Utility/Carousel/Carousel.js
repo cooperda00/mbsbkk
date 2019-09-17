@@ -24,7 +24,11 @@ const Carousel = () => {
     overflow: hidden;
     width: 100vw;
     height: ${height};
+    margin-top: 10rem;
+
+    @media (min-width: 768px) {
     margin-top: 15rem;
+  }
 
     @media (min-width: 1000px) {
       width: ${width};
