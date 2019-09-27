@@ -52,6 +52,7 @@
     margin-bottom: $spaceM;
     width: 90%;
     text-align: center;
+    text-transform: uppercase;
 
     @include min-width(1000px) {
       @include font("XXL");
@@ -75,7 +76,6 @@
     h1,
     h2,
     h3,
-    h4,
     p {
       text-align: center;
       width: 100%;
@@ -155,5 +155,20 @@
     strong {
       color: $primaryDD;
     }
+
+    blockquote {
+      border-left: 3px solid $primaryDD;
+      padding-left: $spaceM;
+      font-style: italic;
+    }
+  }
+}
+
+.EmbedImageContainer {
+  width: 100%;
+
+  img {
+    width: 100%;
+    padding: $spaceM;
   }
 }

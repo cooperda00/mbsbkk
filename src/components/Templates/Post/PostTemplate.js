@@ -20,6 +20,22 @@ const PostTemplate = ({ data: { singleBlog } }) => {
   const caption = singleBlog.imageCaption
   const author = singleBlog.author
 
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        console.log(node)
+        const url = node.data.target.fields.file["en-US"].url
+        const alt = node.data.target.fields.title["en-US"]
+
+        return (
+          <div className={styles.EmbedImageContainer}>
+            <img src={url} alt={alt} />
+          </div>
+        )
+      },
+    },
+  }
+
   return (
     <Layout>
       <SEO titleExtra={title} keywordsExtra="" descriptionExtra={subtitle} />
@@ -36,7 +52,7 @@ const PostTemplate = ({ data: { singleBlog } }) => {
           </div>
 
           <div className={styles.RichText}>
-            {documentToReactComponents(richText)}
+            {documentToReactComponents(richText, options)}
           </div>
 
           <div className={styles.AuthorContainer}>
