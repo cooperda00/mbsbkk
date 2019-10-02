@@ -40,7 +40,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         content={`${descriptionExtra} | ${description}`}
       />
 
-      <meta name="twitter:image" content="https://i.imgur.com/Rc2I2Gk.jpg" />
+      <meta name="twitter:image" content="https://i.imgur.com/na5c2Pe.jpg" />
 
       <meta name="twitter:creator" content="@mindbodyspiritfairbkk" />
 
@@ -70,7 +70,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       />
       <meta
         property="og:image"
-        content="https://i.imgur.com/jswm816.jpg"
+        content="https://i.imgur.com/fNDop7g.jpg"
         prefix="og: http://ogp.me/ns#"
       />
       <meta
