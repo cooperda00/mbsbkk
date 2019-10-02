@@ -1,0 +1,87 @@
+@import "../../vars";
+
+.SponsorForm {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  padding: 10rem 0 5rem 0;
+
+  @include min-width(768px) {
+    padding: 15rem 0 5rem 0;
+  }
+
+  @include min-width(1000px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.Form {
+  @include flex(column, flex-start, center);
+  width: 90%;
+  padding: $spaceM;
+  max-width: 50rem;
+  background: $gray1;
+  margin-top: $spaceS;
+
+  button {
+    @include font("S");
+    @include cta-button();
+    margin-top: $spaceS;
+  }
+
+  .InputGroup {
+    width: 100%;
+
+    label,
+    input,
+    textarea {
+      width: 100%;
+    }
+    label {
+      @include font("SSM");
+      display: block;
+    }
+
+    input,
+    textarea {
+      @include font("S");
+      margin: $spaceS 0;
+      padding: $spaceS;
+    }
+
+    textarea {
+      min-height: 20rem;
+      resize: vertical;
+    }
+  }
+
+  .CheckboxInputGroup {
+    width: 100%;
+    margin: $spaceS 0;
+
+    p {
+      @include font("S");
+      margin-bottom: $spaceS;
+      text-align: center;
+
+      @include min-width(768px) {
+        text-align: left;
+      }
+    }
+
+    ul {
+      @include flex(row, space-around, flex-start);
+
+      li {
+        @include flex(row, flex-start, center);
+        @include font("S");
+        list-style: none;
+
+        label {
+          margin-right: $spaceS;
+        }
+      }
+    }
+  }
+}
