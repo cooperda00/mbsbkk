@@ -11,7 +11,7 @@ const SponsorForm = () => {
       <Title title="Become a Sponsor" />
       <form
         className={styles.Form}
-        name="Sponsorship-Request"
+        name="Sponsorship"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -22,7 +22,7 @@ const SponsorForm = () => {
           <input
             type="text"
             id="name"
-            name="name"
+            name="Sname"
             required
             placeholder="John Smith"
             onFocus={e => {
@@ -39,7 +39,7 @@ const SponsorForm = () => {
           <input
             type="email"
             id="email"
-            name="email"
+            name="Semail"
             required
             placeholder="j.smith@example.com"
             onFocus={e => {
@@ -57,12 +57,12 @@ const SponsorForm = () => {
           <ul>
             <li>
               <label htmlFor="BKK">Bangkok</label>
-              <input type="checkbox" id="BKK" name="BKK" />
+              <input type="checkbox" id="BKK" name="SBKK" />
             </li>
 
             <li>
               <label htmlFor="CM">Chiang Mai</label>
-              <input type="checkbox" id="CM" name="BKK" />
+              <input type="checkbox" id="CM" name="SCM" />
             </li>
           </ul>
         </div>
@@ -70,9 +70,8 @@ const SponsorForm = () => {
         <div className={styles.InputGroup}>
           <label htmlFor="message">Message</label>
           <textarea
-            name="message"
+            name="Smessage"
             id="message"
-            name="message"
             placeholder="Please include your company name and website in the message (if
             applicable)."
             required
