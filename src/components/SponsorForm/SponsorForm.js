@@ -22,6 +22,7 @@ const SponsorForm = () => {
           <input
             type="text"
             id="name"
+            name="name"
             required
             placeholder="John Smith"
             onFocus={e => {
@@ -38,6 +39,7 @@ const SponsorForm = () => {
           <input
             type="email"
             id="email"
+            name="email"
             required
             placeholder="j.smith@example.com"
             onFocus={e => {
@@ -55,12 +57,12 @@ const SponsorForm = () => {
           <ul>
             <li>
               <label htmlFor="BKK">Bangkok</label>
-              <input type="checkbox" id="BKK" />
+              <input type="checkbox" id="BKK" name="BKK" />
             </li>
 
             <li>
               <label htmlFor="CM">Chiang Mai</label>
-              <input type="checkbox" id="CM" />
+              <input type="checkbox" id="CM" name="BKK" />
             </li>
           </ul>
         </div>
@@ -70,6 +72,7 @@ const SponsorForm = () => {
           <textarea
             name="message"
             id="message"
+            name="message"
             placeholder="Please include your company name and website in the message (if
             applicable)."
             required
