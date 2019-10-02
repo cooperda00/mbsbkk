@@ -17,7 +17,7 @@ const BasicInfo = () => {
           </p>
 
           <p>
-            The Mind, Body and Spirit Fair is Bangkok’s first dedicated health,
+            The Mind, Body, Spirit Fair is Bangkok’s first dedicated health,
             well-being and natural therapies event. This community charity event
             brings together a diversity of local and international mind, body
             and spirit practitioners, vendors and businesses, to share their
