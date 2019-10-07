@@ -8,7 +8,7 @@
     @include flex(row, flex-start, flex-start);
     height: 10rem;
     width: 30rem;
-    margin-left: $spaceS;
+    // margin-left: $spaceS;
   }
 
   .ImageContainer {
@@ -26,7 +26,7 @@
 
   .Text {
     width: 60%;
-    margin-top: $spaceS;
+    // margin-top: $spaceS;
 
     .Name {
       @include font("S");

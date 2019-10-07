@@ -5,6 +5,16 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./Sidebar.module.scss"
 
+const shortenTitle = title => {
+  const length = title.length
+
+  if (length > 50) {
+    return title.substr(0, 50) + "..."
+  } else {
+    return title.substr(0, 50)
+  }
+}
+
 const Sidebar = () => {
   const data = useStaticQuery(query)
   const posts = data.allPosts.edges
@@ -49,7 +59,7 @@ const Sidebar = () => {
                   <Image fluid={node.image.fluid} className={styles.Image} />
                 </div>
                 <div className={styles.Text}>
-                  <h1>{node.title}</h1>
+                  <h1>{shortenTitle(node.title)}</h1>
                   <p>{node.created}</p>
                 </div>
               </Link>

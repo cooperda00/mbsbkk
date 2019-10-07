@@ -23,7 +23,6 @@ const PostTemplate = ({ data: { singleBlog } }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log(node)
         const url = node.data.target.fields.file["en-US"].url
         const alt = node.data.target.fields.title["en-US"]
 

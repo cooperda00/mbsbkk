@@ -8,7 +8,7 @@ const AuthorBioLarge = ({ author }) => {
   const name = author.name
   const image = author.portrait.fluid
   const plug = author.personalWebsite
-  const role = author.role
+  // const role = author.role
   const bio = author.bio.bio
 
   return (
@@ -20,7 +20,7 @@ const AuthorBioLarge = ({ author }) => {
         </div>
         <div className={styles.Text}>
           <p className={styles.Name}>{name}</p>
-          <p className={styles.Role}>{role}</p>
+          {/* <p className={styles.Role}>{role}</p> */}
           <p className={styles.Bio}>{bio}</p>
           <a
             href={plug}
