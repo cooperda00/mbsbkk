@@ -9,7 +9,7 @@ import { FaLongArrowAltRight } from "react-icons/fa"
 
 const PostCard = ({ post }) => {
   return (
-    <div className={styles.PostCard}>
+    <Link className={styles.PostCard} to={`/blog/${post.slug}`}>
       <div className={styles.ImageContainer}>
         <Image fluid={post.image.fluid} className={styles.Image} />
       </div>
@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
           Read More <FaLongArrowAltRight />
         </Link>
       </div>
-    </div>
+    </Link>
   )
 }
 

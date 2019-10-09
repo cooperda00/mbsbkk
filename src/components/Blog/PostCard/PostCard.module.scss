@@ -9,11 +9,32 @@
 
   @include min-width(1000px) {
     width: 27%;
+    height: 75rem;
+  }
+
+  @include min-width(1200px) {
+    height: 65rem;
+  }
+
+  @include min-width(1400px) {
+    height: 60rem;
   }
 
   .ImageContainer {
     width: 100%;
     height: 50%;
+
+    @include min-width(1000px) {
+      height: 30%;
+    }
+
+    @include min-width(1200px) {
+      height: 35%;
+    }
+
+    @include min-width(1400px) {
+      height: 40%;
+    }
 
     .Image {
       width: 100%;
