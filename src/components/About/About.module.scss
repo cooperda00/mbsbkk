@@ -10,3 +10,19 @@
     margin: 0 auto;
   }
 }
+
+.Volunteers {
+  @include flex(column, flex-start, flex-start);
+
+  margin-top: $spaceS;
+  padding: 0 $spaceS;
+
+  p {
+    @include font("S");
+    margin-bottom: $spaceM;
+
+    a {
+      color: dodgerblue;
+    }
+  }
+}
