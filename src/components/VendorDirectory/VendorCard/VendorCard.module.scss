@@ -1,0 +1,19 @@
+@import "../../../vars";
+
+.VendorCard {
+  height: 50rem;
+  border: 1px dotted dodgerblue;
+  .CardImageContainer {
+    .Image {
+    }
+  }
+
+  .CardTitle {
+    font-size: $fontS !important;
+  }
+
+  .CardBlurb {
+    font-size: $fontXS !important;
+    color: red;
+  }
+}

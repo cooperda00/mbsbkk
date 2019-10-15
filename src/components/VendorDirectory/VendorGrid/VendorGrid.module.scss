@@ -1,0 +1,8 @@
+@import "../../../vars";
+
+.VendorGrid {
+  width: 100%;
+  display: grid;
+  grid-gap: $spaceS;
+  grid-template-columns: 1fr 1fr 1fr;
+}

@@ -1,0 +1,33 @@
+@import "../../../vars";
+
+.TicketCTA {
+  display: none;
+
+  @include font("S");
+  background: $primaryL;
+  position: absolute;
+  top: 15rem;
+  right: 0rem;
+  z-index: 500;
+  height: 7rem;
+  width: 22rem;
+  border-left: 0.7rem solid white;
+  border-bottom: 0.7rem solid white;
+  transition: 0.5s;
+  font-weight: 300;
+  letter-spacing: 0.3rem;
+
+  @include min-width(768px) {
+    @include flex(column, center, center);
+  }
+
+  @include min-width(1000px) {
+    @include font("SM");
+    height: 8rem;
+    width: 25rem;
+  }
+
+  &:hover {
+    background: $primary;
+  }
+}

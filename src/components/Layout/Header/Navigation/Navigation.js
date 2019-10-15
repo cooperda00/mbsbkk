@@ -9,6 +9,8 @@ import styles from "./Navigation.module.scss"
 import { links } from "../../../../constants/links"
 //Icons
 import { FaBars } from "react-icons/fa"
+//Components
+import OutButton from "../../../Utility/OutButton/OutButton"
 
 const Navigation = () => {
   const [menu, toggleMenu] = useState(false)
@@ -68,6 +70,12 @@ const Navigation = () => {
                   })}
               </>
             ))}
+            <div>
+              <OutButton
+                path="https://www.ticketmelon.com"
+                text="Buy Tickets Now !"
+              />
+            </div>
           </div>
         )}
       </Slide>

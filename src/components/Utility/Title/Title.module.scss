@@ -4,8 +4,7 @@
 .Subtitle {
   @include font("L");
 
-  // color: $gray4;
-  color: red;
+  color: $gray4;
   font-weight: 300;
   letter-spacing: 0.4rem;
   line-height: 1.2 !important;
