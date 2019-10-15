@@ -1,6 +1,7 @@
 @import "../../../vars";
 
-.Title {
+.Title,
+.Subtitle {
   @include font("L");
 
   color: $gray4;
@@ -16,5 +17,14 @@
 
   @include min-width(1000px) {
     @include font("XXL");
+  }
+}
+
+.Subtitle {
+  @include font("M");
+
+  @include min-width(1000px) {
+    @include font("L");
+    text-align: left;
   }
 }

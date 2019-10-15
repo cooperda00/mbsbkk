@@ -12,10 +12,11 @@ const About = () => {
   return (
     <section className={styles.About}>
       <Story />
-      <Title title="Team" />
+      <Title subtitle="Team" />
       <Profiles />
-      <Title title="Volunteers" />
+      {/* <Title subtitle="Volunteers" /> */}
       <div className={styles.Volunteers}>
+        <h3>Volunteers</h3>
         <p>
           We are deeply grateful for our dedicated an passionate volunteers, who
           are central to facilitating the smooth running of all aspects of the

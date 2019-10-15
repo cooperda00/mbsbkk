@@ -20,9 +20,20 @@
   p {
     @include font("S");
     margin-bottom: $spaceM;
+    max-width: 62rem;
+
+    @include min-width(1000px) {
+      width: 50%;
+      max-width: 50%;
+    }
 
     a {
       color: dodgerblue;
     }
+  }
+
+  h3 {
+    @include font("SM");
+    margin-bottom: $spaceS;
   }
 }
