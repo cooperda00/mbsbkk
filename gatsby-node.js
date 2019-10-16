@@ -13,6 +13,15 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      vendors: allContentfulVendor {
+        edges {
+          node {
+            slug
+            name
+          }
+        }
+      }
     }
   `)
 
@@ -21,6 +30,18 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/blog/${node.slug}`,
       component: path.resolve(
         "./src/components/Templates/Post/PostTemplate.js"
+      ),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
+  data.vendors.edges.forEach(({ node }) => {
+    createPage({
+      path: `/fair-info/exhibitors/${node.slug}`,
+      component: path.resolve(
+        "./src/components/Templates/Vendor/VendorTemplate.js"
       ),
       context: {
         slug: node.slug,

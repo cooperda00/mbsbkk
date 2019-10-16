@@ -2,9 +2,16 @@
 
 .VendorCard {
   height: 50rem;
-  border: 1px dotted dodgerblue;
+  max-width: 40rem;
+  position: relative;
+
   .CardImageContainer {
+    width: 100%;
+    height: 20rem;
+
     .Image {
+      height: 100%;
+      width: 100%;
     }
   }
 
@@ -14,6 +21,17 @@
 
   .CardBlurb {
     font-size: $fontXS !important;
-    color: red;
+  }
+
+  .ReadMore {
+    @include flex(row, flex-start, center);
+    @include font("XS");
+
+    position: absolute;
+    bottom: $spaceS;
+
+    svg {
+      margin-left: $spaceS;
+    }
   }
 }
