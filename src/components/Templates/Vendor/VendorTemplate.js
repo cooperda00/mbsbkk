@@ -32,6 +32,19 @@ export const query = graphql`
   query($slug: String) {
     singleVendor: contentfulVendor(slug: { eq: $slug }) {
       name
+      event
+      blurb {
+        blurb
+      }
+      image {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+      website
+      facebook
+      twitter
+      instagram
     }
 
     bg: file(relativePath: { eq: "vendor_3.jpg" }) {

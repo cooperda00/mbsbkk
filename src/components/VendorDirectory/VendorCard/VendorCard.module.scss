@@ -1,9 +1,29 @@
 @import "../../../vars";
 
 .VendorCard {
-  height: 50rem;
+  height: 47rem;
   max-width: 40rem;
   position: relative;
+
+  @include min-width(400px) {
+    height: 44rem;
+  }
+
+  @include min-width(768px) {
+    height: 45rem;
+  }
+
+  @include min-width(1000px) {
+    height: 50rem;
+  }
+
+  @include min-width(1200px) {
+    height: 45rem;
+  }
+
+  @include min-width(1400px) {
+    height: 50rem;
+  }
 
   .CardImageContainer {
     width: 100%;

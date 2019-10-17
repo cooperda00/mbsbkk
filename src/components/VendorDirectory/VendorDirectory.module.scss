@@ -7,16 +7,55 @@
 }
 
 .FilterControls {
+  @include flex(column, flex-start, center);
+  width: 100%;
+
+  @include min-width(1024px) {
+    @include flex(column, flex-start, flex-start);
+  }
+
   .InputGroup {
+    @include flex(column, flex-start, center);
+
+    @include min-width(1024px) {
+      @include flex(column, flex-start, flex-start);
+    }
+
     label {
+      @include font("S");
+      display: block;
     }
 
     input {
+      @include font("SSM");
+      width: 100%;
+      margin-bottom: $spaceS;
+      max-width: 30rem;
+      padding: 0.2rem $spaceS;
     }
   }
 
   .Alphabet {
+    padding: 0 $spaceS;
+    margin-bottom: $spaceM;
+
+    @include min-width(1000px) {
+      padding: 0;
+    }
+
     button {
+      @include font("XS");
+      padding: 0.3rem 0.7rem;
+      margin-top: $spaceS;
+      background: $gray1;
+    }
+
+    button:not(:last-of-type) {
+      margin-right: $spaceS;
     }
   }
+}
+
+.Selected {
+  background: $primaryL !important;
 }

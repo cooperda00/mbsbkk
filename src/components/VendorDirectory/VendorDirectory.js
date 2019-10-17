@@ -30,11 +30,14 @@ const VendorDirectory = () => {
 
   //Alphabetical Filter Methods
   const handleAlphabetFilter = e => {
+    //Set selectedButton
+    setSelectedButton(e.target.value)
+
     const filter = e.target.value.toLowerCase()
     const arrayClone = [...data.vendors.edges]
 
     //Reset Filter Back to Props
-    if (filter === "clear") {
+    if (filter === "all") {
       setFilteredVendors(arrayClone)
       //Set for if first space is a digit
     } else if (filter === "0-9") {
@@ -59,6 +62,9 @@ const VendorDirectory = () => {
     }
   }
 
+  //Conditional Styles ************************************
+  const [selectedButton, setSelectedButton] = useState("all")
+
   return (
     <div className={styles.VendorDirectory}>
       <h3>Exhibitor Directory</h3>
@@ -73,15 +79,27 @@ const VendorDirectory = () => {
           />
         </div>
         <div className={styles.Alphabet}>
-          <button onClick={handleAlphabetFilter} value="clear">
+          <button
+            onClick={handleAlphabetFilter}
+            value="all"
+            className={selectedButton === "all" && styles.Selected}
+          >
             All
           </button>
           {filterButtons.map(button => (
-            <button onClick={handleAlphabetFilter} value={button}>
+            <button
+              onClick={handleAlphabetFilter}
+              value={button}
+              className={selectedButton === button && styles.Selected}
+            >
               {button.toUpperCase()}
             </button>
           ))}
-          <button onClick={handleAlphabetFilter} value="0-9">
+          <button
+            onClick={handleAlphabetFilter}
+            value="0-9"
+            className={selectedButton === "0-9" && styles.Selected}
+          >
             0-9
           </button>
         </div>
@@ -99,7 +117,6 @@ const query = graphql`
           slug
           id
           name
-          event
           blurb {
             blurb
           }
@@ -108,10 +125,6 @@ const query = graphql`
               ...GatsbyContentfulFluid
             }
           }
-          website
-          facebook
-          twitter
-          instagram
         }
       }
     }

@@ -9,3 +9,53 @@
     padding: 0 $spaceM;
   }
 }
+
+.ImageContainer {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: $spaceM;
+
+  .Image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.Title {
+  @include font("M");
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+  margin-bottom: $spaceS;
+}
+
+.Events {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: $spaceS;
+
+  .Event {
+    @include font("SSM");
+    margin-right: $spaceM;
+  }
+
+  .ChiangMai {
+    color: $tertiaryD;
+  }
+
+  .BKK {
+    color: $primaryDD;
+  }
+}
+
+.Social {
+  @include flex(row, flex-start, center);
+  @include font("M");
+  margin-bottom: $spaceS;
+
+  a:not(:last-of-type) {
+    margin-right: $spaceS;
+  }
+}
+
+.Blurb {
+  @include font("S");
+}
