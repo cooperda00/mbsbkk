@@ -47,6 +47,8 @@
   .Text {
     @include flex(column, space-between, flex-start);
     height: 50%;
+    width: 100%;
+    max-width: 100%;
 
     .Title {
       @include font("S");
@@ -55,10 +57,14 @@
       color: $primaryDD;
       text-transform: uppercase;
       margin-top: $spaceM;
+      max-width: 100%;
     }
 
     .Subtitle {
       @include font("XS");
+      width: 100%;
+      max-width: 100%;
+      // overflow-wrap: break-word;
     }
 
     .ReadMore {
