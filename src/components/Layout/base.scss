@@ -44,3 +44,20 @@ textarea {
 .active {
   color: rgba($primaryDD, 1);
 }
+
+//Button Reset
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:active {
+  transform: scale(0.99);
+}
