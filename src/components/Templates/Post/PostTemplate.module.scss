@@ -166,9 +166,18 @@
 
 .EmbedImageContainer {
   width: 100%;
+  position: relative;
 
   img {
     width: 100%;
     padding: $spaceM;
+  }
+
+  svg {
+    @include font("M");
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
