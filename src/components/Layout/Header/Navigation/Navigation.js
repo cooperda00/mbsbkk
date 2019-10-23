@@ -74,6 +74,7 @@ const Navigation = () => {
               <OutButton
                 path="https://www.ticketmelon.com"
                 text="Buy Tickets Now"
+                type="2"
               />
             </div>
           </div>

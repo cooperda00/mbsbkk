@@ -19,7 +19,7 @@
   line-height: 3rem !important;
   margin-bottom: $spaceS;
 
-  a {
+  .Icon {
     @include flex(column, center, center);
 
     position: relative;
@@ -34,16 +34,42 @@
     }
   }
 
-  a:hover {
+  .Icon:hover {
     transform: translateY(-0.3rem);
   }
 
-  a svg {
+  .Icon svg {
     color: $gray5;
   }
 
+  .TicketCTA {
+    @include font("S");
+    margin-right: $spaceM !important;
+    background: $bonus;
+    color: $gray5 !important;
+    padding: 0.4rem 2rem;
+    border-bottom: 2px solid darken($bonus, 10%);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    border-radius: 0.2rem;
+    display: none;
+    transition: 0.5s;
+
+    @include min-width(768px) {
+      display: inline-block;
+    }
+
+    @include min-width(1250px) {
+      @include font("SSM");
+      padding: 0.6rem 2rem;
+    }
+
+    &:hover {
+      background: darken($bonus, 10%);
+    }
+  }
+
   @include min-width(768px) {
-  
     margin-right: $spaceM;
   }
 

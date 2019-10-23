@@ -51,8 +51,10 @@
       @include font("XS");
       padding: 0.3rem 0.7rem;
       margin-top: $spaceS;
-      background: $gray1;
-      border: 0.1rem soild $gray5;
+      // background: $gray1;
+      // border: 0.1rem soild $gray5;
+      background: transparent;
+      border: none;
     }
 
     button:not(:last-of-type) {
@@ -62,5 +64,6 @@
 }
 
 .Selected {
-  background: $primaryL !important;
+  // background: $primaryL !important;
+  color: $primaryDD !important;
 }

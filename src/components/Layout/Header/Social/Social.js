@@ -12,6 +12,9 @@ const Social = ({ header }) => {
         header ? `${styles.Social} ${styles.Header}` : `${styles.Social}`
       }
     >
+      <a href="https://ticketmelon.com" className={styles.TicketCTA}>
+        BUY TICKETS
+      </a>
       {social.map(link => {
         return (
           <a
@@ -21,6 +24,7 @@ const Social = ({ header }) => {
             key={link.name}
             style={{ color: "gray" }}
             aria-label={link.label}
+            className={styles.Icon}
           >
             {link.icon}
           </a>

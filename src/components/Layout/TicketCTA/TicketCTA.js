@@ -11,7 +11,7 @@ const TicketCTA = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <p>Buy Tickets Now !</p>
+      <p>Buy Tickets</p>
     </a>
   )
 }

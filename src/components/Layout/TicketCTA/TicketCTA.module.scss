@@ -3,20 +3,37 @@
 .TicketCTA {
   display: none;
 
+  // @include font("S");
+  // background: $primaryL;
+  // position: absolute;
+  // top: 15rem;
+  // right: 0rem;
+  // z-index: 500;
+  // height: 7rem;
+  // width: 22rem;
+  // border-left: 0.7rem solid white;
+  // border-right: 0.7rem solid white;
+  // border-bottom: 0.7rem solid white;
+  // transition: 0.5s;
+  // font-weight: 300;
+  // letter-spacing: 0.3rem;
+
   @include font("S");
-  background: $primaryL;
+  background: $bonus;
   position: absolute;
-  top: 15rem;
-  right: 0rem;
+  top: 18rem;
+  right: 2rem;
   z-index: 500;
-  height: 7rem;
-  width: 22rem;
-  border-left: 0.7rem solid white;
-  border-right: 0.7rem solid white;
-  border-bottom: 0.7rem solid white;
+  height: 6rem;
+  width: 20rem;
+  // border-left: 0.7rem solid white;
+  // border-right: 0.7rem solid white;
+  // border-bottom: 0.7rem solid white;
+  border-bottom: 3px solid darken($bonus, 10%);
   transition: 0.5s;
-  font-weight: 300;
-  letter-spacing: 0.3rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  // border-radius: 15px;
 
   @include min-width(768px) {
     @include flex(column, center, center);
@@ -24,11 +41,12 @@
 
   @include min-width(1000px) {
     @include font("SM");
-    height: 8rem;
-    width: 25rem;
+    height: 7rem;
+    width: 23rem;
   }
 
   &:hover {
-    background: $primary;
+    // background: $primary;
+    background: darken($bonus, 5%);
   }
 }
