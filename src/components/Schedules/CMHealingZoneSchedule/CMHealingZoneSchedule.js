@@ -3,30 +3,49 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 //Sass
 import styles from "./CMHealingZoneSchedule.module.scss"
+//Components
+import HZTimetable from "../HZTimetable/HZTimetable"
 
 const CMHealingZoneSchedule = () => {
-  // const data = useStaticQuery(query)
-  // const { saturday, sunday } = data
+  const data = useStaticQuery(query)
+  const { saturday, sunday } = data
 
   return (
     <div className={styles.CMHealingZoneSchedule}>
-      <h1>Healing Zone Schedules</h1>
+      <hr />
+      <h2>Chiang Mai Schedule</h2>
+      <HZTimetable title="Saturday" timetable={saturday} />
+      <HZTimetable title="Sunday" timetable={sunday} />
     </div>
   )
 }
 
-// const query = graphql`
-//   {
-//     saturday: contentfulChiangMaiSeminarSchedule(day: { eq: "Saturday" }) {
-//       am
-//       pm
-//     }
+const query = graphql`
+  {
+    saturday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Saturday" }) {
+      day
+      am {
+        name
+        slug
+      }
+      pm {
+        name
+        slug
+      }
+    }
 
-//     sunday: contentfulChiangMaiSeminarSchedule(day: { eq: "Sunday" }) {
-//       am
-//       pm
-//     }
-//   }
-// `
+    sunday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Sunday" }) {
+      day
+      am {
+        name
+        slug
+      }
+      pm {
+        name
+        slug
+      }
+    }
+  }
+`
 
 export default CMHealingZoneSchedule

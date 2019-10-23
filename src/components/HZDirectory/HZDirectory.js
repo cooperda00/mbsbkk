@@ -66,46 +66,49 @@ const HZDirectory = () => {
   const [selectedButton, setSelectedButton] = useState("all")
 
   return (
-    <div className={styles.HZDirectory}>
-      <h3>Healing Zone Directory</h3>
-      <div className={styles.FilterControls}>
-        <div className={styles.InputGroup}>
-          <label htmlFor="filter">Search</label>
-          <input
-            type="text"
-            name="filter"
-            id="filter"
-            onChange={handleFilterChange}
-          />
-        </div>
-        <div className={styles.Alphabet}>
-          <button
-            onClick={handleAlphabetFilter}
-            value="all"
-            className={selectedButton === "all" && styles.Selected}
-          >
-            All
-          </button>
-          {filterButtons.map(button => (
+    <>
+      <hr />
+      <div className={styles.HZDirectory}>
+        <h2>Directory</h2>
+        <div className={styles.FilterControls}>
+          <div className={styles.InputGroup}>
+            <label htmlFor="filter">Search</label>
+            <input
+              type="text"
+              name="filter"
+              id="filter"
+              onChange={handleFilterChange}
+            />
+          </div>
+          <div className={styles.Alphabet}>
             <button
               onClick={handleAlphabetFilter}
-              value={button}
-              className={selectedButton === button && styles.Selected}
+              value="all"
+              className={selectedButton === "all" && styles.Selected}
             >
-              {button.toUpperCase()}
+              All
             </button>
-          ))}
-          <button
-            onClick={handleAlphabetFilter}
-            value="0-9"
-            className={selectedButton === "0-9" && styles.Selected}
-          >
-            0-9
-          </button>
+            {filterButtons.map(button => (
+              <button
+                onClick={handleAlphabetFilter}
+                value={button}
+                className={selectedButton === button && styles.Selected}
+              >
+                {button.toUpperCase()}
+              </button>
+            ))}
+            <button
+              onClick={handleAlphabetFilter}
+              value="0-9"
+              className={selectedButton === "0-9" && styles.Selected}
+            >
+              0-9
+            </button>
+          </div>
         </div>
+        <HZGrid HZ={filteredHZ} />
       </div>
-      <HZGrid HZ={filteredHZ} />
-    </div>
+    </>
   )
 }
 

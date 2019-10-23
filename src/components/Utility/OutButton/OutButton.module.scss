@@ -2,7 +2,6 @@
 
 .OutButton {
   @include cta-button();
-  @include font("S");
 
   text-align: center;
   font-weight: 300;
