@@ -22,6 +22,15 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      HZ: allContentfulHealingZonePractitioner {
+        edges {
+          node {
+            slug
+            name
+          }
+        }
+      }
     }
   `)
 
@@ -43,6 +52,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(
         "./src/components/Templates/Vendor/VendorTemplate.js"
       ),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
+  data.HZ.edges.forEach(({ node }) => {
+    createPage({
+      path: `/fair-info/healing-zone/${node.slug}`,
+      component: path.resolve("./src/components/Templates/HZ/HZTemplate.js"),
       context: {
         slug: node.slug,
       },

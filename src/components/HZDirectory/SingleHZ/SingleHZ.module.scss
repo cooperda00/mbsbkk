@@ -1,0 +1,80 @@
+@import "../../../vars";
+
+.SingleHZ {
+  @include flex(column, flex-start, center);
+
+  margin-top: $spaceM;
+  width: 100%;
+  padding: 0 $spaceS;
+
+  @include min-width(1000px) {
+    width: 80%;
+    padding: 0 $spaceM;
+  }
+}
+
+.ImageContainer {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: $spaceM;
+
+  @include min-width(700px) {
+    width: 85%;
+  }
+
+  @include min-width(1200px) {
+    width: 70%;
+  }
+
+  .Image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.Title {
+  @include font("M");
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+  margin-bottom: $spaceS;
+}
+
+.Events {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: $spaceS;
+
+  .Event {
+    @include font("SSM");
+    margin-right: $spaceM;
+  }
+
+  .ChiangMai {
+    color: $tertiaryD;
+  }
+
+  .BKK {
+    color: $primaryDD;
+  }
+}
+
+.Social {
+  @include flex(row, flex-start, center);
+  @include font("M");
+  margin-bottom: $spaceS;
+
+  a {
+    transition: 0.5s;
+  }
+
+  a:not(:last-of-type) {
+    margin-right: $spaceS;
+  }
+
+  a:hover {
+    color: $primaryDD;
+  }
+}
+
+.Blurb {
+  @include font("S");
+}

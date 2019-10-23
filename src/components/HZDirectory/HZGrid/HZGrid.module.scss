@@ -1,0 +1,17 @@
+@import "../../../vars";
+
+.HZGrid {
+  width: 100%;
+  display: grid;
+  grid-gap: $spaceS;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include min-width(768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include min-width(1400px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
