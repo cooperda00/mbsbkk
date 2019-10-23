@@ -98,12 +98,14 @@ $contentWidthL: 165rem;
   background: $primaryL;
   border-radius: 0.2rem;
   border: none;
-  box-shadow: 0px 0.2rem 0px 0px $primary;
+  border-bottom: 0.2rem solid $primary;
+  // box-shadow: 0px 0.2rem 0px 0px $primary;
   color: $gray5;
   cursor: pointer;
   padding: 1rem 2rem;
   letter-spacing: 0.3rem;
   transition: 0.5s;
+  box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4);
 
   &:hover {
     background: $primary;

@@ -54,6 +54,7 @@
     border-radius: 0.2rem;
     display: none;
     transition: 0.5s;
+    box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4);
 
     @include min-width(768px) {
       display: inline-block;

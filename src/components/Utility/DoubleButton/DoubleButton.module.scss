@@ -10,7 +10,7 @@
   }
 
   a {
-    @include font("S");
+    @include font("SM");
 
     text-align: center;
     font-weight: 300;
@@ -22,6 +22,7 @@
     padding: 1rem 2rem;
     letter-spacing: 0.3rem;
     transition: 0.5s;
+    box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4);
   }
 
   a:not(:last-of-type) {
@@ -34,7 +35,7 @@
 
   .Button1 {
     background: $primaryL;
-    box-shadow: 0px 0.2rem 0px 0px $primary;
+    border-bottom: 0.2rem solid $primaryDD;
 
     &:hover {
       background: $primary;
@@ -43,7 +44,7 @@
 
   .Button2 {
     background: $bonus;
-    box-shadow: 0px 0.2rem 0px 0px darken($bonus, 10%);
+    border-bottom: 0.2rem solid darken($bonus, 10%);
 
     &:hover {
       background: darken($bonus, 10%);

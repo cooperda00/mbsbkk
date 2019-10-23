@@ -10,7 +10,7 @@
 
 .AltColor {
   background: $bonus;
-  box-shadow: 0px 0.2rem 0px 0px darken($bonus, 10%);
+  border-bottom: 0.2rem solid darken($bonus, 10%);
 
   &:hover {
     background: darken($bonus, 10%);
