@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.Layout}>
       <Header />
-      {/* <TicketCTA /> */}
+      <TicketCTA />
       <main>{children}</main>
       <Footer />
     </div>

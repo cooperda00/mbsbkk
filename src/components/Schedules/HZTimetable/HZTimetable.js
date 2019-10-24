@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import styles from "./HZTimetable.module.scss"
 
 const Timetable = ({ title, timetable }) => {
-  console.log(timetable)
   return (
     <>
       <h3>{title}</h3>

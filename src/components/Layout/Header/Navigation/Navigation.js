@@ -10,7 +10,7 @@ import { links } from "../../../../constants/links"
 //Icons
 import { FaBars } from "react-icons/fa"
 //Components
-import OutButton from "../../../Utility/OutButton/OutButton"
+// import OutButton from "../../../Utility/OutButton/OutButton"
 
 const Navigation = () => {
   const [menu, toggleMenu] = useState(false)
@@ -70,13 +70,13 @@ const Navigation = () => {
                   })}
               </>
             ))}
-            <div>
+            {/* <div>
               <OutButton
                 path="https://www.ticketmelon.com"
                 text="Buy Tickets"
                 type="2"
               />
-            </div>
+            </div> */}
           </div>
         )}
       </Slide>

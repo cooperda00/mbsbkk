@@ -33,7 +33,7 @@
   transition: 0.5s;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  // border-radius: 15px;
+  border-radius: 15px;
 
   @include min-width(768px) {
     @include flex(column, center, center);
@@ -47,6 +47,6 @@
 
   &:hover {
     // background: $primary;
-    background: darken($bonus, 5%);
+    background: darken($bonus, 10%);
   }
 }

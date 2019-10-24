@@ -12,9 +12,6 @@ const Social = ({ header }) => {
         header ? `${styles.Social} ${styles.Header}` : `${styles.Social}`
       }
     >
-      <a href="https://ticketmelon.com" className={styles.TicketCTA}>
-        BUY TICKETS
-      </a>
       {social.map(link => {
         return (
           <a
@@ -30,6 +27,10 @@ const Social = ({ header }) => {
           </a>
         )
       })}
+
+      <a href="https://ticketmelon.com" className={styles.TicketCTA}>
+        Buy Tickets
+      </a>
     </div>
   )
 }

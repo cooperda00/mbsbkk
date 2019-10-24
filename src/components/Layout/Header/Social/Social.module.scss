@@ -43,27 +43,39 @@
   }
 
   .TicketCTA {
-    @include font("S");
-    margin-right: $spaceM !important;
+    font-size: 1.1rem;
+    line-height: 1;
+    // margin-right: $spaceM !important;
     background: $bonus;
     color: $gray5 !important;
-    padding: 0.4rem 2rem;
+    // padding: 0.4rem 2rem;
     border-bottom: 2px solid darken($bonus, 10%);
     font-weight: 300;
     letter-spacing: 0.3rem;
     border-radius: 0.2rem;
-    display: none;
+    display: block;
     transition: 0.5s;
-    box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4);
+    // box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4);
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 105%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+
+    @include min-width(360px) {
+      font-size: 1.3rem;
+      width: 115%;
+    }
 
     @include min-width(768px) {
-      display: inline-block;
+      display: none;
     }
 
-    @include min-width(1250px) {
-      @include font("SSM");
-      padding: 0.6rem 2rem;
-    }
+    // @include min-width(1250px) {
+    //   @include font("SSM");
+    //   padding: 0.6rem 2rem;
+    // }
 
     &:hover {
       background: darken($bonus, 10%);

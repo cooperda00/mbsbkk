@@ -7,7 +7,7 @@
   font-weight: 300;
   margin: $spaceS auto $spaceM auto;
   border-bottom: 0.2rem solid $primaryDD;
-  box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4) !important;
+  // box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4) !important;
 
   @include min-width(1000px) {
     margin: $spaceS 0 $spaceM 0;
