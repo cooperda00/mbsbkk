@@ -8,7 +8,7 @@
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
     width: 30%;
-    // margin-top: 6rem;
+    margin-top: 6rem;
   }
 
   .Title {
