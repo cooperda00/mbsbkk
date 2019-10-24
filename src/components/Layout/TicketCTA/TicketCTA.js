@@ -1,12 +1,15 @@
 //Modules
-import React from "react"
+import React, { useEffect } from "react"
 //Sass
 import styles from "./TicketCTA.module.scss"
 
 const TicketCTA = () => {
   //Dont show on individual blog view (less ugly)
-  if (typeof window !== undefined) {
-    if (!window.location.href.includes("/blog/")) {
+  useEffect(() => {
+    if (
+      typeof window !== undefined &&
+      !window.location.href.includes("/blog/")
+    ) {
       return (
         <a
           href="https://www.ticketmelon.com"
@@ -17,10 +20,10 @@ const TicketCTA = () => {
           <p>Buy Tickets</p>
         </a>
       )
+    } else {
+      return null
     }
-  } else {
-    return <div></div>
-  }
+  }, [])
 }
 
 export default TicketCTA
