@@ -5,7 +5,7 @@ import styles from "./TicketCTA.module.scss"
 
 const TicketCTA = () => {
   //Dont show on individual blog view (less ugly)
-  if (!window.location.href.includes("/blog/")) {
+  if (window && !window.location.href.includes("/blog/")) {
     return (
       <a
         href="https://www.ticketmelon.com"
