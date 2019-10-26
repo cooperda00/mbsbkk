@@ -7,10 +7,10 @@ import styles from "./SingleVendor.module.scss"
 import { FaFacebookF, FaInstagram, FaTwitter, FaHome } from "react-icons/fa"
 
 const SingleVendor = ({ vendor }) => {
-  console.log(vendor)
   const website = vendor.website
   const name = vendor.name
   const image = vendor.image.fluid
+  const logo = vendor.logo.fluid
   const events = vendor.event
   const blurb = vendor.blurb.blurb
   const facebook = vendor.facebook
@@ -22,7 +22,15 @@ const SingleVendor = ({ vendor }) => {
       <div className={styles.ImageContainer}>
         <Image fluid={image} className={styles.Image} />
       </div>
-      <h3 className={styles.Title}>{name}</h3>
+
+      <div className={styles.Title}>
+        <div className={styles.LogoContainer}>
+          <Image fluid={logo} className={styles.Logo} />
+        </div>
+
+        <h3>{name}</h3>
+      </div>
+
       <div className={styles.Social}>
         {website && (
           <a href={website} target="_blank" rel="noopener noreferrer">

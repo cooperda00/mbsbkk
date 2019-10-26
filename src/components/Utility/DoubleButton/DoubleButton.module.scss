@@ -35,7 +35,7 @@
 
   .Button1 {
     background: $primaryL;
-    border-bottom: 0.2rem solid $primaryDD;
+    // border-bottom: 0.2rem solid $primaryDD;
 
     &:hover {
       background: $primary;
@@ -44,7 +44,7 @@
 
   .Button2 {
     background: $bonus;
-    border-bottom: 0.2rem solid darken($bonus, 10%);
+    // border-bottom: 0.2rem solid darken($bonus, 10%);
 
     &:hover {
       background: darken($bonus, 10%);

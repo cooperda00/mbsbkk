@@ -33,10 +33,27 @@
 }
 
 .Title {
-  @include font("M");
-  letter-spacing: 0.4rem;
-  font-weight: 300;
-  margin-bottom: $spaceS;
+  @include flex(column, flex-start, center);
+
+  margin-bottom: $spaceM;
+  width: 100%;
+
+  .LogoContainer {
+    width: 30%;
+    margin-bottom: $spaceM;
+
+    .Logo {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  h3 {
+    @include font("M");
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+    text-align: center;
+  }
 }
 
 .Events {

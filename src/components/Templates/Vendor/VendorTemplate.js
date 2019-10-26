@@ -41,6 +41,11 @@ export const query = graphql`
           ...GatsbyContentfulFluid
         }
       }
+      logo {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
       website
       facebook
       twitter
