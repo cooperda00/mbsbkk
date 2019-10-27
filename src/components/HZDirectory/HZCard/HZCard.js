@@ -11,13 +11,19 @@ const HZCard = ({ node }) => {
   return (
     <Link className={styles.HZCard} to={`/fair-info/healing-zone/${node.slug}`}>
       <div className={styles.CardImageContainer}>
-        <Image fluid={node.image.fluid} className={styles.Image} />
+        <Image
+          fluid={node.image.fluid}
+          className={styles.Image}
+          // imgStyle={{
+          //   objectFit: "contain",
+          // }}
+        />
       </div>
       <h3 className={styles.CardTitle}>{node.name}</h3>
-      <p className={styles.CardBlurb}>
+      {/* <p className={styles.CardBlurb}>
         {" "}
         {node.blurb.blurb.substr(0, 350) + "..."}
-      </p>
+      </p> */}
 
       <Link
         to={`/fair-info/healing-zone/${node.slug}`}
