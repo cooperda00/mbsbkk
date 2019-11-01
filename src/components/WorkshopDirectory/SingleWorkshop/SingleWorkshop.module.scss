@@ -36,6 +36,8 @@
   @include font("M");
   letter-spacing: 0.4rem;
   font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
   margin-bottom: $spaceS;
 }
 
@@ -72,6 +74,27 @@
 
   a:hover {
     color: $primaryDD;
+  }
+}
+
+.Details {
+  @include flex(column, flex-start, flex-start);
+  margin-bottom: $spaceM;
+
+  p {
+    @include font("S");
+  }
+
+  strong {
+    margin-right: $spaceS;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, space-around);
+
+    p:not(:last-of-type) {
+      margin-right: $spaceM;
+    }
   }
 }
 

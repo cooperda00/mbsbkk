@@ -33,6 +33,9 @@ export const query = graphql`
   query($slug: String) {
     singleWorkshop: contentfulWorkshop(slug: { eq: $slug }) {
       name
+      room
+      time
+      facilitatorName
       event
       blurb {
         blurb

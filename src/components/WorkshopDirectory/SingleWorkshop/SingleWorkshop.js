@@ -16,6 +16,10 @@ const SingleWorkshop = ({ workshop }) => {
   const twitter = workshop.twitter
   const instagram = workshop.instagram
 
+  const room = workshop.room
+  const time = workshop.time
+  const facilitatorName = workshop.facilitatorName
+
   return (
     <div className={styles.SingleWorkshop}>
       <div className={styles.ImageContainer}>
@@ -56,6 +60,19 @@ const SingleWorkshop = ({ workshop }) => {
             }
           })}
       </div>
+
+      <div className={styles.Details}>
+        <p>
+          <strong>Time:</strong> {time}
+        </p>
+        <p>
+          <strong>Room:</strong> {room}
+        </p>
+        <p>
+          <strong>Facilitator:</strong> {facilitatorName}
+        </p>
+      </div>
+
       <p className={styles.Blurb}>{blurb}</p>
     </div>
   )

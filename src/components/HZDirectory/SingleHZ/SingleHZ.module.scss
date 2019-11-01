@@ -36,7 +36,9 @@
   @include font("M");
   letter-spacing: 0.4rem;
   font-weight: 300;
+  text-align: center;
   margin-bottom: $spaceS;
+  text-transform: uppercase;
 }
 
 .Events {
