@@ -16,8 +16,6 @@ const SingleWorkshop = ({ workshop }) => {
   const twitter = workshop.twitter
   const instagram = workshop.instagram
 
-  console.log(blurb)
-
   return (
     <div className={styles.SingleWorkshop}>
       <div className={styles.ImageContainer}>

@@ -12,10 +12,11 @@ import SingleVendor from "../../VendorDirectory/SingleVendor/SingleVendor"
 
 const VendorTemplate = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
+  const name = data.singleVendor.name
 
   return (
     <Layout>
-      <SEO titleExtra="" keywordsExtra="" descriptionExtra="" />
+      <SEO titleExtra={name} keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}></Hero>
       <section className={styles.FairInfo}>
         <div className={styles.Container}>
