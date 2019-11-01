@@ -7,11 +7,16 @@ import styles from "./VendorCard.module.scss"
 //Icons
 import { FaLongArrowAltRight } from "react-icons/fa"
 
-const VendorCard = ({ node }) => {
+const VendorCard = ({ node, type }) => {
+  console.log(type)
   return (
     <Link
       className={styles.VendorCard}
-      to={`/fair-info/exhibitors/${node.slug}`}
+      to={
+        type === "workshop"
+          ? `/fair-info/workshops-and-seminars/${node.slug}`
+          : `/fair-info/exhibitors/${node.slug}`
+      }
     >
       <div className={styles.CardImageContainer}>
         <Image
@@ -29,7 +34,11 @@ const VendorCard = ({ node }) => {
       </p> */}
 
       <Link
-        to={`/fair-info/exhibitors/${node.slug}`}
+        to={
+          type === "workshop"
+            ? `/fair-info/workshops-and-seminars/${node.slug}`
+            : `/fair-info/exhibitors/${node.slug}`
+        }
         className={styles.ReadMore}
       >
         More Info <FaLongArrowAltRight />

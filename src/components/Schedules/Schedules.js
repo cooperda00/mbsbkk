@@ -15,8 +15,8 @@ const Schedules = () => {
 
       <hr />
 
-      <h3>Bangkok</h3>
-      <p>Coming Soon</p>
+      {/* <h3>Bangkok</h3>
+      <p>Coming Soon</p> */}
     </section>
   )
 }

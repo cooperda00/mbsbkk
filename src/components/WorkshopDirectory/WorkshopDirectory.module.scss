@@ -1,0 +1,70 @@
+@import "../../vars";
+
+.VendorDirectory {
+  @include flex(column, flex-start, flex-start);
+
+  width: 100%;
+}
+
+.FilterControls {
+  @include flex(column, flex-start, center);
+  width: 100%;
+
+  @include min-width(1024px) {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  .InputGroup {
+    @include flex(column, flex-start, center);
+
+    @include min-width(1024px) {
+      @include flex(column, flex-start, flex-start);
+    }
+
+    label {
+      @include font("S");
+      display: block;
+    }
+
+    input {
+      @include font("SSM");
+      width: 100%;
+      margin-bottom: $spaceS;
+      max-width: 30rem;
+      padding: 0.2rem $spaceS;
+    }
+  }
+
+  .Alphabet {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 $spaceS;
+    margin-bottom: $spaceM;
+
+    @include min-width(1000px) {
+      @include flex(row, flex-start, center);
+      padding: 0;
+    }
+
+    button {
+      @include font("XS");
+      padding: 0.3rem 0.7rem;
+      margin-top: $spaceS;
+      // background: $gray1;
+      // border: 0.1rem soild $gray5;
+      background: transparent;
+      border: none;
+    }
+
+    button:not(:last-of-type) {
+      margin-right: $spaceS;
+    }
+  }
+}
+
+.Selected {
+  // background: $primaryL !important;
+
+  color: $primaryDD !important;
+}

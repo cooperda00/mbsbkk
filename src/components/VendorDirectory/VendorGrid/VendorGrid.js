@@ -5,11 +5,11 @@ import styles from "./VendorGrid.module.scss"
 //Components
 import VendorCard from "../VendorCard/VendorCard"
 
-const VendorGrid = ({ vendors }) => {
+const VendorGrid = ({ vendors, type }) => {
   return (
     <div className={styles.VendorGrid}>
       {vendors.map(({ node }) => (
-        <VendorCard node={node} key={node.id} />
+        <VendorCard node={node} key={node.id} type={type} />
       ))}
     </div>
   )
