@@ -78,3 +78,38 @@
 .Blurb {
   @include font("S");
 }
+
+.RichText {
+  width: 100%;
+
+  p {
+    @include font("S");
+    margin-bottom: $spaceS;
+    text-align: center;
+    width: 100%;
+
+    @include min-width(1000px) {
+      text-align: left;
+    }
+  }
+
+  ul {
+    margin-left: $spaceM;
+    margin-bottom: $spaceS;
+
+    li {
+      p {
+        @include font("S");
+      }
+    }
+  }
+
+  span a,
+  p a {
+    color: dodgerblue;
+  }
+
+  strong {
+    color: $primaryDD;
+  }
+}

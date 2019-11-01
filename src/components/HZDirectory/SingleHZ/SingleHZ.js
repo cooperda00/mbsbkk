@@ -1,6 +1,7 @@
 //Modules
 import React from "react"
 import Image from "gatsby-image"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 //Sass
 import styles from "./SingleHZ.module.scss"
 //Icons
@@ -15,6 +16,7 @@ const SingleHZ = ({ HZ }) => {
   const facebook = HZ.facebook
   const twitter = HZ.twitter
   const instagram = HZ.instagram
+  const extraInfo = HZ.extraInfo.json
 
   return (
     <div className={styles.SingleHZ}>
@@ -56,6 +58,11 @@ const SingleHZ = ({ HZ }) => {
             }
           })}
       </div>
+
+      <div className={styles.RichText}>
+        {documentToReactComponents(extraInfo)}
+      </div>
+
       <p className={styles.Blurb}>{blurb}</p>
     </div>
   )

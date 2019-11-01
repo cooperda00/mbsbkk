@@ -34,6 +34,9 @@ export const query = graphql`
     singleHZ: contentfulHealingZonePractitioner(slug: { eq: $slug }) {
       name
       event
+      extraInfo {
+        json
+      }
       blurb {
         blurb
       }

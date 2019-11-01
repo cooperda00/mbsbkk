@@ -12,8 +12,6 @@ const CMHealingZoneSchedule = () => {
   // const { saturday, sunday } = data
   const posters = data.schedules.posters
 
-  console.log(posters)
-
   return (
     <div className={styles.CMHealingZoneSchedule}>
       <hr />
@@ -21,42 +19,43 @@ const CMHealingZoneSchedule = () => {
       {/* <HZTimetable title="Saturday" timetable={saturday} />
       <HZTimetable title="Sunday" timetable={sunday} /> */}
 
-      {posters.map(poster => {
-        return (
-          <div className={styles.PosterContainer} key={poster.id}>
-            <Image fluid={poster.fluid} className={styles.Poster} />
-          </div>
-        )
-      })}
+      {posters &&
+        posters.map(poster => {
+          return (
+            <div className={styles.PosterContainer} key={poster.id}>
+              <Image fluid={poster.fluid} className={styles.Poster} />
+            </div>
+          )
+        })}
     </div>
   )
 }
 
 const query = graphql`
   {
-    saturday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Saturday" }) {
-      day
-      am {
-        name
-        slug
-      }
-      pm {
-        name
-        slug
-      }
-    }
+    #   saturday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Saturday" }) {
+    #     day
+    #     am {
+    #       name
+    #       slug
+    #     }
+    #     pm {
+    #       name
+    #       slug
+    #     }
+    #   }
 
-    sunday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Sunday" }) {
-      day
-      am {
-        name
-        slug
-      }
-      pm {
-        name
-        slug
-      }
-    }
+    # sunday: contentfulChiangMaiHealingZoneSchedule(day: { eq: "Sunday" }) {
+    #   day
+    #   am {
+    #     name
+    #     slug
+    #   }
+    #   pm {
+    #     name
+    #     slug
+    #   }
+    # }
 
     schedules: contentfulScheduleHealingZone(event: { eq: "CM" }) {
       event
