@@ -16,7 +16,7 @@ const SingleHZ = ({ HZ }) => {
   const facebook = HZ.facebook
   const twitter = HZ.twitter
   const instagram = HZ.instagram
-  const extraInfo = HZ.extraInfo.json
+  // const extraInfo = HZ.extraInfo.json
 
   return (
     <div className={styles.SingleHZ}>
@@ -59,9 +59,11 @@ const SingleHZ = ({ HZ }) => {
           })}
       </div>
 
-      <div className={styles.RichText}>
-        {documentToReactComponents(extraInfo)}
-      </div>
+      {HZ.extraInfo && (
+        <div className={styles.RichText}>
+          {documentToReactComponents(HZ.extraInfo.json)}
+        </div>
+      )}
 
       <p className={styles.Blurb}>{blurb}</p>
     </div>

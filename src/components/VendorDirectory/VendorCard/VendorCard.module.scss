@@ -14,8 +14,8 @@
   //   height: 45rem;
   // }
 
-  @include min-width(1100px) {
-    height: 35rem;
+  @include min-width(1000px) {
+    height: 36rem;
   }
 
   // @include min-width(1200px) {
@@ -24,7 +24,7 @@
   // }
 
   @include min-width(1400px) {
-    height: 32rem;
+    height: 33rem;
   }
 
   .CardImageContainer {
@@ -40,6 +40,11 @@
 
   .CardTitle {
     font-size: $fontSSM !important;
+    text-align: center !important;
+  }
+
+  .CardTitleLong {
+    font-size: $fontXS !important;
     text-align: center !important;
   }
 
