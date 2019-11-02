@@ -8,9 +8,13 @@ import HZCard from "../HZCard/HZCard"
 const HZGrid = ({ HZ }) => {
   return (
     <div className={styles.HZGrid}>
-      {HZ.map(({ node }) => (
-        <HZCard node={node} key={node.id} />
-      ))}
+      {HZ.map(({ node }) => {
+        if (!node.hidden) {
+          return <HZCard node={node} key={node.id} />
+        } else {
+          return null
+        }
+      })}
     </div>
   )
 }

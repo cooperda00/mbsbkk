@@ -119,6 +119,7 @@ const query = graphql`
     ) {
       edges {
         node {
+          hidden
           slug
           id
           name

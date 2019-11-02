@@ -114,6 +114,7 @@ const query = graphql`
     vendors: allContentfulVendor(sort: { order: ASC, fields: name }) {
       edges {
         node {
+          hidden
           slug
           id
           name

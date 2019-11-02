@@ -8,9 +8,13 @@ import VendorCard from "../VendorCard/VendorCard"
 const VendorGrid = ({ vendors, type }) => {
   return (
     <div className={styles.VendorGrid}>
-      {vendors.map(({ node }) => (
-        <VendorCard node={node} key={node.id} type={type} />
-      ))}
+      {vendors.map(({ node }) => {
+        if (!node.hidden) {
+          return <VendorCard node={node} key={node.id} type={type} />
+        } else {
+          return null
+        }
+      })}
     </div>
   )
 }

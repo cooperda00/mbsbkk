@@ -11,12 +11,10 @@ const Schedules = () => {
       <hr />
 
       <h3>Chiang Mai</h3>
+
       <ChiangMaiSchedules />
 
       <hr />
-
-      {/* <h3>Bangkok</h3>
-      <p>Coming Soon</p> */}
     </section>
   )
 }

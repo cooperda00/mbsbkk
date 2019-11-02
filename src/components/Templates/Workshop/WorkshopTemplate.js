@@ -49,6 +49,7 @@ export const query = graphql`
       facebook
       twitter
       instagram
+      bookingUrl
     }
 
     bg: file(relativePath: { eq: "workshops.jpg" }) {

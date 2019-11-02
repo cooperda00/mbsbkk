@@ -73,6 +73,17 @@ const SingleWorkshop = ({ workshop }) => {
         </p>
       </div>
 
+      {workshop.bookingUrl && (
+        <a
+          href={workshop.bookingUrl}
+          className={styles.BookNow}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
+      )}
+
       <p className={styles.Blurb}>{blurb}</p>
     </div>
   )

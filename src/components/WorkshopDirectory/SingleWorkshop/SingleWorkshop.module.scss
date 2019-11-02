@@ -101,3 +101,11 @@
 .Blurb {
   @include font("S");
 }
+
+.BookNow {
+  @include cta-button();
+  @include font("S");
+  font-weight: 300;
+  letter-spacing: 0.4rem;
+  margin-bottom: $spaceM;
+}
