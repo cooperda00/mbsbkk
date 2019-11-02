@@ -19,7 +19,14 @@ const HZCard = ({ node }) => {
           // }}
         />
       </div>
-      <h3 className={styles.CardTitle}>{node.name}</h3>
+      <h3
+        className={
+          node.name.length < 35 ? styles.CardTitle : styles.CardTitleLong
+        }
+      >
+        {node.name}
+      </h3>
+
       {/* <p className={styles.CardBlurb}>
         {" "}
         {node.blurb.blurb.substr(0, 350) + "..."}
