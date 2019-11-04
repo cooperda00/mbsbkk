@@ -16,7 +16,7 @@ const SingleHZ = ({ HZ }) => {
   const facebook = HZ.facebook
   const twitter = HZ.twitter
   const instagram = HZ.instagram
-  // const extraInfo = HZ.extraInfo.json
+  const practitionerName = HZ.practitionerName
 
   return (
     <div className={styles.SingleHZ}>
@@ -24,6 +24,7 @@ const SingleHZ = ({ HZ }) => {
         <Image fluid={image} className={styles.Image} />
       </div>
       <h3 className={styles.Title}>{name}</h3>
+      <h3 className={styles.Name}>{practitionerName}</h3>
       <div className={styles.Social}>
         {website && (
           <a href={website} target="_blank" rel="noopener noreferrer">

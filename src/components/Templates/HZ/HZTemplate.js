@@ -49,6 +49,7 @@ export const query = graphql`
       facebook
       twitter
       instagram
+      practitionerName
     }
 
     bg: file(relativePath: { eq: "healing_zone.jpg" }) {

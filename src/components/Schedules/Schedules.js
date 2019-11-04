@@ -10,11 +10,9 @@ const Schedules = () => {
     <section className={styles.Schedules}>
       <hr />
 
-      <h3>Chiang Mai</h3>
+      <h3>Chiang Mai: Workshop Schedule</h3>
 
       <ChiangMaiSchedules />
-
-      <hr />
     </section>
   )
 }

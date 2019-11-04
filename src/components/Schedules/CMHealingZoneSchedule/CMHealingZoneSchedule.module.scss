@@ -5,6 +5,10 @@
 
   width: 100%;
 
+  h3 {
+    margin-bottom: $spaceM !important;
+  }
+
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
   }
