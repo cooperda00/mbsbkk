@@ -12,7 +12,7 @@ const CMHealingZoneSchedule = () => {
   return (
     <div className={styles.CMHealingZoneSchedule}>
       <hr />
-      <h3>Chiang Mai: Healing Zone Schedule</h3>
+      <h3>Healing Zone Schedule</h3>
       {posters &&
         posters.map(poster => {
           return (
