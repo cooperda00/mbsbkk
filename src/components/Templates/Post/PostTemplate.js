@@ -3,6 +3,7 @@ import React from "react"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
+import download from "downloadjs"
 //Sass
 import styles from "./PostTemplate.module.scss"
 //Components
@@ -11,6 +12,8 @@ import Sidebar from "../../Blog/Sidebar/Sidebar"
 import AuthorBio from "../../Blog/AuthorBio/AuthorBio"
 import AuthorBioLarge from "../../Blog/AuthorBioLarge/AuthorBioLarge"
 import SEO from "../../SEO/SEO"
+//Icons
+import { FaFileDownload } from "react-icons/fa"
 
 const PostTemplate = ({ data: { singleBlog } }) => {
   const richText = singleBlog.body.json
@@ -29,6 +32,11 @@ const PostTemplate = ({ data: { singleBlog } }) => {
         return (
           <div className={styles.EmbedImageContainer}>
             <img src={url} alt={alt} />
+            <FaFileDownload
+              onClick={() => {
+                download(url)
+              }}
+            />
           </div>
         )
       },

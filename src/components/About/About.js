@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section className={styles.About}>
       <Story />
-      <Title subtitle="Team" />
+      <Title subtitle="Our Team" />
       <Profiles />
       {/* <Title subtitle="Volunteers" /> */}
       <div className={styles.Volunteers}>
