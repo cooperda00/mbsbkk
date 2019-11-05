@@ -21,7 +21,11 @@ const HZCard = ({ node }) => {
       </div>
       <h3
         className={
-          node.name.length < 35 ? styles.CardTitle : styles.CardTitleLong
+          node.name.length > 70
+            ? styles.CardTitleExtraLong
+            : node.name.length > 35
+            ? styles.CardTitleLong
+            : styles.CardTitle
         }
       >
         {node.name}

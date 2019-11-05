@@ -34,7 +34,7 @@ const BasicInfo = () => {
 
           <h3>Chiang Mai</h3>
           <p>Dates: 30th November - 1st December 2019</p>
-          <p>Time: 9:30am - 6pm</p>
+          <p>Time: 9:30am - 5:30pm</p>
           <p>
             Venue:{" "}
             <a href="https://goo.gl/maps/LPfGs6XuV9yvQqWr8">ChiangMai&Co</a>{" "}
