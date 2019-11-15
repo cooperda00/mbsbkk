@@ -1,18 +1,15 @@
 @import "../../../../vars";
 
-.Navigation {
-}
-
 .DesktopNav {
   display: none;
 
   @include min-width(768px) {
     @include flex(row, flex-end, center);
-    @include font("S");
+    @include font("XS");
 
     a {
       padding: 0 0.5rem;
-      margin-right: 2rem;
+      // margin-right: 2rem;
       transition: 0.5s;
       text-align: center;
     }
@@ -22,14 +19,9 @@
     }
   }
 
-  @include min-width(900px) {
-    @include font("SSM");
-  }
-
-  @include min-width(1000px) {
-    a {
-      margin-right: 6rem;
-    }
+  @include min-width(1050px) {
+    font-size: 1.7rem;
+    // @include font("S");
   }
 
   @include min-width(1250px) {
@@ -99,6 +91,14 @@
 }
 
 .MenuItemWrapper {
+  @include flex(row, center, center);
+
+  margin-right: 2rem;
+
+  @include min-width(1000px) {
+    margin-right: 6rem;
+  }
+
   .InfoSubMenu {
     @include flex(column, flex-start, flex-start);
 
@@ -141,4 +141,8 @@
       opacity: 1;
     }
   }
+}
+
+.Icon {
+  color: $primaryD;
 }

@@ -8,7 +8,7 @@ import styles from "./Navigation.module.scss"
 //Constants
 import { links } from "../../../../constants/links"
 //Icons
-import { FaBars } from "react-icons/fa"
+import { FaBars, FaCaretDown } from "react-icons/fa"
 //Components
 // import OutButton from "../../../Utility/OutButton/OutButton"
 
@@ -29,19 +29,23 @@ const Navigation = () => {
               activeClassName="active"
               key={i}
               partiallyActive={text !== "Home" ? true : false}
+              className={styles.NavLink}
             >
               {text}
             </Link>
             {text === "Fair Info" && (
-              <div className={styles.InfoSubMenu}>
-                {subLinks.map((subLink, i) => {
-                  return (
-                    <Link to={subLink.path} key={i}>
-                      {subLink.text}
-                    </Link>
-                  )
-                })}
-              </div>
+              <>
+                <FaCaretDown className={styles.Icon} />
+                <div className={styles.InfoSubMenu}>
+                  {subLinks.map((subLink, i) => {
+                    return (
+                      <Link to={subLink.path} key={i}>
+                        {subLink.text}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </>
             )}
           </div>
         ))}
