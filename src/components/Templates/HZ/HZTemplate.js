@@ -50,6 +50,7 @@ export const query = graphql`
       twitter
       instagram
       practitionerName
+      bookingUrl
     }
 
     bg: file(relativePath: { eq: "healing_zone.jpg" }) {

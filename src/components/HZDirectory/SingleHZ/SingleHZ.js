@@ -60,6 +60,17 @@ const SingleHZ = ({ HZ }) => {
           })}
       </div>
 
+      {HZ.bookingUrl && (
+        <a
+          href={HZ.bookingUrl}
+          className={styles.BookNow}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
+      )}
+
       {HZ.extraInfo && (
         <div className={styles.RichText}>
           {documentToReactComponents(HZ.extraInfo.json)}
