@@ -28,7 +28,7 @@ const SingleWorkshop = ({ workshop }) => {
       <h3 className={styles.Title}>{name}</h3>
       <div className={styles.Social}>
         {website && (
-          <a href={website} target="_blank" rel="noopener noreferrer">
+          <a href={`//${website}`} target="_blank" rel="noopener noreferrer">
             <FaHome />
           </a>
         )}
