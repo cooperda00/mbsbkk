@@ -83,6 +83,10 @@
 
   a:hover {
     color: $primaryDD;
+
+    p {
+      color: $primaryDD;
+    }
   }
 }
 
@@ -131,4 +135,12 @@
   font-weight: 300;
   letter-spacing: 0.4rem;
   margin-bottom: $spaceM;
+}
+.WebsiteLink {
+  @include flex(row, center, center);
+
+  p {
+    margin-left: $spaceS;
+    transition: 0.5s;
+  }
 }

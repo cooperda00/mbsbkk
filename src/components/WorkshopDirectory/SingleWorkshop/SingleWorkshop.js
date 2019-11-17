@@ -23,13 +23,19 @@ const SingleWorkshop = ({ workshop }) => {
   return (
     <div className={styles.SingleWorkshop}>
       <div className={styles.ImageContainer}>
-        <Image fluid={image} className={styles.Image} />
+        <Image fluid={image} className={styles.Image} alt={name} />
       </div>
       <h3 className={styles.Title}>{name}</h3>
       <div className={styles.Social}>
         {website && (
-          <a href={`//${website}`} target="_blank" rel="noopener noreferrer">
+          <a
+            href={`//${website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.WebsiteLink}
+          >
             <FaHome />
+            <p>Website</p>
           </a>
         )}
         {facebook && (

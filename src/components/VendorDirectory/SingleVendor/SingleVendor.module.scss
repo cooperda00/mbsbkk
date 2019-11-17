@@ -90,9 +90,22 @@
 
   a:hover {
     color: $primaryDD;
+
+    p {
+      color: $primaryDD;
+    }
   }
 }
 
 .Blurb {
   @include font("S");
+}
+
+.WebsiteLink {
+  @include flex(row, center, center);
+
+  p {
+    margin-left: $spaceS;
+    transition: 0.5s;
+  }
 }
