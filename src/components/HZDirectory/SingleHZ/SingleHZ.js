@@ -27,22 +27,22 @@ const SingleHZ = ({ HZ }) => {
       <h3 className={styles.Name}>{practitionerName}</h3>
       <div className={styles.Social}>
         {website && (
-          <a href={website} target="_blank" rel="noopener noreferrer">
+          <a href={`//${website}`} target="_blank" rel="noopener noreferrer">
             <FaHome />
           </a>
         )}
         {facebook && (
-          <a href={facebook} target="_blank" rel="noopener noreferrer">
+          <a href={`${facebook}`} target="_blank" rel="noopener noreferrer">
             <FaFacebookF />
           </a>
         )}
         {instagram && (
-          <a href={instagram} target="_blank" rel="noopener noreferrer">
+          <a href={`${instagram}`} target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
         )}
         {twitter && (
-          <a href={twitter} target="_blank" rel="noopener noreferrer">
+          <a href={`${twitter}`} target="_blank" rel="noopener noreferrer">
             <FaTwitter />
           </a>
         )}

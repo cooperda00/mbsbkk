@@ -33,7 +33,7 @@ const SingleVendor = ({ vendor }) => {
 
       <div className={styles.Social}>
         {website && (
-          <a href={website} target="_blank" rel="noopener noreferrer">
+          <a href={`//${website}`} target="_blank" rel="noopener noreferrer">
             <FaHome />
           </a>
         )}
