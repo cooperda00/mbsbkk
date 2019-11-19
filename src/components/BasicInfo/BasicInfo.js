@@ -3,6 +3,7 @@ import React from "react"
 //Sass
 import styles from "./BasicInfo.module.scss"
 import CTAButton from "../Utility/CTAButton/CTAButton"
+import OutButton from "../Utility/OutButton/OutButton"
 
 const BasicInfo = () => {
   return (
@@ -35,13 +36,23 @@ const BasicInfo = () => {
           <h3>Chiang Mai</h3>
           <p>Dates: 30th November - 1st December 2019</p>
           <p>Time: 9:30am - 5:30pm</p>
+          <br />
+          <p>Tickets:</p>
+          <p>Online: ฿300 1 Day / ฿500 2 Days</p>
+          <p>Door: ฿400 1 Day / ฿700 2 Days</p>
+          <br />
           <p>
             Venue:{" "}
             <a href="https://goo.gl/maps/LPfGs6XuV9yvQqWr8">ChiangMai&Co</a>{" "}
           </p>
 
           <div className={styles.ButtonContainer}>
-            <CTAButton path="/get-involved" text="Get Involved" type="2" />
+            {/* <CTAButton path="/get-involved" text="Get Involved" type="2" /> */}
+            <OutButton
+              path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairchiangmai"
+              text="Book Now"
+              type="2"
+            />
           </div>
 
           <h3>Bangkok</h3>

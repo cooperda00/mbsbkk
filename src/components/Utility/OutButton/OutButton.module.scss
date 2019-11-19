@@ -2,7 +2,7 @@
 
 .OutButton {
   @include cta-button();
-  @include font("S");
+  @include font("SM");
 
   text-align: center;
   font-weight: 300;
@@ -11,7 +11,7 @@
   // box-shadow: 4px 4px 7px -1px rgba($gray5, 0.4) !important;
 
   @include min-width(1000px) {
-    margin: $spaceS 0 0 0;
+    margin: $spaceS 0 $spaceS 0;
   }
 }
 
