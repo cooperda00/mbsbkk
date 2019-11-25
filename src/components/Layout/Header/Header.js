@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 //Sass
 import styles from "./Header.module.scss"
 //Images
-import headerLogo from "../../../images/logo_transparent.png"
+import headerLogo from "../../../images/logo_v2.jpg"
+// import headerLogo from "../../../images/logo_transparent.png"
 // import headerLogo from "../../../images/logo_long.png"
 //Components
 import Navigation from "./Navigation/Navigation"
@@ -16,7 +17,7 @@ const Header = () => {
       <Link to="/">
         <img
           src={headerLogo}
-          alt="Mind Body SPirit Fair Logo"
+          alt="Mind Body Spirit Fair Logo"
           className={styles.Logo}
         />
       </Link>

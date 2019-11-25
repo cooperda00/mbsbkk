@@ -11,7 +11,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
   const { siteUrl, description, image } = siteMetadata
 
   return (
-    <Helmet title={`${titleExtra} | Mind Body Spirit Fair BKK`}>
+    <Helmet title={`${titleExtra} | Mind Body Spirit Fair`}>
       <meta
         name="keywords"
         content={`${keywordsExtra}, mind, body, spirit, bkk, bangkok, well-being, holistic, spirituality, yoga, meditation`}
