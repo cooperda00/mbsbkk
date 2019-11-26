@@ -14,7 +14,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
     <Helmet title={`${titleExtra} | Mind Body Spirit Fair`}>
       <meta
         name="keywords"
-        content={`${keywordsExtra}, mind, body, spirit, bkk, bangkok, well-being, holistic, spirituality, yoga, meditation`}
+        content={`${keywordsExtra}, mind, body, spirit, bkk, bangkok, well-being, holistic, spirituality, yoga, meditation, Chiang Mai`}
       />
 
       <meta
@@ -32,7 +32,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
 
       <meta
         name="twitter:title"
-        content={`${titleExtra} | Mind Body Spirit Fair BKK`}
+        content={`${titleExtra} | Mind Body Spirit Fair`}
       />
 
       <meta
@@ -59,7 +59,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
 
       <meta
         property="og:title"
-        content={`${titleExtra} | Mind Body Spirit BKK`}
+        content={`${titleExtra} | Mind Body Spirit`}
         prefix="og: http://ogp.me/ns#"
       />
 
