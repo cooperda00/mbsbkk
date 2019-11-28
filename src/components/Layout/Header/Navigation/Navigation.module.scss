@@ -41,10 +41,12 @@
   background: white;
   z-index: 1500;
 
-  a {
+  a,
+  p {
     @include font("S");
     height: 3rem;
     margin-bottom: $spaceS;
+    cursor: pointer;
   }
 
   @include min-width(768px) {

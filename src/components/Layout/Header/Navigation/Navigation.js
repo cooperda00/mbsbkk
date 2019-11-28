@@ -60,9 +60,18 @@ const Navigation = () => {
           <div className={styles.MobileNav}>
             {links.map(({ path, text, subLinks }, i) => (
               <>
-                <Link to={path} tabIndex="-1" activeClassName="active" key={i}>
-                  {text}
-                </Link>
+                {path ? (
+                  <Link
+                    to={path}
+                    tabIndex="-1"
+                    activeClassName="active"
+                    key={i}
+                  >
+                    {text}
+                  </Link>
+                ) : (
+                  <p>{text}</p>
+                )}
                 {subLinks &&
                   subLinks.map((subLink, i) => {
                     return (
