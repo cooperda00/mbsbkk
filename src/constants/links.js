@@ -9,7 +9,7 @@ export const links = [
   },
   {
     path: "/fair-info",
-    text: `Fair Info`,
+    text: `Program`,
     subLinks: [
       {
         path: "/fair-info/exhibitors",
