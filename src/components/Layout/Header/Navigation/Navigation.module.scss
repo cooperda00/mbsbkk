@@ -96,7 +96,16 @@
   margin-right: 2rem;
 
   @include min-width(1000px) {
-    margin-right: 6rem;
+    margin-right: 4rem;
+  }
+
+  .DeadLink {
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      color: $primaryDD;
+    }
   }
 
   .InfoSubMenu {
@@ -106,7 +115,7 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: $spaceM;
+    top: 4rem;
     left: -3rem;
     padding: $spaceM;
     transition: 0.5s;

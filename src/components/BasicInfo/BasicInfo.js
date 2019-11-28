@@ -40,10 +40,19 @@ const BasicInfo = () => {
           <p>Tickets:</p>
           <p>Online: ฿300 1 Day / ฿500 2 Days</p>
           <p>Door: ฿400 1 Day / ฿700 2 Days</p>
+          <p>
+            <em>All workshops are free after admission.</em>
+          </p>
           <br />
           <p>
             Venue:{" "}
             <a href="https://goo.gl/maps/LPfGs6XuV9yvQqWr8">ChiangMai&Co</a>{" "}
+          </p>
+          <p>
+            <em>
+              The event venue is an outdoor space. There will be limited parking
+              available.
+            </em>
           </p>
 
           <div className={styles.ButtonContainer}>

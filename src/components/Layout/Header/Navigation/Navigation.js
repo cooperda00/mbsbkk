@@ -24,16 +24,20 @@ const Navigation = () => {
             style={{ position: "relative" }}
             key={text}
           >
-            <Link
-              to={path}
-              activeClassName="active"
-              key={i}
-              partiallyActive={text !== "Home" ? true : false}
-              className={styles.NavLink}
-            >
-              {text}
-            </Link>
-            {text === "Fair Info" && (
+            {path ? (
+              <Link
+                to={path}
+                activeClassName="active"
+                key={i}
+                partiallyActive={text !== "Home" ? true : false}
+                className={styles.NavLink}
+              >
+                {text}
+              </Link>
+            ) : (
+              <p className={styles.DeadLink}>{text}</p>
+            )}
+            {text === "Program" && (
               <>
                 <FaCaretDown className={styles.Icon} />
                 <div className={styles.InfoSubMenu}>
