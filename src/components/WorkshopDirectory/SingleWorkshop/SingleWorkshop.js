@@ -79,7 +79,7 @@ const SingleWorkshop = ({ workshop }) => {
         </p>
       </div>
 
-      {workshop.bookingUrl && (
+      {/* {workshop.bookingUrl && (
         <a
           href={workshop.bookingUrl}
           className={styles.BookNow}
@@ -88,7 +88,7 @@ const SingleWorkshop = ({ workshop }) => {
         >
           Book Now
         </a>
-      )}
+      )} */}
 
       <p className={styles.Blurb}>{blurb}</p>
     </div>

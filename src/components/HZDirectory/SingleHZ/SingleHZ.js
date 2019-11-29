@@ -66,7 +66,7 @@ const SingleHZ = ({ HZ }) => {
           })}
       </div>
 
-      {HZ.bookingUrl && (
+      {/* {HZ.bookingUrl && (
         <a
           href={HZ.bookingUrl}
           className={styles.BookNow}
@@ -75,7 +75,7 @@ const SingleHZ = ({ HZ }) => {
         >
           Book Now
         </a>
-      )}
+      )} */}
 
       {HZ.extraInfo && (
         <div className={styles.RichText}>
