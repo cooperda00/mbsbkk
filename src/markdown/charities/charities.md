@@ -15,6 +15,10 @@ Visit their website to find out more about their projects and the work they do, 
 
 [The Fatima Centre](https://goodshepherdbangkok.com/)
 
+Our chosen charity for the Chiang Mai event is Warm Heart Worldwide.
+
+[Warm Heart Worldwide](https://warmheartworldwide.org/)
+
 Proceeds from admission fees will go towards supporting this charity. If you needed another reason to get involved, you just found it.
 
 Through MBSBKK 2018 we were able to make 220, 000 baht in charitable contributions.
