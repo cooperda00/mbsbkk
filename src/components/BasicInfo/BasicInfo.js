@@ -55,14 +55,13 @@ const BasicInfo = () => {
             </em>
           </p>
 
-          <div className={styles.ButtonContainer}>
-            {/* <CTAButton path="/get-involved" text="Get Involved" type="2" /> */}
+          {/* <div className={styles.ButtonContainer}>
             <OutButton
               path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairchiangmai"
               text="Book Now"
               type="2"
             />
-          </div>
+          </div> */}
 
           <h3>Bangkok</h3>
           <p>Dates: 29th February - 1st March 2020</p>

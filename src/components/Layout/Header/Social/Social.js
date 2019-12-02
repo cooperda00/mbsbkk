@@ -28,12 +28,12 @@ const Social = ({ header }) => {
         )
       })}
 
-      <a
+      {/* <a
         href="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairchiangmai"
         className={styles.TicketCTA}
       >
         Buy Tickets
-      </a>
+      </a> */}
     </div>
   )
 }
