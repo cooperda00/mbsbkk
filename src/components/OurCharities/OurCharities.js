@@ -2,14 +2,12 @@
 import React from "react"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 //Sass
 import styles from "./OurCharities.module.scss"
 
 const OurCharities = ({ copy }) => {
-  const html = copy.html
-
   const data = useStaticQuery(query)
-
   const fatima = data.fatima.childImageSharp.fluid
 
   return (
@@ -25,10 +23,7 @@ const OurCharities = ({ copy }) => {
           </div>
         </div>
 
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-          className={styles.Copy}
-        />
+        <div className={styles.Copy}>{documentToReactComponents(copy)}</div>
       </div>
     </section>
   )

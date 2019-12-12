@@ -6,7 +6,7 @@ import "./base.scss"
 //Components
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
-import TicketCTA from "./TicketCTA/TicketCTA"
+// import TicketCTA from "./TicketCTA/TicketCTA"
 
 const Layout = ({ children }) => {
   return (

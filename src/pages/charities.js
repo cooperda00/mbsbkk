@@ -9,7 +9,7 @@ import OurCharities from "../components/OurCharities/OurCharities"
 
 const CharitiesPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
-  const copy = data.copy
+  const copy = data.copy.edges[0].node.mainText.json
 
   return (
     <Layout>
@@ -34,11 +34,21 @@ export const query = graphql`
       }
     }
 
-    copy: markdownRemark(frontmatter: { title: { eq: "Our Charities" } }) {
-      frontmatter {
-        title
+    # copy: markdownRemark(frontmatter: { title: { eq: "Our Charities" } }) {
+    #   frontmatter {
+    #     title
+    #   }
+    #   html
+    # }
+
+    copy: allContentfulCharityPage {
+      edges {
+        node {
+          mainText {
+            json
+          }
+        }
       }
-      html
     }
   }
 `

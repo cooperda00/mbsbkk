@@ -9,7 +9,7 @@ import FairInfo from "../components/FairInfo/FairInfo"
 
 const FairInfoPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
-  const copy = data.copy
+  const copy = data.copy.edges[0].node
 
   return (
     <Layout>
@@ -34,11 +34,27 @@ export const query = graphql`
       }
     }
 
-    copy: mdx(frontmatter: { title: { eq: "Fair Info" } }) {
-      frontmatter {
-        title
+    # copy: mdx(frontmatter: { title: { eq: "Fair Info" } }) {
+    #   frontmatter {
+    #     title
+    #   }
+    #   body
+    # }
+
+    copy: allContentfulFairInfoPage {
+      edges {
+        node {
+          mainText {
+            json
+          }
+          newsletter {
+            json
+          }
+          sustainability {
+            json
+          }
+        }
       }
-      body
     }
   }
 `

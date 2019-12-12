@@ -5,17 +5,21 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import Hero from "../../components/Utility/Hero/Hero"
-import FairInfo from "../../components/FairInfo/FairInfo"
+import Exhibitors from "../../components/FairInfo/Exhibitors"
 
 const ExhibitorsPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
-  const copy = data.copy
+  const copy = data.copy.edges[0].node
 
   return (
     <Layout>
-      <SEO titleExtra="Exhibitors" keywordsExtra="" descriptionExtra="Exhibitors" />
+      <SEO
+        titleExtra="Exhibitors"
+        keywordsExtra=""
+        descriptionExtra="Exhibitors"
+      />
       <Hero type="page" image={image} />
-      <FairInfo copy={copy} />
+      <Exhibitors copy={copy} />
     </Layout>
   )
 }
@@ -30,11 +34,14 @@ export const query = graphql`
       }
     }
 
-    copy: mdx(frontmatter: { queryName: { eq: "fairInfoExhibitors" } }) {
-      frontmatter {
-        title
+    copy: allContentfulExhibitorsPage {
+      edges {
+        node {
+          mainText {
+            json
+          }
+        }
       }
-      body
     }
   }
 `

@@ -12,6 +12,7 @@ import Youtube from "../components/Utility/Youtube/Youtube"
 
 const IndexPage = ({ data }) => {
   const features = data.features.edges
+  const copy = data.copy.edges[0].node
 
   return (
     <Layout>
@@ -19,7 +20,7 @@ const IndexPage = ({ data }) => {
 
       <Carousel />
 
-      <BasicInfo />
+      <BasicInfo copy={copy} />
 
       <Features features={features} />
 
@@ -73,6 +74,22 @@ export const query = graphql`
             }
           }
           html
+        }
+      }
+    }
+
+    copy: allContentfulHomePage {
+      edges {
+        node {
+          mainText {
+            json
+          }
+          eventDetails {
+            json
+          }
+          eventDetailsExtra {
+            json
+          }
         }
       }
     }

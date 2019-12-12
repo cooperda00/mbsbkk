@@ -5,11 +5,11 @@ import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import Hero from "../../components/Utility/Hero/Hero"
-import FairInfo from "../../components/FairInfo/FairInfo"
+import Workshops from "../../components/FairInfo/Workshops"
 
 const WorkshopsAndSeminarsPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
-  const copy = data.copy
+  const copy = data.copy.edges[0].node
 
   return (
     <Layout>
@@ -19,7 +19,7 @@ const WorkshopsAndSeminarsPage = ({ data }) => {
         descriptionExtra="Workshops And Seminars"
       />
       <Hero type="page" image={image} />
-      <FairInfo copy={copy} />
+      <Workshops copy={copy} />
     </Layout>
   )
 }
@@ -34,13 +34,14 @@ export const query = graphql`
       }
     }
 
-    copy: mdx(
-      frontmatter: { queryName: { eq: "fairInfoWorkshopsAndSeminars" } }
-    ) {
-      frontmatter {
-        title
+    copy: allContentfulWorkshopPage {
+      edges {
+        node {
+          mainText {
+            json
+          }
+        }
       }
-      body
     }
   }
 `
