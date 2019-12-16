@@ -7,21 +7,25 @@ import styles from "./VendorDirectory.module.scss"
 import VendorGrid from "./VendorGrid/VendorGrid"
 //Constants
 import { filterButtons } from "../../constants/filterButtons"
+import styled from "styled-components"
 
 const VendorDirectory = () => {
   //Bring in all vendors from contentful with graphql
   const data = useStaticQuery(query)
 
   //Set array of vendors to state on mount - adjustable via filter
+  const [eventVendors, setEventVendors] = useState([])
   const [filteredVendors, setFilteredVendors] = useState([])
+
   useEffect(() => {
     setFilteredVendors(data.vendors.edges)
+    setEventVendors(data.vendors.edges)
   }, [])
 
   //Apply Search Filter Method
   const handleFilterChange = e => {
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.vendors.edges]
+    const arrayClone = [...eventVendors]
     const filteredArray = arrayClone.filter(({ node }) =>
       node.name.toLowerCase().includes(filter)
     )
@@ -34,7 +38,7 @@ const VendorDirectory = () => {
     setSelectedButton(e.target.value)
 
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.vendors.edges]
+    const arrayClone = [...eventVendors]
 
     //Reset Filter Back to Props
     if (filter === "all") {
@@ -62,8 +66,43 @@ const VendorDirectory = () => {
     }
   }
 
+  const handleEventChangeCM = e => {
+    setSelectedEvent(e.target.value)
+    if ((e.target.value = "CM")) {
+      const eventFilteredArray = data.vendors.edges.filter(node => {
+        if (node.node.event.includes("Chiang Mai")) {
+          return true
+        }
+      })
+      setEventVendors(eventFilteredArray)
+      setFilteredVendors(eventFilteredArray)
+      setSelectedButton("all")
+    }
+  }
+
+  const handleEventChangeBKK = e => {
+    if ((e.target.value = "BKK")) {
+      const eventFilteredArray = data.vendors.edges.filter(node => {
+        if (node.node.event.includes("Bangkok")) {
+          return true
+        }
+      })
+      setEventVendors(eventFilteredArray)
+      setFilteredVendors(eventFilteredArray)
+      setSelectedButton("all")
+    }
+  }
+
+  const handleEventChangeCMBKK = e => {
+    setSelectedEvent(e.target.value)
+    setSelectedButton("all")
+    setEventVendors(data.vendors.edges)
+    setFilteredVendors(data.vendors.edges)
+  }
+
   //Conditional Styles ************************************
   const [selectedButton, setSelectedButton] = useState("all")
+  const [selectedEvent, setSelectedEvent] = useState("CM/BKK")
 
   return (
     <div className={styles.VendorDirectory}>
@@ -102,6 +141,30 @@ const VendorDirectory = () => {
           >
             0-9
           </button>
+          <button
+            className={`${styles.CMButton} ${selectedEvent === "CM" &&
+              styles.SelectedEvent}`}
+            onClick={handleEventChangeCM}
+            value="CM"
+          >
+            CM
+          </button>
+          <button
+            className={`${styles.BKKButton} ${selectedEvent === "BKK" &&
+              styles.SelectedEvent}`}
+            onClick={handleEventChangeBKK}
+            value="BKK"
+          >
+            BKK
+          </button>
+          <button
+            className={`${styles.CMBKKButton} ${selectedEvent === "CM/BKK" &&
+              styles.SelectedEvent}`}
+            onClick={handleEventChangeCMBKK}
+            value="CM/BKK"
+          >
+            CM / BKK
+          </button>
         </div>
       </div>
       <VendorGrid vendors={filteredVendors} />
@@ -114,6 +177,7 @@ const query = graphql`
     vendors: allContentfulVendor(sort: { order: ASC, fields: name }) {
       edges {
         node {
+          event
           hidden
           slug
           id

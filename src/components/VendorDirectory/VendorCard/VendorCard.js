@@ -8,7 +8,6 @@ import styles from "./VendorCard.module.scss"
 import { FaLongArrowAltRight } from "react-icons/fa"
 
 const VendorCard = ({ node, type }) => {
-  console.log(type)
   return (
     <Link
       className={styles.VendorCard}
@@ -26,6 +25,17 @@ const VendorCard = ({ node, type }) => {
           //   objectFit: "contain",
           // }}
         />
+
+        {/* EVENT LOCATION */}
+        <div className={styles.Event}>
+          {node.event.map(event => {
+            return (
+              <div className={event === "Bangkok" ? styles.BKK : styles.CM}>
+                {event}
+              </div>
+            )
+          })}
+        </div>
       </div>
       <h3
         className={

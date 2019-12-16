@@ -60,6 +60,22 @@
     button:not(:last-of-type) {
       margin-right: $spaceS;
     }
+
+    .CMButton {
+      background: $bonus;
+    }
+
+    .BKKButton {
+      background: $primaryL;
+    }
+
+    .CMBKKButton {
+      background: linear-gradient(to right, $bonus, $primaryL);
+    }
+
+    .SelectedEvent {
+      border: 0.2rem solid $gray5;
+    }
   }
 }
 

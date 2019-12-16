@@ -28,6 +28,7 @@
   }
 
   .CardImageContainer {
+    position: relative;
     width: 100%;
     height: 20rem;
 
@@ -62,5 +63,29 @@
     svg {
       margin-left: $spaceS;
     }
+  }
+}
+
+//EVENT LOCATION STYLES
+.Event {
+  @include flex(row, flex-start, flex-end);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .CM,
+  .BKK {
+    font-size: $fontS !important;
+    padding: $spaceXS $spaceS;
+  }
+
+  .CM {
+    background: $bonus;
+    margin-right: $spaceXS;
+  }
+
+  .BKK {
+    background: $primaryL;
   }
 }
