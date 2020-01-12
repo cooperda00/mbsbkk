@@ -8,20 +8,17 @@ import HZGrid from "./HZGrid/HZGrid"
 //Constants
 import { filterButtons } from "../../constants/filterButtons"
 
-const HZDirectory = () => {
-  //Bring in all HZ Practitioners from contentful with graphql
-  const data = useStaticQuery(query)
-
+const HZDirectory = ({ healingZone }) => {
   //Set array of HZ Practitioners to state on mount - adjustable via filter
   const [filteredHZ, setFilteredHZ] = useState([])
   useEffect(() => {
-    setFilteredHZ(data.HZ.edges)
+    setFilteredHZ(healingZone)
   }, [])
 
   //Apply Search Filter Method
   const handleFilterChange = e => {
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.HZ.edges]
+    const arrayClone = [...healingZone]
     const filteredArray = arrayClone.filter(({ node }) =>
       node.name.toLowerCase().includes(filter)
     )
@@ -34,7 +31,7 @@ const HZDirectory = () => {
     setSelectedButton(e.target.value)
 
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.HZ.edges]
+    const arrayClone = [...healingZone]
 
     //Reset Filter Back to Props
     if (filter === "all") {
@@ -111,30 +108,5 @@ const HZDirectory = () => {
     </>
   )
 }
-
-const query = graphql`
-  {
-    HZ: allContentfulHealingZonePractitioner(
-      sort: { order: ASC, fields: name }
-    ) {
-      edges {
-        node {
-          hidden
-          slug
-          id
-          name
-          blurb {
-            blurb
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default HZDirectory

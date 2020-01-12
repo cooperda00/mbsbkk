@@ -77,21 +77,14 @@
 }
 
 .Right {
-}
+  .HTML {
+    margin-top: $spaceM;
+    width: 100%;
 
-.HTML {
-  margin-top: $spaceM;
-  width: 100%;
-
-  p {
-    @include font("M");
-    padding: 0 $spaceS;
-    text-align: center;
-  }
-
-  @include min-width(1000px) {
     p {
-      text-align: left;
+      @include font("M");
+      padding: 0 $spaceS;
+      text-align: center;
     }
   }
 }

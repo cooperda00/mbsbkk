@@ -1,13 +1,11 @@
 //Modules
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 //Sass
 import styles from "./CMHealingZoneSchedule.module.scss"
 
-const CMHealingZoneSchedule = () => {
-  const data = useStaticQuery(query)
-  const posters = data.schedules.posters
+const CMHealingZoneSchedule = ({ schedules }) => {
+  const posters = schedules.posters
 
   return (
     <div className={styles.CMHealingZoneSchedule}>
@@ -24,19 +22,5 @@ const CMHealingZoneSchedule = () => {
     </div>
   )
 }
-
-const query = graphql`
-  {
-    schedules: contentfulScheduleHealingZone(event: { eq: "CM" }) {
-      event
-      posters {
-        id
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
-  }
-`
 
 export default CMHealingZoneSchedule

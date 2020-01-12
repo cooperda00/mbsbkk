@@ -33,26 +33,26 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    insta: allInstaNode {
-      edges {
-        node {
-          id
-          localFile {
-            childImageSharp {
-              fixed(width: 275, height: 275) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
+    # insta: allInstaNode {
+    #   edges {
+    #     node {
+    #       id
+    #       localFile {
+    #         childImageSharp {
+    #           fixed(width: 275, height: 275) {
+    #             ...GatsbyImageSharpFixed
+    #           }
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
 
-    instaUser: instaUserNode {
-      username
-      biography
-      profile_pic_url
-    }
+    # instaUser: instaUserNode {
+    #   username
+    #   biography
+    #   profile_pic_url
+    # }
 
     features: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "feature" } } }

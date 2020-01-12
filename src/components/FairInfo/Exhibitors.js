@@ -7,7 +7,7 @@ import styles from "./FairInfo.module.scss"
 import SideMenu from "./SideMenu/SideMenu"
 import VendorDirectory from "../VendorDirectory/VendorDirectory"
 
-const Exhibitors = ({ copy }) => {
+const Exhibitors = ({ copy, vendors }) => {
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
@@ -17,7 +17,7 @@ const Exhibitors = ({ copy }) => {
           <div className={styles.HTML}>
             {documentToReactComponents(copy.mainText.json)}
 
-            <VendorDirectory />
+            <VendorDirectory vendors={vendors} />
           </div>
         </div>
       </div>

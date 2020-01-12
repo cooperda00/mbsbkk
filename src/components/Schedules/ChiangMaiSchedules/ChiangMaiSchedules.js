@@ -1,13 +1,11 @@
 //Modules
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 //Sass
 import styles from "./ChiangMaiSchedules.module.scss"
 
-const ChiangMaiSchedules = () => {
-  const data = useStaticQuery(query)
-  const posters = data.schedules.posters
+const ChiangMaiSchedules = ({ schedules }) => {
+  const posters = schedules.posters
 
   return (
     <div className={styles.ChiangMaiSchedules}>
@@ -21,19 +19,5 @@ const ChiangMaiSchedules = () => {
     </div>
   )
 }
-
-const query = graphql`
-  {
-    schedules: contentfulScheduleWorkshopsAndSeminars(event: { eq: "CM" }) {
-      event
-      posters {
-        id
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
-  }
-`
 
 export default ChiangMaiSchedules

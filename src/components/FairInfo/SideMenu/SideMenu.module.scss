@@ -20,7 +20,7 @@
 
       letter-spacing: 4px;
       position: absolute;
-      bottom: 5%;
+      bottom: 25%;
       left: 3%;
       z-index: 1000;
       color: white;
@@ -32,9 +32,29 @@
       }
     }
 
+    .FairInfoText {
+      bottom: 5%;
+    }
+
     .Image {
       height: 100%;
       width: 100%;
+    }
+
+    .Overlay3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 900;
+      background: linear-gradient(
+        to bottom,
+        rgba(white, 0) 55%,
+        rgba($gray5, 0.8) 100%
+      );
+      opacity: 1;
+      transition: 0.5s;
     }
 
     .Overlay {
@@ -46,7 +66,7 @@
       z-index: 900;
       background: linear-gradient(
         to bottom,
-        rgba(white, 0) 55%,
+        rgba(white, 0) 30%,
         rgba($gray5, 0.8) 100%
       );
       opacity: 1;
@@ -70,13 +90,36 @@
       transition: 0.5s;
     }
 
-    &:hover {
-      .Overlay {
-        opacity: 0;
+    .EventButtons {
+      @include flex(row, space-around, center);
+      position: absolute;
+      width: 100%;
+      bottom: 0.1rem;
+      z-index: 1000;
+
+      a {
+        @include font("S");
+        text-align: center;
+        letter-spacing: 0.5px;
+        width: 49%;
       }
-      .Overlay2 {
-        opacity: 1;
+
+      .Bangkok {
+        background: $primary;
+      }
+
+      .ChiangMai {
+        background: $bonus;
       }
     }
+
+    // &:hover {
+    //   .Overlay {
+    //     opacity: 0;
+    //   }
+    //   .Overlay2 {
+    //     opacity: 1;
+    //   }
+    // }
   }
 }

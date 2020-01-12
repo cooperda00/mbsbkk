@@ -8,7 +8,7 @@ import SideMenu from "./SideMenu/SideMenu"
 import WorkshopDirectory from "../WorkshopDirectory/WorkshopDirectory"
 import Schedules from "../Schedules/Schedules"
 
-const Workshops = ({ copy }) => {
+const Workshops = ({ copy, workshops, schedules }) => {
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
@@ -18,11 +18,11 @@ const Workshops = ({ copy }) => {
           <div className={styles.HTML}>
             {documentToReactComponents(copy.mainText.json)}
 
-            <Schedules />
+            <Schedules schedules={schedules} />
 
             <hr />
 
-            <WorkshopDirectory />
+            <WorkshopDirectory workshops={workshops} />
           </div>
         </div>
       </div>

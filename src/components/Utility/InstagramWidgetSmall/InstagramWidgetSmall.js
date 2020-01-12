@@ -6,38 +6,38 @@ import { useStaticQuery, graphql } from "gatsby"
 import styles from "./InstagramWidgetSmall.module.scss"
 
 const InstagramWidget = () => {
-  const data = useStaticQuery(query)
-  const insta = data.insta.edges
-  const user = data.instaUser
+  // const data = useStaticQuery(query)
+  // const insta = data.insta.edges
+  // const user = data.instaUser
 
-  const username = user.username
-  const userImage = user.profile_pic_url
+  // const username = user.username
+  // const userImage = user.profile_pic_url
 
   return (
     <div className={styles.Container}>
       <div className={styles.UserInfo}>
         <a
-          href={`https://instagram.com/${username}`}
+          href={`https://instagram.com/mindbodyspiritfairbkk`}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.LogoContainer}
-          aria-label={`Go to the ${username} Instagram page`}
+          aria-label={`Go to the mindbodyspiritfairbkk Instagram page`}
         >
           {" "}
-          <img src={userImage} alt={username} />
+          {/* <img src={userImage} alt={username} /> */}
         </a>
         <a
-          href={`https://instagram.com/${username}`}
+          href={`https://instagram.com/mindbodyspiritfairbkk`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Go to the ${username} Instagram page`}
+          aria-label={`Go to the mindbodyspiritfairbkk Instagram page`}
         >
           {" "}
-          <h1>@{username}</h1>{" "}
+          <h1>@mindbodyspiritfairbkk</h1>{" "}
         </a>
       </div>
 
-      <div className={styles.FeedGrid}>
+      {/* <div className={styles.FeedGrid}>
         {insta.map(({ node }) => {
           return (
             <a
@@ -56,35 +56,35 @@ const InstagramWidget = () => {
             </a>
           )
         })}
-      </div>
+      </div> */}
     </div>
   )
 }
 
-const query = graphql`
-  {
-    insta: allInstaNode(sort: { fields: [timestamp], order: DESC }, limit: 9) {
-      edges {
-        node {
-          id
-          caption
-          localFile {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
+// const query = graphql`
+//   {
+//     insta: allInstaNode(sort: { fields: [timestamp], order: DESC }, limit: 9) {
+//       edges {
+//         node {
+//           id
+//           caption
+//           localFile {
+//             childImageSharp {
+//               fluid {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
 
-    instaUser: instaUserNode {
-      username
-      biography
-      profile_pic_url
-    }
-  }
-`
+//     instaUser: instaUserNode {
+//       username
+//       biography
+//       profile_pic_url
+//     }
+//   }
+// `
 
 export default InstagramWidget

@@ -43,10 +43,18 @@
 
   a,
   p {
-    @include font("S");
+    @include font("XS");
     height: 3rem;
     margin-bottom: $spaceS;
     cursor: pointer;
+  }
+
+  .Bangkok {
+    color: $primaryDD;
+  }
+
+  .ChiangMai {
+    color: darken($bonus, 10%);
   }
 
   @include min-width(768px) {
@@ -110,6 +118,10 @@
     }
   }
 
+  .DeadLinkActive {
+    color: $primaryDD;
+  }
+
   .InfoSubMenu {
     @include flex(column, flex-start, flex-start);
 
@@ -124,17 +136,31 @@
     width: 35rem;
 
     a {
-      @include font("XS");
+      @include font("S");
       margin-bottom: $spaceS;
+      padding-left: $spaceM;
       letter-spacing: 0.1rem;
 
-      @include min-width(1500px) {
-        @include font("S");
-      }
+      // @include min-width(1500px) {
+      //   @include font("S");
+      // }
     }
 
     a:hover {
       color: $primaryDD;
+    }
+
+    p {
+      @include font("SSM");
+      margin-bottom: $spaceS;
+    }
+
+    .Bangkok {
+      color: $primaryDD;
+    }
+
+    .ChiangMai {
+      color: darken($bonus, 10%);
     }
   }
 

@@ -27,15 +27,16 @@ const VendorCard = ({ node, type }) => {
         />
 
         {/* EVENT LOCATION */}
-        <div className={styles.Event}>
-          {node.event.map(event => {
-            return (
-              <div className={event === "Bangkok" ? styles.BKK : styles.CM}>
-                {event}
-              </div>
-            )
-          })}
-        </div>
+        {/* <div className={styles.Event}>
+          {node &&
+            node.event.map(event => {
+              return (
+                <div className={event === "Bangkok" ? styles.BKK : styles.CM}>
+                  {event}
+                </div>
+              )
+            })}
+        </div> */}
       </div>
       <h3
         className={

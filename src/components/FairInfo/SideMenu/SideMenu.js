@@ -15,7 +15,7 @@ const SideMenu = () => {
   return (
     <div className={styles.SideMenu}>
       <Link to="/fair-info" className={styles.MenuTile}>
-        <p>Fair Info</p>
+        <p className={styles.FairInfoText}>Fair Info</p>
 
         <Image
           fluid={info}
@@ -23,11 +23,12 @@ const SideMenu = () => {
           alt="A close up of a stall"
         />
 
-        <div className={styles.Overlay} />
-        <div className={styles.Overlay2} />
+        {/* <div className={styles.Overlay} />
+        <div className={styles.Overlay2} /> */}
+        <div className={styles.Overlay3} />
       </Link>
 
-      <Link to="/fair-info/exhibitors" className={styles.MenuTile}>
+      <div to="/fair-info/exhibitors" className={styles.MenuTile}>
         <p>Exhibitors</p>
 
         <Image
@@ -38,9 +39,19 @@ const SideMenu = () => {
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
-      </Link>
 
-      <Link to="/fair-info/healing-zone" className={styles.MenuTile}>
+        <div className={styles.EventButtons}>
+          <Link className={styles.Bangkok} to="/programs/BKK/exhibitors">
+            BKK
+          </Link>
+
+          <Link className={styles.ChiangMai} to="/programs/CM/exhibitors">
+            CM
+          </Link>
+        </div>
+      </div>
+
+      <div to="/fair-info/healing-zone" className={styles.MenuTile}>
         <p>Healing Zone</p>
 
         <Image
@@ -51,9 +62,18 @@ const SideMenu = () => {
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
-      </Link>
 
-      <Link to="/fair-info/workshops-and-seminars" className={styles.MenuTile}>
+        <div className={styles.EventButtons}>
+          <Link className={styles.Bangkok} to="/programs/BKK/healing-zone">
+            BKK
+          </Link>
+          <Link className={styles.ChiangMai} to="/programs/CM/healing-zone">
+            CM
+          </Link>
+        </div>
+      </div>
+
+      <div to="/fair-info/workshops-and-seminars" className={styles.MenuTile}>
         <p>Workshops</p>
 
         <Image
@@ -64,7 +84,22 @@ const SideMenu = () => {
 
         <div className={styles.Overlay} />
         <div className={styles.Overlay2} />
-      </Link>
+
+        <div className={styles.EventButtons}>
+          <Link
+            className={styles.Bangkok}
+            to="/programs/BKK/workshops-and-seminars"
+          >
+            BKK
+          </Link>
+          <Link
+            className={styles.ChiangMai}
+            to="/programs/CM/workshops-and-seminars"
+          >
+            CM
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

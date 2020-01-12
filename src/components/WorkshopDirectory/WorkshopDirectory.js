@@ -1,6 +1,5 @@
 //Modules
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./WorkshopDirectory.module.scss"
 //Components
@@ -8,20 +7,18 @@ import VendorGrid from "../VendorDirectory/VendorGrid/VendorGrid"
 //Constants
 import { filterButtons } from "../../constants/filterButtons"
 
-const WorkshopDirectory = () => {
-  //Bring in all workshops from contentful with graphql
-  const data = useStaticQuery(query)
-
+const WorkshopDirectory = ({ workshops }) => {
   //Set array of vendors to state on mount - adjustable via filter
   const [filteredVendors, setFilteredVendors] = useState([])
+
   useEffect(() => {
-    setFilteredVendors(data.vendors.edges)
+    setFilteredVendors(workshops)
   }, [])
 
   //Apply Search Filter Method
   const handleFilterChange = e => {
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.vendors.edges]
+    const arrayClone = [...workshops]
     const filteredArray = arrayClone.filter(({ node }) =>
       node.name.toLowerCase().includes(filter)
     )
@@ -34,7 +31,7 @@ const WorkshopDirectory = () => {
     setSelectedButton(e.target.value)
 
     const filter = e.target.value.toLowerCase()
-    const arrayClone = [...data.vendors.edges]
+    const arrayClone = [...workshops]
 
     //Reset Filter Back to Props
     if (filter === "all") {
@@ -109,27 +106,30 @@ const WorkshopDirectory = () => {
   )
 }
 
-const query = graphql`
-  {
-    vendors: allContentfulWorkshop(sort: { order: ASC, fields: name }) {
-      edges {
-        node {
-          hidden
-          slug
-          id
-          name
-          blurb {
-            blurb
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     vendors: allContentfulWorkshop(
+//       sort: { order: ASC, fields: name }
+//       filter: { event: { eq: "Bangkok" } }
+//     ) {
+//       edges {
+//         node {
+//           hidden
+//           slug
+//           id
+//           name
+//           blurb {
+//             blurb
+//           }
+//           image {
+//             fluid {
+//               ...GatsbyContentfulFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default WorkshopDirectory

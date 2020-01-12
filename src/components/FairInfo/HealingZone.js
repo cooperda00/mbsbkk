@@ -8,7 +8,7 @@ import SideMenu from "./SideMenu/SideMenu"
 import HZDirectory from "../HZDirectory/HZDirectory"
 import CMHealingZoneSchedule from "../Schedules/CMHealingZoneSchedule/CMHealingZoneSchedule"
 
-const HealingZone = ({ copy }) => {
+const HealingZone = ({ copy, healingZone, schedules }) => {
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
@@ -18,9 +18,9 @@ const HealingZone = ({ copy }) => {
           <div className={styles.HTML}>
             {documentToReactComponents(copy.mainText.json)}
 
-            <CMHealingZoneSchedule />
+            <CMHealingZoneSchedule schedules={schedules} />
 
-            <HZDirectory />
+            <HZDirectory healingZone={healingZone} />
           </div>
         </div>
       </div>

@@ -14,7 +14,6 @@ const About = () => {
       <Story />
       <Title subtitle="Our Team" />
       <Profiles />
-      {/* <Title subtitle="Volunteers" /> */}
       <div className={styles.Volunteers}>
         <h3>Volunteers</h3>
         <p>

@@ -25,6 +25,11 @@ const Feature = ({ node }) => {
           className={styles.HTML}
         />
       </div>
+
+      {/* <div className={styles.EventButtons}>
+        <Link>BKK</Link>
+        <Link>CM</Link>
+      </div> */}
     </div>
   )
 }

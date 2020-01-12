@@ -1,25 +1,20 @@
 //Modules
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./VendorDirectory.module.scss"
 //Components
 import VendorGrid from "./VendorGrid/VendorGrid"
 //Constants
 import { filterButtons } from "../../constants/filterButtons"
-import styled from "styled-components"
 
-const VendorDirectory = () => {
-  //Bring in all vendors from contentful with graphql
-  const data = useStaticQuery(query)
-
+const VendorDirectory = ({ vendors }) => {
   //Set array of vendors to state on mount - adjustable via filter
   const [eventVendors, setEventVendors] = useState([])
   const [filteredVendors, setFilteredVendors] = useState([])
 
   useEffect(() => {
-    setFilteredVendors(data.vendors.edges)
-    setEventVendors(data.vendors.edges)
+    setFilteredVendors(vendors)
+    setEventVendors(vendors)
   }, [])
 
   //Apply Search Filter Method
@@ -66,47 +61,12 @@ const VendorDirectory = () => {
     }
   }
 
-  const handleEventChangeCM = e => {
-    setSelectedEvent(e.target.value)
-    if ((e.target.value = "CM")) {
-      const eventFilteredArray = data.vendors.edges.filter(node => {
-        if (node.node.event.includes("Chiang Mai")) {
-          return true
-        }
-      })
-      setEventVendors(eventFilteredArray)
-      setFilteredVendors(eventFilteredArray)
-      setSelectedButton("all")
-    }
-  }
-
-  const handleEventChangeBKK = e => {
-    if ((e.target.value = "BKK")) {
-      const eventFilteredArray = data.vendors.edges.filter(node => {
-        if (node.node.event.includes("Bangkok")) {
-          return true
-        }
-      })
-      setEventVendors(eventFilteredArray)
-      setFilteredVendors(eventFilteredArray)
-      setSelectedButton("all")
-    }
-  }
-
-  const handleEventChangeCMBKK = e => {
-    setSelectedEvent(e.target.value)
-    setSelectedButton("all")
-    setEventVendors(data.vendors.edges)
-    setFilteredVendors(data.vendors.edges)
-  }
-
   //Conditional Styles ************************************
   const [selectedButton, setSelectedButton] = useState("all")
-  const [selectedEvent, setSelectedEvent] = useState("CM/BKK")
 
   return (
     <div className={styles.VendorDirectory}>
-      <h3>Exhibitor Directory</h3>
+      <h3> Exhibitor Directory</h3>
       <div className={styles.FilterControls}>
         <div className={styles.InputGroup}>
           <label htmlFor="filter">Search</label>
@@ -141,59 +101,11 @@ const VendorDirectory = () => {
           >
             0-9
           </button>
-          <button
-            className={`${styles.CMButton} ${selectedEvent === "CM" &&
-              styles.SelectedEvent}`}
-            onClick={handleEventChangeCM}
-            value="CM"
-          >
-            CM
-          </button>
-          <button
-            className={`${styles.BKKButton} ${selectedEvent === "BKK" &&
-              styles.SelectedEvent}`}
-            onClick={handleEventChangeBKK}
-            value="BKK"
-          >
-            BKK
-          </button>
-          <button
-            className={`${styles.CMBKKButton} ${selectedEvent === "CM/BKK" &&
-              styles.SelectedEvent}`}
-            onClick={handleEventChangeCMBKK}
-            value="CM/BKK"
-          >
-            CM / BKK
-          </button>
         </div>
       </div>
       <VendorGrid vendors={filteredVendors} />
     </div>
   )
 }
-
-const query = graphql`
-  {
-    vendors: allContentfulVendor(sort: { order: ASC, fields: name }) {
-      edges {
-        node {
-          event
-          hidden
-          slug
-          id
-          name
-          blurb {
-            blurb
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default VendorDirectory

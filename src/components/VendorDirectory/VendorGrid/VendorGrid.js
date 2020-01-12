@@ -9,6 +9,7 @@ const VendorGrid = ({ vendors, type }) => {
   return (
     <div className={styles.VendorGrid}>
       {vendors.map(({ node }) => {
+        console.log(node)
         if (!node.hidden) {
           return <VendorCard node={node} key={node.id} type={type} />
         } else {

@@ -12,8 +12,10 @@
 }
 
 .Volunteers {
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, flex-start, center);
 
+  width: 100%;
+  max-width: $contentWidthL;
   margin-top: $spaceS;
   padding: 0 $spaceS;
 
