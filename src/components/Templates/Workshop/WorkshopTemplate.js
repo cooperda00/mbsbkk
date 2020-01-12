@@ -10,12 +10,12 @@ import SEO from "../../SEO/SEO"
 import Hero from "../../Utility/Hero/Hero"
 import SingleWorkshop from "../../WorkshopDirectory/SingleWorkshop/SingleWorkshop"
 
-const WorkshopTemplate = ({ data }) => {
+const WorkshopTemplate = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const name = data.singleWorkshop.name
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra={name} keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}></Hero>
       <section className={styles.FairInfo}>

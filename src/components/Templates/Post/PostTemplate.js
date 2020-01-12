@@ -15,7 +15,7 @@ import SEO from "../../SEO/SEO"
 //Icons
 import { FaFileDownload } from "react-icons/fa"
 
-const PostTemplate = ({ data: { singleBlog } }) => {
+const PostTemplate = ({ data: { singleBlog }, location }) => {
   const richText = singleBlog.body.json
   const title = singleBlog.title
   const subtitle = singleBlog.subtitle
@@ -44,7 +44,7 @@ const PostTemplate = ({ data: { singleBlog } }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra={title} keywordsExtra="" descriptionExtra={subtitle} />
       <article className={styles.Post}>
         <section className={styles.PostContent}>

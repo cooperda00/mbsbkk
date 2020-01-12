@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
 import Fade from "react-reveal/Fade"
-import { Location } from "@reach/router"
+// import { Location } from "@reach/router"
 //Sass
 import styles from "./Navigation.module.scss"
 //Constants
@@ -13,7 +13,7 @@ import { FaBars, FaCaretDown } from "react-icons/fa"
 //Components
 // import OutButton from "../../../Utility/OutButton/OutButton"
 
-const Navigation = () => {
+const Navigation = ({ location }) => {
   const [menu, toggleMenu] = useState(false)
 
   return (
@@ -36,24 +36,18 @@ const Navigation = () => {
                 {text}
               </Link>
             ) : (
-              //Add active-link styles to the p tag
-              // <Location>
-              //   {({ location }) => {
-              //     if (location.href.includes("/programs/")) {
-              //       return (
-              //         <p
-              //           className={`${styles.DeadLink} ${styles.DeadLinkActive}`}
-              //         >
-              //           {text}
-              //         </p>
-              //       )
-              //     } else {
-              //       return <p className={styles.DeadLink}>{text}</p>
-              //     }
-              //   }}
-              // </Location>
-              <p className={styles.DeadLink}>{text}</p>
+              <p
+                className={
+                  typeof window !== "undefined" &&
+                  location.href.includes("/programs/")
+                    ? `${styles.DeadLink} ${styles.DeadLinkActive}`
+                    : styles.DeadLink
+                }
+              >
+                {text}
+              </p>
             )}
+
             {text === "Programs" && (
               <>
                 <FaCaretDown className={styles.Icon} />

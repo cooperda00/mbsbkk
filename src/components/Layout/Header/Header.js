@@ -11,7 +11,7 @@ import headerLogo from "../../../images/logo_v2.jpg"
 import Navigation from "./Navigation/Navigation"
 import Social from "./Social/Social"
 
-const Header = () => {
+const Header = ({ location }) => {
   return (
     <header className={styles.Header}>
       <Link to="/">
@@ -23,7 +23,7 @@ const Header = () => {
       </Link>
       <div className={styles.Menu}>
         <Social header={true} />
-        <Navigation />
+        <Navigation location={location} />
       </div>
     </header>
   )

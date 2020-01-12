@@ -7,12 +7,12 @@ import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
 import OurCharities from "../components/OurCharities/OurCharities"
 
-const CharitiesPage = ({ data }) => {
+const CharitiesPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const copy = data.copy.edges[0].node.mainText.json
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Our Charities"
         keywordsExtra="charity, fatima centre"

@@ -10,12 +10,12 @@ import SEO from "../../SEO/SEO"
 import Hero from "../../Utility/Hero/Hero"
 import SingleVendor from "../../VendorDirectory/SingleVendor/SingleVendor"
 
-const VendorTemplate = ({ data }) => {
+const VendorTemplate = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const name = data.singleVendor.name
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra={name} keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}></Hero>
       <section className={styles.FairInfo}>

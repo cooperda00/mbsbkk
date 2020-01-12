@@ -10,12 +10,12 @@ import SEO from "../../SEO/SEO"
 import Hero from "../../Utility/Hero/Hero"
 import SingleHZ from "../../HZDirectory/SingleHZ/SingleHZ"
 
-const HZTemplate = ({ data }) => {
+const HZTemplate = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const name = data.singleHZ.name
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra={name} keywordsExtra="" descriptionExtra="" />
       <Hero type="page" image={image}></Hero>
       <section className={styles.FairInfo}>

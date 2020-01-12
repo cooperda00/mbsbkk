@@ -7,14 +7,14 @@ import SEO from "../../../components/SEO/SEO"
 import Hero from "../../../components/Utility/Hero/Hero"
 import Workshops from "../../../components/FairInfo/Workshops"
 
-const WorkshopsAndSeminarsPage = ({ data }) => {
+const WorkshopsAndSeminarsPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const copy = data.copy.edges[0].node
   const workshops = data.workshops.edges
   const schedules = data.schedules
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Workshops And Seminars"
         keywordsExtra=""

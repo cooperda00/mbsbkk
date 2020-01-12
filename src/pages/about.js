@@ -7,12 +7,16 @@ import SEO from "../components/SEO/SEO"
 import About from "../components/About/About"
 import Hero from "../components/Utility/Hero/Hero"
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
 
   return (
-    <Layout>
-      <SEO titleExtra="About Us" keywordsExtra="about" descriptionExtra="About Us" />
+    <Layout location={location}>
+      <SEO
+        titleExtra="About Us"
+        keywordsExtra="about"
+        descriptionExtra="About Us"
+      />
       <Hero image={image} type="page" />
       <About />
     </Layout>

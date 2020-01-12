@@ -8,10 +8,10 @@ import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 // import TicketCTA from "./TicketCTA/TicketCTA"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <div className={styles.Layout}>
-      <Header />
+      <Header location={location} />
       {/* <TicketCTA /> */}
       <main>{children}</main>
       <Footer />

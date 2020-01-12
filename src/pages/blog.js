@@ -7,13 +7,13 @@ import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
 import AllPosts from "../components/Blog/AllPosts/AllPosts"
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const allPosts = data.allPosts.edges
   const featuredPost = data.featuredPost.edges
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra="Blog" keywordsExtra="blog" descriptionExtra="Blog" />
       <Hero image={image} type="page" position="top" />
       <AllPosts posts={allPosts} featuredPost={featuredPost} />

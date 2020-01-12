@@ -7,12 +7,12 @@ import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
 import GetInvolved from "../components/GetInvolved/GetInvolved"
 
-const GetInvolvedPage = ({ data }) => {
+const GetInvolvedPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const mdx = data.mdx.body
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Get Involved"
         keywordsExtra="join us, sponsor, volunteer, vendor"

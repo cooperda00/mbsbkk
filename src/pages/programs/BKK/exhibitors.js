@@ -7,13 +7,13 @@ import SEO from "../../../components/SEO/SEO"
 import Hero from "../../../components/Utility/Hero/Hero"
 import Exhibitors from "../../../components/FairInfo/Exhibitors"
 
-const ExhibitorsPage = ({ data }) => {
+const ExhibitorsPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const copy = data.copy.edges[0].node
   const vendors = data.vendors.edges
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Exhibitors"
         keywordsExtra=""

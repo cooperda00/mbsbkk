@@ -5,9 +5,9 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import SponsorForm from "../components/SponsorForm/SponsorForm"
 
-const SponsorPage = () => {
+const SponsorPage = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Sponsor Us"
         keywordsExtra="sponsor"

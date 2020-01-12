@@ -10,12 +10,12 @@ import BasicInfo from "../components/BasicInfo/BasicInfo"
 import Carousel from "../components/Utility/Carousel/Carousel"
 import Youtube from "../components/Utility/Youtube/Youtube"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const features = data.features.edges
   const copy = data.copy.edges[0].node
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="Home" />
 
       <Carousel />

@@ -7,14 +7,14 @@ import SEO from "../../../components/SEO/SEO"
 import Hero from "../../../components/Utility/Hero/Hero"
 import HealingZone from "../../../components/FairInfo/HealingZone"
 
-const HealingZonePage = ({ data }) => {
+const HealingZonePage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const copy = data.copy.edges[0].node
   const healingZone = data.HZ.edges
   const schedules = data.schedules
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Healing Zone"
         keywordsExtra=""

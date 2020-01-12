@@ -7,12 +7,12 @@ import SEO from "../components/SEO/SEO"
 import Hero from "../components/Utility/Hero/Hero"
 import FairInfo from "../components/FairInfo/FairInfo"
 
-const FairInfoPage = ({ data }) => {
+const FairInfoPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
   const copy = data.copy.edges[0].node
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         titleExtra="Fair Info"
         keywordsExtra="information"
