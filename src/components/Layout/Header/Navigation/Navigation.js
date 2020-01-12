@@ -37,21 +37,22 @@ const Navigation = () => {
               </Link>
             ) : (
               //Add active-link styles to the p tag
-              <Location>
-                {({ location }) => {
-                  if (location.href.includes("/programs/")) {
-                    return (
-                      <p
-                        className={`${styles.DeadLink} ${styles.DeadLinkActive}`}
-                      >
-                        {text}
-                      </p>
-                    )
-                  } else {
-                    return <p className={styles.DeadLink}>{text}</p>
-                  }
-                }}
-              </Location>
+              // <Location>
+              //   {({ location }) => {
+              //     if (location.href.includes("/programs/")) {
+              //       return (
+              //         <p
+              //           className={`${styles.DeadLink} ${styles.DeadLinkActive}`}
+              //         >
+              //           {text}
+              //         </p>
+              //       )
+              //     } else {
+              //       return <p className={styles.DeadLink}>{text}</p>
+              //     }
+              //   }}
+              // </Location>
+              <p className={styles.DeadLink}>{text}</p>
             )}
             {text === "Programs" && (
               <>
