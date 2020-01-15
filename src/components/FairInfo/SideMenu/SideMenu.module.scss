@@ -3,7 +3,7 @@
 .SideMenu {
   display: none;
 
-  @include min-width(1000px) {
+  @include min-width(1025px) {
     @include flex(column, flex-start, center);
     width: 20%;
   }
@@ -20,11 +20,12 @@
 
       letter-spacing: 4px;
       position: absolute;
-      bottom: 25%;
+      bottom: 5%;
       left: 3%;
       z-index: 1000;
       color: white;
       line-height: 1 !important;
+      transition: 0.5s;
 
       @include min-width(1200px) {
         @include font("SM");
@@ -91,35 +92,59 @@
     }
 
     .EventButtons {
-      @include flex(row, space-around, center);
+      @include flex(column, space-around, center);
+      opacity: 0;
       position: absolute;
       width: 100%;
-      bottom: 0.1rem;
+      height: 100%;
+      bottom: 0rem;
+      left: 0;
       z-index: 1000;
+      transition: 0.5s;
+      color: $gray6;
 
       a {
         @include font("S");
         text-align: center;
-        letter-spacing: 0.5px;
-        width: 49%;
+        letter-spacing: 3px;
+        width: 70%;
+        color: $gray5;
+        font-weight: 300;
+        padding: $spaceXS 0;
       }
 
       .Bangkok {
         background: $primary;
+        transition: 0.4s;
+
+        &:hover {
+          background: $primaryD;
+        }
       }
 
       .ChiangMai {
         background: $bonus;
+        transition: 0.4s;
+
+        &:hover {
+          background: darken($bonus, 10%);
+        }
       }
     }
 
-    // &:hover {
-    //   .Overlay {
-    //     opacity: 0;
-    //   }
-    //   .Overlay2 {
-    //     opacity: 1;
-    //   }
-    // }
+    &:hover {
+      // .Overlay {
+      //   opacity: 0;
+      // }
+      .Overlay2 {
+        opacity: 1;
+      }
+      .EventButtons {
+        opacity: 1;
+      }
+      .AnimatedP {
+        opacity: 0;
+      }
+    }
   }
 }

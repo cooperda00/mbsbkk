@@ -23,13 +23,13 @@ const SideMenu = () => {
           alt="A close up of a stall"
         />
 
-        {/* <div className={styles.Overlay} />
-        <div className={styles.Overlay2} /> */}
-        <div className={styles.Overlay3} />
+        <div className={styles.Overlay} />
+        <div className={styles.Overlay2} />
+        {/* <div className={styles.Overlay3} /> */}
       </Link>
 
       <div to="/fair-info/exhibitors" className={styles.MenuTile}>
-        <p>Exhibitors</p>
+        <p className={styles.AnimatedP}>Exhibitors</p>
 
         <Image
           fluid={exhibitors}
@@ -42,17 +42,17 @@ const SideMenu = () => {
 
         <div className={styles.EventButtons}>
           <Link className={styles.Bangkok} to="/programs/BKK/exhibitors">
-            BKK
+            Bangkok
           </Link>
 
           <Link className={styles.ChiangMai} to="/programs/CM/exhibitors">
-            CM
+            Chiang Mai
           </Link>
         </div>
       </div>
 
       <div to="/fair-info/healing-zone" className={styles.MenuTile}>
-        <p>Healing Zone</p>
+        <p className={styles.AnimatedP}>Healing Zone</p>
 
         <Image
           fluid={healingZone}
@@ -65,16 +65,16 @@ const SideMenu = () => {
 
         <div className={styles.EventButtons}>
           <Link className={styles.Bangkok} to="/programs/BKK/healing-zone">
-            BKK
+            Bangkok
           </Link>
           <Link className={styles.ChiangMai} to="/programs/CM/healing-zone">
-            CM
+            Chiang Mai
           </Link>
         </div>
       </div>
 
       <div to="/fair-info/workshops-and-seminars" className={styles.MenuTile}>
-        <p>Workshops</p>
+        <p className={styles.AnimatedP}>Workshops</p>
 
         <Image
           fluid={workshops}
@@ -90,13 +90,13 @@ const SideMenu = () => {
             className={styles.Bangkok}
             to="/programs/BKK/workshops-and-seminars"
           >
-            BKK
+            Bangkok
           </Link>
           <Link
             className={styles.ChiangMai}
             to="/programs/CM/workshops-and-seminars"
           >
-            CM
+            Chiang Mai
           </Link>
         </div>
       </div>
