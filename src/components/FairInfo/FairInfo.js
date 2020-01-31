@@ -9,6 +9,7 @@ import MailChimpContainer from "../Spacing/MailChimpContainer/MailChimpContainer
 import SocialContainer from "../Spacing/SocialContainer/SocialContainer"
 import MailChimp from "../Utility/MailChimp/MailChimp"
 import Social from "../Layout/Header/Social/Social"
+import OutButton from "../Utility/OutButton/OutButton"
 
 const FairInfo = ({ copy }) => {
   return (
@@ -19,6 +20,14 @@ const FairInfo = ({ copy }) => {
         <div className={styles.Copy}>
           <div className={styles.HTML}>
             {documentToReactComponents(copy.mainText.json)}
+
+            <hr />
+
+            <OutButton
+              path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
+              text="Book Tickets"
+              type="1"
+            />
 
             <hr />
 

@@ -6,13 +6,13 @@ import "./base.scss"
 //Components
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
-// import TicketCTA from "./TicketCTA/TicketCTA"
+import TicketCTA from "./TicketCTA/TicketCTA"
 
 const Layout = ({ children, location }) => {
   return (
     <div className={styles.Layout}>
       <Header location={location} />
-      {/* <TicketCTA /> */}
+      <TicketCTA />
       <main>{children}</main>
       <Footer />
     </div>

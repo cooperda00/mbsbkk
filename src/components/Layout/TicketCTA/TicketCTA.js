@@ -6,7 +6,7 @@ import styles from "./TicketCTA.module.scss"
 const TicketCTA = () => {
   return (
     <a
-      href="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairchiangmai"
+      href="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
       className={styles.TicketCTA}
       target="_blank"
       rel="noopener noreferrer"

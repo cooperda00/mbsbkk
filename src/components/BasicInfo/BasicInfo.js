@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 //Sass
 import styles from "./BasicInfo.module.scss"
 import CTAButton from "../Utility/CTAButton/CTAButton"
+import OutButton from "../Utility/OutButton/OutButton"
 
 const BasicInfo = ({ copy }) => {
   return (
@@ -33,7 +34,12 @@ const BasicInfo = ({ copy }) => {
           <div>{documentToReactComponents(copy.eventDetails.json)}</div>
 
           <div className={styles.ButtonContainer}>
-            <CTAButton path="/get-involved" text="Get Involved" />
+            {/* <CTAButton path="/get-involved" text="Get Involved" /> */}
+            <OutButton
+              path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
+              text="Book Now"
+              type="1"
+            />
           </div>
 
           {/* <h3>Chiang Mai</h3>
