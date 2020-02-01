@@ -74,6 +74,13 @@ const Navigation = ({ location }) => {
       <Slide right when={menu}>
         {menu && (
           <div className={styles.MobileNav}>
+            <div>
+              <OutButton
+                path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
+                text="Buy Tickets"
+                type="1"
+              />
+            </div>
             {mobileLinks.map(({ path, text, subLinks }, i) => (
               <>
                 {path ? (
@@ -113,13 +120,13 @@ const Navigation = ({ location }) => {
                   })}
               </>
             ))}
-            <div>
+            {/* <div>
               <OutButton
                 path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
                 text="Buy Tickets"
                 type="1"
               />
-            </div>
+            </div> */}
           </div>
         )}
       </Slide>
