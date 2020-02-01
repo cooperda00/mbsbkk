@@ -1,13 +1,17 @@
 @import "../../../vars";
 
 .TicketCTA {
-  display: none;
+  // display: none;
+
+  @include flex(column, center, center);
+
+  top: 11rem;
+  right: 1rem;
 
   @include font("S");
-  background: $bonus;
+  background: $primaryL;
   position: absolute;
-  top: 18rem;
-  right: 2rem;
+
   z-index: 500;
   height: 6rem;
   width: 20rem;
@@ -16,8 +20,15 @@
   letter-spacing: 0.2rem;
   border-radius: 15px;
 
+  p {
+    color: $gray5;
+  }
+
   @include min-width(768px) {
     @include flex(column, center, center);
+
+    top: 18rem;
+    right: 2rem;
   }
 
   @include min-width(1000px) {
@@ -28,6 +39,6 @@
 
   &:hover {
     // background: $primary;
-    background: darken($bonus, 10%);
+    background: $primary;
   }
 }

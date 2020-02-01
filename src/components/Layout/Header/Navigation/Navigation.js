@@ -11,7 +11,7 @@ import { links, mobileLinks } from "../../../../constants/links"
 //Icons
 import { FaBars, FaCaretDown } from "react-icons/fa"
 //Components
-// import OutButton from "../../../Utility/OutButton/OutButton"
+import OutButton from "../../../Utility/OutButton/OutButton"
 
 const Navigation = ({ location }) => {
   const [menu, toggleMenu] = useState(false)
@@ -113,13 +113,13 @@ const Navigation = ({ location }) => {
                   })}
               </>
             ))}
-            {/* <div>
+            <div>
               <OutButton
-                path="https://www.ticketmelon.com"
+                path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
                 text="Buy Tickets"
-                type="2"
+                type="1"
               />
-            </div> */}
+            </div>
           </div>
         )}
       </Slide>
