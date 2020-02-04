@@ -19,15 +19,16 @@ const FairInfo = ({ copy }) => {
 
         <div className={styles.Copy}>
           <div className={styles.HTML}>
-            {documentToReactComponents(copy.mainText.json)}
-
-            <hr />
+            {documentToReactComponents(copy.topText.json)}
+            {documentToReactComponents(copy.bkkEventDetails.json)}
 
             <OutButton
               path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
-              text="Book Tickets"
+              text="Buy Tickets"
               type="1"
             />
+
+            {documentToReactComponents(copy.cmEventDetails.json)}
 
             <hr />
 

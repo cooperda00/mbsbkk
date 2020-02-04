@@ -37,7 +37,7 @@ const BasicInfo = ({ copy }) => {
             {/* <CTAButton path="/get-involved" text="Get Involved" /> */}
             <OutButton
               path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
-              text="Book Now"
+              text="Buy Tickets"
               type="1"
             />
           </div>

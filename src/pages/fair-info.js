@@ -34,17 +34,16 @@ export const query = graphql`
       }
     }
 
-    # copy: mdx(frontmatter: { title: { eq: "Fair Info" } }) {
-    #   frontmatter {
-    #     title
-    #   }
-    #   body
-    # }
-
     copy: allContentfulFairInfoPage {
       edges {
         node {
-          mainText {
+          topText {
+            json
+          }
+          bkkEventDetails {
+            json
+          }
+          cmEventDetails {
             json
           }
           newsletter {

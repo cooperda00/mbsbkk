@@ -55,8 +55,10 @@
   }
 
   button {
-    @include font("S");
+    @include font("SM");
     @include cta-button();
     margin-top: $spaceS;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
   }
 }

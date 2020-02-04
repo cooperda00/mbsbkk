@@ -8,7 +8,7 @@
   top: 11rem;
   right: 1rem;
 
-  @include font("S");
+  @include font("SM");
   background: $primaryL;
   position: absolute;
 
@@ -16,9 +16,9 @@
   height: 6rem;
   width: 20rem;
   transition: 0.5s;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
   border-radius: 15px;
+  font-weight: 300;
+  letter-spacing: 0.3rem;
 
   p {
     color: $gray5;
