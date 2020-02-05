@@ -1,0 +1,69 @@
+@import "../../../vars";
+
+.MailChimp {
+  width: 100%;
+  margin-top: $spaceS;
+  max-width: 30rem;
+
+  @include min-width(1000px) {
+    margin-top: $spaceM;
+  }
+
+  .Title {
+    @include font("SM");
+    width: 100%;
+    margin-bottom: $spaceS;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("M");
+      text-align: left;
+    }
+  }
+
+  form {
+    @include flex(column, center, flex-start);
+    width: 100%;
+    max-width: 30rem;
+
+    @include min-width(1000px) {
+      @include flex(column, center, center);
+    }
+
+    div {
+      margin-bottom: $spaceS;
+      label {
+        @include font("SM");
+        display: block;
+
+        @include min-width(1000px) {
+          @include font("M");
+        }
+      }
+
+      input {
+        @include font("SM");
+        width: 100%;
+        margin-bottom: $spaceS;
+        max-width: 30rem;
+        padding: 0.2rem $spaceS;
+
+        @include min-width(1000px) {
+          @include font("M");
+        }
+      }
+    }
+  }
+
+  .Message {
+    color: red;
+  }
+
+  button {
+    @include font("SM");
+    @include cta-button();
+    margin-top: $spaceS;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+  }
+}

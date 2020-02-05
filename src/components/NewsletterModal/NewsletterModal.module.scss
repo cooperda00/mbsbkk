@@ -1,0 +1,54 @@
+@import "../../vars";
+
+.NewsletterModal {
+  @include flex(column, center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  .FormContainer {
+    @include flex(column, center, flex-start);
+    position: relative;
+    border-radius: 5px;
+    background: white;
+    padding: $spaceM;
+    max-width: 90%;
+
+    @include min-width(1000px) {
+      @include flex(column, center, center);
+      padding: $spaceXL;
+    }
+
+    .ModalCopy {
+      @include font("S");
+      //   max-width: 95%;
+
+      @include min-width(1000px) {
+        @include font("M");
+      }
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: $spaceS;
+      margin-top: $spaceM;
+    }
+
+    .CloseModalButton {
+      @include font("L");
+      position: absolute;
+      top: $spaceXS;
+      right: $spaceXS;
+      background: transparent;
+
+      @include min-width(1000px) {
+        @include font("XL");
+        top: $spaceS;
+        right: $spaceS;
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ import InstagramWidgetSmall from "../../Utility/InstagramWidgetSmall/InstagramWi
 
 const Footer = () => {
   const data = useStaticQuery(query)
-  console.log(data.sponsorImage.childImageSharp.fluid)
+
   return (
     <footer className={styles.Footer}>
       <div className={styles.FooterNav}>
