@@ -1,14 +1,18 @@
 //Modules
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 //Sass
 import styles from "./Footer.module.scss"
 //Constants
 import { social } from "../../../constants/social"
 //Components
 import InstagramWidgetSmall from "../../Utility/InstagramWidgetSmall/InstagramWidgetSmall"
-import MailChimp from "../../Utility/MailChimp/MailChimp"
+// import MailChimp from "../../Utility/MailChimp/MailChimp"
 
 const Footer = () => {
+  const data = useStaticQuery(query)
+  console.log(data.sponsorImage.childImageSharp.fluid)
   return (
     <footer className={styles.Footer}>
       <div className={styles.FooterNav}>
@@ -26,7 +30,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <MailChimp text="Stay In The Loop With Our Newsletter" />
+        <a
+          href="https://www.flexilexi-fitness.com"
+          className={styles.Sponsor}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            fluid={data.sponsorImage.childImageSharp.fluid}
+            className={styles.SponsorImage}
+          />
+        </a>
+
+        {/* <MailChimp text="Stay In The Loop With Our Newsletter" /> */}
       </div>
 
       <div className={styles.InstagramWidget}>
@@ -62,5 +78,17 @@ const Footer = () => {
     </footer>
   )
 }
+
+const query = graphql`
+  {
+    sponsorImage: file(relativePath: { eq: "flexi_lexi_sponsor_logo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Footer

@@ -95,3 +95,22 @@
     }
   }
 }
+
+.Sponsor {
+  width: 100%;
+  margin-top: $spaceS;
+  padding: $spaceM;
+
+  @include min-width(1000px) {
+    padding: 0;
+    margin-top: $spaceM;
+  }
+
+  .SponsorImage {
+    width: 100%;
+
+    @include min-width(1000px) {
+      width: 80%;
+    }
+  }
+}
