@@ -3,10 +3,12 @@
 .IndividualTestimonial {
   @include flex(column, flex-start, center);
   margin: $spaceS 0;
+  align-self: center;
 
   @include min-width(1000px) {
     @include flex(column, flex-start, flex-start);
     margin: 0;
+    align-self: flex-start;
   }
 
   .Title {

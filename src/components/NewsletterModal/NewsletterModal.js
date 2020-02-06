@@ -12,6 +12,7 @@ const NewsletterModal = ({ setShowModal }) => {
             setShowModal(false)
             localStorage.setItem("modal", "viewed")
           }}
+          tabIndex="1"
         >
           X
         </button>

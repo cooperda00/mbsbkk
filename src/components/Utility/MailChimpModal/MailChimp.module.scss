@@ -22,7 +22,7 @@
   }
 
   form {
-    @include flex(column, center, flex-start);
+    @include flex(column, center, center);
     width: 100%;
     max-width: 30rem;
 
@@ -32,9 +32,13 @@
 
     div {
       margin-bottom: $spaceS;
+
       label {
         @include font("SM");
         display: block;
+        margin-bottom: $spaceS;
+        letter-spacing: 0.2rem;
+        font-weight: 300;
 
         @include min-width(1000px) {
           @include font("M");
@@ -46,7 +50,9 @@
         width: 100%;
         margin-bottom: $spaceS;
         max-width: 30rem;
-        padding: 0.2rem $spaceS;
+        padding: 0.6rem $spaceS;
+        letter-spacing: 0.2rem;
+        font-weight: 300;
 
         @include min-width(1000px) {
           @include font("M");

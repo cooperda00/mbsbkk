@@ -11,7 +11,7 @@
   z-index: 10000;
 
   .FormContainer {
-    @include flex(column, center, flex-start);
+    @include flex(column, center, center);
     position: relative;
     border-radius: 5px;
     background: white;
@@ -20,12 +20,14 @@
 
     @include min-width(1000px) {
       @include flex(column, center, center);
-      padding: $spaceXL;
+      padding: $spaceL;
     }
 
     .ModalCopy {
       @include font("S");
-      //   max-width: 95%;
+      letter-spacing: 0.2rem;
+      font-weight: 300;
+      text-align: center;
 
       @include min-width(1000px) {
         @include font("M");

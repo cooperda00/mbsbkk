@@ -1,6 +1,5 @@
 //Modules
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./HZDirectory.module.scss"
 //Components

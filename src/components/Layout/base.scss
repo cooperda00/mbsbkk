@@ -61,3 +61,13 @@ button {
 button:active {
   transform: scale(0.99);
 }
+
+.cta-button-wrapper {
+  margin: 0 auto;
+  margin-top: $spaceSM;
+
+  @include min-width(1000px) {
+    margin: 0;
+    margin-top: $spaceS;
+  }
+}

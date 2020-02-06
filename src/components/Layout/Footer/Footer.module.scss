@@ -27,8 +27,12 @@
 
   .Links {
     @include flex(column, flex-start, center);
-
+    @include font("SM");
     margin-top: $spaceM;
+
+    @include min-width(1200px) {
+      @include font("M");
+    }
 
     .Icons {
       margin-top: $spaceS;
@@ -97,6 +101,7 @@
 }
 
 .Sponsor {
+  @include flex(column, flex-start, center);
   width: 100%;
   margin-top: $spaceS;
   padding: $spaceM;
@@ -108,9 +113,20 @@
 
   .SponsorImage {
     width: 100%;
+    max-width: 40rem;
 
     @include min-width(1000px) {
       width: 80%;
+    }
+  }
+
+  .SponsorMessage {
+    @include font("SM");
+    margin-top: $spaceSM;
+    text-align: center;
+
+    a {
+      color: dodgerblue;
     }
   }
 }

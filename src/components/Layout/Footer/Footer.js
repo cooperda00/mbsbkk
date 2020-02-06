@@ -40,6 +40,16 @@ const Footer = () => {
             fluid={data.sponsorImage.childImageSharp.fluid}
             className={styles.SponsorImage}
           />
+          <p className={styles.SponsorMessage}>
+            Proudly sponsored by{" "}
+            <a
+              href="https://www.flexilexi-fitness.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Flexi Lexi Fitness
+            </a>
+          </p>
         </a>
 
         {/* <MailChimp text="Stay In The Loop With Our Newsletter" /> */}
