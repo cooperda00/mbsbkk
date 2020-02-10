@@ -15,12 +15,12 @@
     position: relative;
     border-radius: 5px;
     background: white;
-    padding: $spaceM;
+    padding: $spaceSM;
     max-width: 90%;
 
     @include min-width(1000px) {
       @include flex(column, center, center);
-      padding: $spaceL;
+      padding: $spaceM;
     }
 
     .ModalCopy {
@@ -30,7 +30,7 @@
       text-align: center;
 
       @include min-width(1000px) {
-        @include font("M");
+        @include font("S");
       }
     }
 
@@ -40,16 +40,16 @@
     }
 
     .CloseModalButton {
-      @include font("L");
+      @include font("M");
       position: absolute;
-      top: $spaceXS;
-      right: $spaceXS;
+      top: 0;
+      right: 0;
       background: transparent;
 
       @include min-width(1000px) {
-        @include font("XL");
-        top: $spaceS;
-        right: $spaceS;
+        @include font("L");
+        top: $spaceXS;
+        right: $spaceXS;
       }
     }
   }

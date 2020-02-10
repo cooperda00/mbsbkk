@@ -34,19 +34,19 @@
       margin-bottom: $spaceS;
 
       label {
-        @include font("SM");
+        @include font("S");
         display: block;
-        margin-bottom: $spaceS;
+        margin-bottom: $spaceXS;
         letter-spacing: 0.2rem;
         font-weight: 300;
 
         @include min-width(1000px) {
-          @include font("M");
+          @include font("SM");
         }
       }
 
       input {
-        @include font("SM");
+        @include font("S");
         width: 100%;
         margin-bottom: $spaceS;
         max-width: 30rem;
@@ -55,7 +55,7 @@
         font-weight: 300;
 
         @include min-width(1000px) {
-          @include font("M");
+          @include font("SM");
         }
       }
     }
@@ -66,10 +66,14 @@
   }
 
   button {
-    @include font("SM");
+    @include font("S");
     @include cta-button();
     margin-top: $spaceS;
     font-weight: 300;
     letter-spacing: 0.4rem;
+
+    @include min-width(1000px) {
+      @include font("SM");
+    }
   }
 }
