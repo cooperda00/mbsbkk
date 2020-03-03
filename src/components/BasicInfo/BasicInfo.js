@@ -33,14 +33,14 @@ const BasicInfo = ({ copy }) => {
 
           <div>{documentToReactComponents(copy.eventDetails.json)}</div>
 
-          <div className={styles.ButtonContainer}>
-            {/* <CTAButton path="/get-involved" text="Get Involved" /> */}
+          {/* <div className={styles.ButtonContainer}>
+            <CTAButton path="/get-involved" text="Get Involved" />
             <OutButton
               path="https://www.ticketmelon.com/mbsfairbkk/mindbodyspiritfairbangkok"
               text="Buy Tickets"
               type="1"
             />
-          </div>
+          </div> */}
 
           {/* <h3>Chiang Mai</h3>
           <p>Dates: 30th November - 1st December 2019</p>
