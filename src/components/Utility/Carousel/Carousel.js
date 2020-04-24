@@ -27,8 +27,8 @@ const Carousel = () => {
     margin-top: 10rem;
 
     @media (min-width: 768px) {
-    margin-top: 15rem;
-  }
+      margin-top: 15rem;
+    }
 
     @media (min-width: 1000px) {
       width: ${width};
@@ -52,7 +52,7 @@ const Carousel = () => {
     font-size: 5rem;
     position: absolute;
     text-align: center;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 2px 2px 3px #000;
     top: 50%;
     transform: translateY(-50%);
     user-select: none;
@@ -83,7 +83,7 @@ const Carousel = () => {
     color: white;
     font-size: 3rem;
     cursor: pointer;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 2px 2px 3px #000;
     user-select: none;
   `
 
@@ -110,7 +110,7 @@ const Carousel = () => {
   const Carousel = makeCarousel(CarouselUI)
 
   return (
-    <Carousel>
+    <Carousel defaultWait={5000}>
       <Slide right>
         <div className={styles.SlideContainer}>
           <Image
