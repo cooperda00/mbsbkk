@@ -5,13 +5,13 @@ import { graphql } from "gatsby"
 import Layout from "../../../components/Layout/Layout"
 import SEO from "../../../components/SEO/SEO"
 import Hero from "../../../components/Utility/Hero/Hero"
-import HealingZone from "../../../components/FairInfo/HealingZone"
+// import HealingZone from "../../../components/FairInfo/HealingZone"
 
 const HealingZonePage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
-  const copy = data.copy.edges[0].node
-  const healingZone = data.HZ.edges
-  const schedules = data.schedules
+  // const copy = data.copy.edges[0].node
+  // const healingZone = data.HZ.edges
+  // const schedules = data.schedules
 
   return (
     <Layout location={location}>
@@ -21,11 +21,11 @@ const HealingZonePage = ({ data, location }) => {
         descriptionExtra="Healing Zone"
       />
       <Hero type="page" image={image} position="top" />
-      <HealingZone
+      {/* <HealingZone
         copy={copy}
         healingZone={healingZone}
         schedules={schedules}
-      />
+      /> */}
     </Layout>
   )
 }
@@ -40,47 +40,47 @@ export const query = graphql`
       }
     }
 
-    copy: allContentfulHealingZonePageChiangMai {
-      edges {
-        node {
-          mainText {
-            json
-          }
-        }
-      }
-    }
+    # copy: allContentfulHealingZonePageChiangMai {
+    #   edges {
+    #     node {
+    #       mainText {
+    #         json
+    #       }
+    #     }
+    #   }
+    # }
 
-    HZ: allContentfulHealingZonePractitioner(
-      filter: { event: { eq: "Chiang Mai" } }
-      sort: { order: ASC, fields: name }
-    ) {
-      edges {
-        node {
-          hidden
-          slug
-          id
-          name
-          blurb {
-            blurb
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
+    # HZ: allContentfulHealingZonePractitioner(
+    #   filter: { event: { eq: "Chiang Mai" } }
+    #   sort: { order: ASC, fields: name }
+    # ) {
+    #   edges {
+    #     node {
+    #       hidden
+    #       slug
+    #       id
+    #       name
+    #       blurb {
+    #         blurb
+    #       }
+    #       image {
+    #         fluid {
+    #           ...GatsbyContentfulFluid
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
 
-    schedules: contentfulScheduleHealingZone(event: { eq: "CM" }) {
-      event
-      posters {
-        id
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
+  #   schedules: contentfulScheduleHealingZone(event: { eq: "CM" }) {
+  #     event
+  #     posters {
+  #       id
+  #       fluid {
+  #         ...GatsbyContentfulFluid
+  #       }
+  #     }
+  #   }
   }
 `
 
