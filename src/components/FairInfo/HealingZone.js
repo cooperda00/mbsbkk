@@ -8,7 +8,9 @@ import SideMenu from "./SideMenu/SideMenu"
 import HZDirectory from "../HZDirectory/HZDirectory"
 import CMHealingZoneSchedule from "../Schedules/CMHealingZoneSchedule/CMHealingZoneSchedule"
 
-const HealingZone = ({ copy, healingZone, schedules }) => {
+const HealingZone = ({ 
+  copy, 
+  healingZone, schedules }) => {
   return (
     <section className={styles.FairInfo}>
       <div className={styles.Container}>
