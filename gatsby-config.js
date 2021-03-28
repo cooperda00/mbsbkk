@@ -81,13 +81,13 @@ module.exports = {
       },
     },
     //Profile Data
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        type: `user-profile`,
-        username: `mindbodyspiritfairbkk`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     type: `user-profile`,
+    //     username: `mindbodyspiritfairbkk`,
+    //   },
+    // },
     //Contentful
     {
       resolve: `gatsby-source-contentful`,
