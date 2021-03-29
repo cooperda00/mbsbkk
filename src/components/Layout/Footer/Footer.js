@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <a
+        {/* <a
           href="https://www.flexilexi-fitness.com"
           className={styles.Sponsor}
           target="_blank"
@@ -50,7 +50,7 @@ const Footer = () => {
               Flexi Lexi Fitness
             </a>
           </p>
-        </a>
+        </a> */}
 
         {/* <MailChimp text="Stay In The Loop With Our Newsletter" /> */}
       </div>
